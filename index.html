@@ -216,6 +216,27 @@ textarea.f-input{resize:vertical;min-height:108px}
 @media(max-width:900px){.hamburger{display:flex}.nav-links{display:none}}
 @media(max-width:600px){.video-grid{grid-template-columns:1fr!important}.sub-hero-title{font-size:54px!important}.hero-title{font-size:58px!important}.section-title{font-size:36px!important}}
 
+
+/* ── PHOTO GALLERY ── */
+.photo-gallery{margin-top:36px}
+.photo-gallery-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;flex-wrap:wrap;gap:12px}
+.photo-count{font-size:12px;color:var(--white2);opacity:.5;font-family:var(--fb);letter-spacing:1px}
+.photo-grid{columns:3 280px;gap:12px}
+.photo-grid img{width:100%;display:block;margin-bottom:12px;border-radius:2px;cursor:pointer;transition:transform .25s,opacity .25s;opacity:.9}
+.photo-grid img:hover{transform:scale(1.02);opacity:1}
+.photo-loading{text-align:center;padding:48px;color:var(--white2);opacity:.5;font-family:var(--fb);font-size:13px;letter-spacing:2px;text-transform:uppercase}
+/* Lightbox */
+.lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.95);z-index:1000;align-items:center;justify-content:center;padding:20px}
+.lightbox.open{display:flex}
+.lightbox img{max-width:90vw;max-height:90vh;object-fit:contain;border-radius:2px}
+.lightbox-close{position:absolute;top:20px;right:24px;color:var(--white2);font-size:32px;cursor:pointer;background:none;border:none;line-height:1;transition:color .2s}
+.lightbox-close:hover{color:var(--accent)}
+.lightbox-prev,.lightbox-next{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.1);border:none;color:var(--white);font-size:28px;padding:16px 20px;cursor:pointer;border-radius:2px;transition:background .2s}
+.lightbox-prev:hover,.lightbox-next:hover{background:rgba(232,184,106,.3)}
+.lightbox-prev{left:20px}.lightbox-next{right:20px}
+.lightbox-caption{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);color:var(--white2);font-size:13px;font-family:var(--fb);letter-spacing:1px;opacity:.7}
+@media(max-width:600px){.photo-grid{columns:2 140px}}
+
 footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px}
 .footer-logo{font-family:var(--fd);font-size:21px;letter-spacing:3px;cursor:pointer;color:var(--white)}
 .footer-logo span{color:var(--accent)}
@@ -405,6 +426,8 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
   <a onclick="mNav('interviews')">Interviews</a>
   <a onclick="mNav('art-performance')">Art &amp; Performance</a>
   <a onclick="mNav('drone-footage')">Drone &amp; Aerial</a>
+  <a onclick="mNav('locations')">Geneva Locations</a>
+  <a onclick="mNav('watches-photography')">Watches &amp; Jewellery</a>
   <a onclick="mNav('contact')" class="m-cta">Get a Quote →</a>
 </div>
 
@@ -617,7 +640,35 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
     <p class="eyebrow">Portfolio</p>
     <h2 class="section-title">SHOWREEL &amp; EXAMPLES</h2>
     <div class="divider" style="margin-bottom:0"></div>
-    <div class="video-grid"><div class="video-item"><div class="vid-wrap" onclick="playVid(this,'Xd1DZG7ZOSs')"><img class="vid-thumb" src="https://img.youtube.com/vi/Xd1DZG7ZOSs/hqdefault.jpg" alt="2023 Showreel" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
+    <div class="video-grid">
+<div class="video-item">
+  <div class="vid-wrap vimeo-wrap" data-vimeo="942738398">
+    <img class="vid-thumb" src="https://vumbnail.com/942738398.jpg"
+         onerror="this.src='https://i.vimeocdn.com/video/942738398_640x360.jpg';this.onerror=null"
+         alt="2023 Showreel" loading="lazy">
+    <div class="vid-overlay"><div class="vid-btn">&#9654;</div></div>
+  </div>
+  <p>2023 Showreel</p>
+</div>
+<div class="video-item">
+  <div class="vid-wrap vimeo-wrap" data-vimeo="788842884">
+    <img class="vid-thumb" src="https://vumbnail.com/788842884.jpg"
+         onerror="this.src='https://i.vimeocdn.com/video/788842884_640x360.jpg';this.onerror=null"
+         alt="2022 Showreel" loading="lazy">
+    <div class="vid-overlay"><div class="vid-btn">&#9654;</div></div>
+  </div>
+  <p>2022 Showreel</p>
+</div>
+<div class="video-item">
+  <div class="vid-wrap vimeo-wrap" data-vimeo="673164993">
+    <img class="vid-thumb" src="https://vumbnail.com/673164993.jpg"
+         onerror="this.src='https://i.vimeocdn.com/video/673164993_640x360.jpg';this.onerror=null"
+         alt="Showreel" loading="lazy">
+    <div class="vid-overlay"><div class="vid-btn">&#9654;</div></div>
+  </div>
+  <p>Showreel</p>
+</div>
+<div class="video-item"><div class="vid-wrap" onclick="playVid(this,'Xd1DZG7ZOSs')"><img class="vid-thumb" src="https://img.youtube.com/vi/Xd1DZG7ZOSs/hqdefault.jpg" alt="2023 Showreel" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
   <p>UAE National Day</p></div>
 <div class="video-item"><div class="vid-wrap" onclick="playVid(this,'AT0UAa-qKWE')"><img class="vid-thumb" src="https://img.youtube.com/vi/AT0UAa-qKWE/hqdefault.jpg" alt="Corporate Video" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
   <p>1st ICRC Conference on Weapon-Wounded Care</p></div>
@@ -760,7 +811,7 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
       <div class="sub-card" onclick="goTo('ngo-photography')"><div class="sub-card-title">NGO & FIELD PHOTOGRAPHY</div><p class="sub-card-text">Impactful photography for international organisations and humanitarian projects.</p><div class="sub-arrow">&#8599;</div></div>
       <div class="sub-card" onclick="goTo('corporate-photography')"><div class="sub-card-title">CORPORATE PHOTOGRAPHY</div><p class="sub-card-text">Team portraits, office photography, annual reports, and brand content.</p><div class="sub-arrow">&#8599;</div></div>
       <div class="sub-card" onclick="goTo('food-photography')"><div class="sub-card-title">FOOD & RESTAURANT</div><p class="sub-card-text">Appetising food photography for menus, websites, and social media.</p><div class="sub-arrow">&#8599;</div></div>
-      <div class="sub-card" onclick="goTo('watch-jewellery-photography')"><div class="sub-card-title">WATCH & JEWELLERY</div><p class="sub-card-text">Precision product photography for Swiss watch brands and luxury jewellers.</p><div class="sub-arrow">&#8599;</div></div>
+      <div class="sub-card" onclick="goTo('watches-photography')"><div class="sub-card-title">WATCH & JEWELLERY</div><p class="sub-card-text">Precision product photography for Swiss watch brands and luxury jewellers.</p><div class="sub-arrow">&#8599;</div></div>
       <div class="sub-card" onclick="goTo('fashion-photography')"><div class="sub-card-title">FASHION PHOTOGRAPHY</div><p class="sub-card-text">Editorial and commercial fashion photography for designers and brands.</p><div class="sub-arrow">&#8599;</div></div>
     </div>
   </section>
@@ -1420,6 +1471,20 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
   <p>1st ICRC Conference on Weapon-Wounded Care</p></div></div>
     <div style="margin-top:28px"><button class="btn btn-primary" onclick="goTo('contact')">Get a Quote</button></div>
   </section>
+  <section style="background:var(--black)">
+    <p class="eyebrow">Examples — wedding photography</p>
+    <h2 class="section-title">WEDDING PHOTOGRAPHY<br>PORTFOLIO</h2>
+    <div class="divider" style="margin-bottom:0"></div>
+    <div class="photo-gallery">
+      <div class="photo-gallery-header">
+        <span style="font-size:12px;color:var(--white2);opacity:.5;font-family:var(--fb);letter-spacing:1px" id="wedding-filming-gallery-count"></span>
+      </div>
+      <div class="photo-grid" id="wedding-filming-gallery">
+        <div class="photo-loading">Loading...</div>
+      </div>
+    </div>
+    <script>loadGallery('wedding', 'wedding-filming-gallery');</script>
+  </section>
 </div>
 
 <div class="page" id="page-drone-footage">
@@ -1813,6 +1878,20 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
   <p>Gérer l'urgence — Incendie Secours Genève</p></div></div>
     <div style="margin-top:28px"><button class="btn btn-primary" onclick="goTo('contact')">Get a Quote</button></div>
   </section>
+  <section style="background:var(--dark)">
+    <p class="eyebrow">Examples — event photography</p>
+    <h2 class="section-title">EVENT PHOTOGRAPHY<br>PORTFOLIO</h2>
+    <div class="divider" style="margin-bottom:0"></div>
+    <div class="photo-gallery">
+      <div class="photo-gallery-header">
+        <span style="font-size:12px;color:var(--white2);opacity:.5;font-family:var(--fb);letter-spacing:1px" id="events-gallery-count"></span>
+      </div>
+      <div class="photo-grid" id="events-gallery">
+        <div class="photo-loading">Loading...</div>
+      </div>
+    </div>
+    <script>loadGallery('Events', 'events-gallery');</script>
+  </section>
 </div>
 
 <div class="page" id="page-headshots-portraits">
@@ -1837,6 +1916,20 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
 <div class="video-item"><div class="vid-wrap" onclick="playVid(this,'oPBldw6mrxE')"><img class="vid-thumb" src="https://img.youtube.com/vi/oPBldw6mrxE/hqdefault.jpg" alt="Brand Film" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
   <p>Gstaad Real Estate</p></div></div>
     <div style="margin-top:28px"><button class="btn btn-primary" onclick="goTo('contact')">Get a Quote</button></div>
+  </section>
+  <section style="background:var(--dark)">
+    <p class="eyebrow">Examples — corporate portraits & headshots</p>
+    <h2 class="section-title">PORTRAIT<br>PHOTOGRAPHY</h2>
+    <div class="divider" style="margin-bottom:0"></div>
+    <div class="photo-gallery">
+      <div class="photo-gallery-header">
+        <span style="font-size:12px;color:var(--white2);opacity:.5;font-family:var(--fb);letter-spacing:1px" id="portraits-gallery-count"></span>
+      </div>
+      <div class="photo-grid" id="portraits-gallery">
+        <div class="photo-loading">Loading...</div>
+      </div>
+    </div>
+    <script>loadGallery('portraits', 'portraits-gallery');</script>
   </section>
 </div>
 
@@ -1863,6 +1956,20 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
   <p>Gérer l'urgence — Incendie Secours Genève</p></div></div>
     <div style="margin-top:28px"><button class="btn btn-primary" onclick="goTo('contact')">Get a Quote</button></div>
   </section>
+  <section style="background:var(--dark)">
+    <p class="eyebrow">Examples — conference photography</p>
+    <h2 class="section-title">CONFERENCE PHOTOGRAPHY<br>PORTFOLIO</h2>
+    <div class="divider" style="margin-bottom:0"></div>
+    <div class="photo-gallery">
+      <div class="photo-gallery-header">
+        <span style="font-size:12px;color:var(--white2);opacity:.5;font-family:var(--fb);letter-spacing:1px" id="conf-photo-gallery-count"></span>
+      </div>
+      <div class="photo-grid" id="conf-photo-gallery">
+        <div class="photo-loading">Loading...</div>
+      </div>
+    </div>
+    <script>loadGallery('Events', 'conf-photo-gallery', 50);</script>
+  </section>
 </div>
 
 <div class="page" id="page-ngo-photography">
@@ -1887,6 +1994,20 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
 <div class="video-item"><div class="vid-wrap" onclick="playVid(this,'k4YIP0iz9QE')"><img class="vid-thumb" src="https://img.youtube.com/vi/k4YIP0iz9QE/hqdefault.jpg" alt="Science Communication" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
   <p>The Three Old Men — Fête de la Musique 2024</p></div></div>
     <div style="margin-top:28px"><button class="btn btn-primary" onclick="goTo('contact')">Get a Quote</button></div>
+  </section>
+  <section style="background:var(--dark)">
+    <p class="eyebrow">Examples — NGO & field photography</p>
+    <h2 class="section-title">NGO PHOTOGRAPHY<br>PORTFOLIO</h2>
+    <div class="divider" style="margin-bottom:0"></div>
+    <div class="photo-gallery">
+      <div class="photo-gallery-header">
+        <span style="font-size:12px;color:var(--white2);opacity:.5;font-family:var(--fb);letter-spacing:1px" id="ngo-gallery-count"></span>
+      </div>
+      <div class="photo-grid" id="ngo-gallery">
+        <div class="photo-loading">Loading...</div>
+      </div>
+    </div>
+    <script>loadGallery('ngo', 'ngo-gallery');</script>
   </section>
 </div>
 
@@ -1995,6 +2116,20 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
   <p>1st ICRC Conference on Weapon-Wounded Care</p></div></div>
     <div style="margin-top:28px"><button class="btn btn-primary" onclick="goTo('contact')">Get a Quote</button></div>
   </section>
+  <section style="background:var(--dark)">
+    <p class="eyebrow">Examples — watch & jewellery photography</p>
+    <h2 class="section-title">WATCH PHOTOGRAPHY<br>PORTFOLIO</h2>
+    <div class="divider" style="margin-bottom:0"></div>
+    <div class="photo-gallery">
+      <div class="photo-gallery-header">
+        <span style="font-size:12px;color:var(--white2);opacity:.5;font-family:var(--fb);letter-spacing:1px" id="watches-gallery-count"></span>
+      </div>
+      <div class="photo-grid" id="watches-gallery">
+        <div class="photo-loading">Loading...</div>
+      </div>
+    </div>
+    <script>loadGallery('watches', 'watches-gallery');</script>
+  </section>
 </div>
 
 <div class="page" id="page-drone-photography">
@@ -2019,6 +2154,20 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
 <div class="video-item"><div class="vid-wrap" onclick="playVid(this,'AT0UAa-qKWE')"><img class="vid-thumb" src="https://img.youtube.com/vi/AT0UAa-qKWE/hqdefault.jpg" alt="Corporate Video" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
   <p>1st ICRC Conference on Weapon-Wounded Care</p></div></div>
     <div style="margin-top:28px"><button class="btn btn-primary" onclick="goTo('contact')">Get a Quote</button></div>
+  </section>
+  <section style="background:var(--dark)">
+    <p class="eyebrow">Examples — aerial & location photography</p>
+    <h2 class="section-title">AERIAL &amp; LOCATION<br>PHOTOGRAPHY</h2>
+    <div class="divider" style="margin-bottom:0"></div>
+    <div class="photo-gallery">
+      <div class="photo-gallery-header">
+        <span style="font-size:12px;color:var(--white2);opacity:.5;font-family:var(--fb);letter-spacing:1px" id="places-gallery-count"></span>
+      </div>
+      <div class="photo-grid" id="places-gallery">
+        <div class="photo-loading">Loading...</div>
+      </div>
+    </div>
+    <script>loadGallery('Places', 'places-gallery');</script>
   </section>
 </div>
 
@@ -2368,6 +2517,20 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
 </div>
     <div style="margin-top:28px"><button class="btn btn-primary" onclick="goTo('contact')">Get a Quote</button></div>
   </section>
+  <section style="background:var(--dark)">
+    <p class="eyebrow">Examples — educational & academic events</p>
+    <h2 class="section-title">EDUCATIONAL<br>PHOTOGRAPHY</h2>
+    <div class="divider" style="margin-bottom:0"></div>
+    <div class="photo-gallery">
+      <div class="photo-gallery-header">
+        <span style="font-size:12px;color:var(--white2);opacity:.5;font-family:var(--fb);letter-spacing:1px" id="edu-gallery-count"></span>
+      </div>
+      <div class="photo-grid" id="edu-gallery">
+        <div class="photo-loading">Loading...</div>
+      </div>
+    </div>
+    <script>loadGallery('educational', 'edu-gallery');</script>
+  </section>
 </div>
 
 <div class="page" id="page-music-session">
@@ -2472,6 +2635,20 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
 <div class="video-item"><div class="vid-wrap" onclick="playVid(this,'DncVHMS-ZAE')"><img class="vid-thumb" src="https://img.youtube.com/vi/DncVHMS-ZAE/hqdefault.jpg" alt="Conference Film" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
   <p>Gérer l'urgence — Incendie Secours Genève</p></div></div>
     <div style="margin-top:28px"><button class="btn btn-primary" onclick="goTo('contact')">Get a Quote</button></div>
+  </section>
+  <section style="background:var(--dark)">
+    <p class="eyebrow">Examples — behind the scenes & production</p>
+    <h2 class="section-title">PRODUCTION<br>PHOTOGRAPHY</h2>
+    <div class="divider" style="margin-bottom:0"></div>
+    <div class="photo-gallery">
+      <div class="photo-gallery-header">
+        <span style="font-size:12px;color:var(--white2);opacity:.5;font-family:var(--fb);letter-spacing:1px" id="prod-gallery-count"></span>
+      </div>
+      <div class="photo-grid" id="prod-gallery">
+        <div class="photo-loading">Loading...</div>
+      </div>
+    </div>
+    <script>loadGallery('production', 'prod-gallery');</script>
   </section>
 </div>
 
@@ -2896,6 +3073,92 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
 <div class="video-item"><div class="vid-wrap" onclick="playVid(this,'y3QwH0WYw1k')"><img class="vid-thumb" src="https://img.youtube.com/vi/y3QwH0WYw1k/hqdefault.jpg" alt="Lakevoices Neuchâtel — Full Concert" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
   <p>Lakevoices Neuchâtel — Full Concert</p>
 </div></div></div></section>
+  <section style="background:var(--dark)">
+    <p class="eyebrow">Examples — beauty & lifestyle</p>
+    <h2 class="section-title">INFLUENCER &amp; LIFESTYLE<br>PHOTOGRAPHY</h2>
+    <div class="divider" style="margin-bottom:0"></div>
+    <div class="photo-gallery">
+      <div class="photo-gallery-header">
+        <span style="font-size:12px;color:var(--white2);opacity:.5;font-family:var(--fb);letter-spacing:1px" id="beauty-gallery-count"></span>
+      </div>
+      <div class="photo-grid" id="beauty-gallery">
+        <div class="photo-loading">Loading...</div>
+      </div>
+    </div>
+    <script>loadGallery('influencers', 'beauty-gallery');</script>
+  </section>
+</div>
+
+
+<div class="page" id="page-locations">
+  <div class="sub-hero">
+    <p class="sub-hero-eyebrow">Geneva & Switzerland — Location Photography</p>
+    <h1 class="sub-hero-title">GENEVA &amp;<br>LOCATIONS</h1>
+    <p class="sub-hero-desc">Aerial and location photography across Geneva, Lake Geneva, and Switzerland. Landmarks, venues, and landscapes for productions and property.</p>
+    <div class="hero-actions">
+      <button class="btn btn-primary" onclick="goTo('contact')">Get a Quote</button>
+      <button class="btn btn-ghost" onclick="goTo('photography')">&#8592; Back</button>
+    </div>
+  </div>
+  
+  <section style="background:var(--black)">
+    <p class="eyebrow">Aerial & location photography</p>
+    <h2 class="section-title">GENEVA &amp; SWITZERLAND<br>LOCATION PHOTOGRAPHY</h2>
+    <div class="divider" style="margin-bottom:0"></div>
+    <div class="photo-gallery">
+      <div class="photo-gallery-header">
+        <span style="font-size:12px;color:var(--white2);opacity:.5;font-family:var(--fb);letter-spacing:1px" id="places-pg-gallery-count"></span>
+      </div>
+      <div class="photo-grid" id="places-pg-gallery">
+        <div class="photo-loading">Loading...</div>
+      </div>
+    </div>
+    <script>loadGallery('Places', 'places-pg-gallery');</script>
+  </section>
+</div>
+
+
+<div class="page" id="page-watches-photography">
+  <div class="sub-hero">
+    <p class="sub-hero-eyebrow">Watch & Jewellery Photography Geneva</p>
+    <h1 class="sub-hero-title">WATCHES &amp;<br>JEWELLERY</h1>
+    <p class="sub-hero-desc">Precision product photography for Swiss watches, timepieces, and jewellery. 216 photos. Clients include CVSTOS, Jacques Philippe, and other Geneva luxury brands.</p>
+    <div class="hero-actions">
+      <button class="btn btn-primary" onclick="goTo('contact')">Get a Quote</button>
+      <button class="btn btn-ghost" onclick="goTo('photography')">&#8592; Back</button>
+    </div>
+  </div>
+  
+  <section style="background:var(--black)">
+    <p class="eyebrow">216 photos — watch & jewellery photography</p>
+    <h2 class="section-title">WATCH &amp; JEWELLERY<br>PHOTOGRAPHY PORTFOLIO</h2>
+    <div class="divider" style="margin-bottom:0"></div>
+    <div class="photo-gallery">
+      <div class="photo-gallery-header">
+        <span style="font-size:12px;color:var(--white2);opacity:.5;font-family:var(--fb);letter-spacing:1px" id="watches-full-gallery-count"></span>
+      </div>
+      <div class="photo-grid" id="watches-full-gallery">
+        <div class="photo-loading">Loading...</div>
+      </div>
+    </div>
+    <script>loadGallery('watches', 'watches-full-gallery');</script>
+  </section>
+  <section style="background:var(--dark);padding:60px 5vw">
+    <div class="sub-body">
+      <h3 class="sub-section-title">Switzerland's Watch Photography Specialist</h3>
+      <p class="sub-p">FilmGeneva has produced an extensive library of over 200 watch and jewellery photographs for Swiss luxury brands. Geneva is the world capital of watchmaking — and we understand the precision, patience, and technical skill required to photograph timepieces that are engineering masterpieces.</p>
+      <p class="sub-p">Our watch photography portfolio spans macro detail shots, lifestyle placements, editorial compositions, and campaign imagery. We work with brands at all levels — from established Geneva maisons to independent watchmakers and emerging designers.</p>
+      <ul class="feat-list">
+        <li>Macro and detail watch photography</li>
+        <li>Lifestyle and wrist-shot photography</li>
+        <li>Editorial and campaign imagery</li>
+        <li>E-commerce and catalogue photography</li>
+        <li>Jewellery and accessory photography</li>
+        <li>Brand identity and marketing content</li>
+      </ul>
+    </div>
+    <div style="margin-top:28px"><button class="btn btn-primary" onclick="goTo('contact')">Get a Quote</button></div>
+  </section>
 </div>
 
 <footer>
@@ -2935,5 +3198,13 @@ function handleForm(e) {
   setTimeout(() => { btn.textContent = 'Send Message'; btn.style.background = ''; btn.style.color = ''; e.target.reset(); }, 4000);
 }
 </script>
+
+<div class="lightbox" id="lightbox" onclick="if(event.target===this)closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">&#215;</button>
+  <button class="lightbox-prev" onclick="lbNav(-1)">&#8249;</button>
+  <img id="lb-img" src="" alt="FilmGeneva">
+  <button class="lightbox-next" onclick="lbNav(1)">&#8250;</button>
+  <div class="lightbox-caption" id="lb-caption"></div>
+</div>
 </body>
 </html>

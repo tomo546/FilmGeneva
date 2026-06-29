@@ -1,0 +1,29 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "filmgeneva",
+  "main": "worker.js",
+  "compatibility_date": "2024-11-01",
+  "compatibility_flags": ["nodejs_compat"],
+
+  // R2 bucket binding for photo serving
+  "r2_buckets": [
+    {
+      "binding": "PHOTOS_BUCKET",
+      "bucket_name": "photoswebsite",
+      "preview_bucket_name": "photoswebsite"
+    }
+  ],
+
+  // Static assets (the HTML site) — serve_directly: false so Worker runs first
+  "assets": {
+    "directory": "./public",
+    "serve_directly": false,
+    "not_found_handling": "single-page-application"
+  },
+
+  // Routes (update domain as needed)
+  "routes": [
+    { "pattern": "filmgeneva.ch/*", "zone_name": "filmgeneva.ch" },
+    { "pattern": "www.filmgeneva.ch/*", "zone_name": "filmgeneva.ch" }
+  ]
+}
