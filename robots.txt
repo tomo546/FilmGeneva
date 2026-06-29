@@ -1,4 +1,14 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://filmgeneva.ch/sitemap.xml
+# Sitemaps
+Sitemap: https://www.filmgeneva.com/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1
+
+# Block common junk paths
+Disallow: /wp-admin/
+Disallow: /wp-login.php
+Disallow: /?s=
+Disallow: /search/

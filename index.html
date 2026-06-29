@@ -76,11 +76,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;height:64px;padding:0 5vw;di
 .btn-sm{padding:10px 22px;font-size:12px}
 
 /* ── CLIENTS ── */
-.clients-strip{background:var(--black);padding:44px 5vw;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-.clients-label{font-size:10px;letter-spacing:5px;text-transform:uppercase;color:var(--white2);opacity:.35;text-align:center;margin-bottom:32px;font-weight:500}
-.clients-list{display:flex;flex-wrap:wrap;justify-content:center;gap:36px 52px;align-items:center}
-.client-tag{font-family:var(--fd);font-size:17px;letter-spacing:3px;color:var(--white2);opacity:.28;transition:opacity .25s;cursor:default}
-.client-tag:hover{opacity:.6}
+
+
+
+
+
 
 /* ── SECTIONS ── */
 section{padding:88px 5vw}
@@ -190,6 +190,20 @@ textarea.f-input{resize:vertical;min-height:108px}
 .equip-text{font-size:13px;color:var(--white2);font-weight:300;line-height:1.6}
 
 /* ── FOOTER ── */
+
+/* ── CLIENTS STRIP REDESIGN ── */
+.clients-strip{background:var(--dark);padding:56px 5vw;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.clients-label{font-size:11px;letter-spacing:5px;text-transform:uppercase;color:var(--white2);opacity:.55;text-align:center;margin-bottom:40px;font-weight:500;font-family:var(--fb)}
+.clients-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:20px 16px;align-items:center;justify-items:center}
+.client-card{display:flex;flex-direction:column;align-items:center;gap:8px;padding:14px 8px;border-radius:4px;transition:background .2s,transform .2s;cursor:default;width:100%}
+.client-card:hover{background:rgba(255,255,255,.05);transform:translateY(-2px)}
+.client-logo-wrap{width:48px;height:48px;display:flex;align-items:center;justify-content:center;border-radius:6px;overflow:hidden;background:rgba(255,255,255,.07);padding:6px;flex-shrink:0}
+.client-logo-wrap img{width:100%;height:100%;object-fit:contain;filter:brightness(0) invert(1);opacity:.55;transition:opacity .2s}
+.client-card:hover .client-logo-wrap img{opacity:.85}
+.client-name-text{font-family:var(--fb);font-size:10px;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:var(--white2);opacity:.6;text-align:center;line-height:1.3;transition:opacity .2s}
+.client-card:hover .client-name-text{opacity:.95}
+@media(max-width:600px){.clients-grid{grid-template-columns:repeat(auto-fill,minmax(90px,1fr))}}
+
 footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px}
 .footer-logo{font-family:var(--fd);font-size:21px;letter-spacing:3px;cursor:pointer;color:var(--white)}
 .footer-logo span{color:var(--accent)}
@@ -378,11 +392,314 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
   </section>
 
   <div class="clients-strip">
-    <p class="clients-label">Previously worked with</p>
-    <div class="clients-list">
-      <span class="client-tag">BBC</span><span class="client-tag">ITV</span><span class="client-tag">TIKTOK</span><span class="client-tag">WHO</span><span class="client-tag">WTO</span><span class="client-tag">WMO</span><span class="client-tag">CERN</span><span class="client-tag">ICRC</span><span class="client-tag">AI FOR GOOD</span><span class="client-tag">CAMPUS BIOTECH</span><span class="client-tag">SWISS ECONOMIC FORUM</span><span class="client-tag">UNIVERSITY OF GENEVA</span><span class="client-tag">SWISS YOUNG ACADEMY</span><span class="client-tag">EDINBURGH NAPIER UNIVERSITY</span><span class="client-tag">MISSOURI SCHOOL OF JOURNALISM</span><span class="client-tag">MERCATOR OCEAN</span><span class="client-tag">EU4OCEANOBS</span><span class="client-tag">GEO BLUE PLANET</span><span class="client-tag">UNITED PEOPLE GLOBAL</span><span class="client-tag">IMPACT HUB</span><span class="client-tag">CAUX FORUM</span><span class="client-tag">CICG</span><span class="client-tag">INTERCONTINENTAL</span><span class="client-tag">INTERCITY HOTEL</span><span class="client-tag">PALEXPO</span><span class="client-tag">CVSTOS</span><span class="client-tag">JACQUES PHILIPPE</span><span class="client-tag">UNIVERSE CONSTANT</span><span class="client-tag">ALPS</span><span class="client-tag">TOMBOY FILMS</span><span class="client-tag">THE NEW BLACK FILM COLLECTIVE</span><span class="client-tag">SCOTTISH DOCUMENTARY INSTITUTE</span><span class="client-tag">TRUE/FALSE FILM FEST</span><span class="client-tag">SCI-FI FILM FEST</span><span class="client-tag">KINOTEKA</span><span class="client-tag">NEWSY</span><span class="client-tag">VIENNA INNOVATIONS LAB</span><span class="client-tag">ACTIVTRADES</span><span class="client-tag">THE TRAVEL CORPORATION</span><span class="client-tag">INSIGHT VACATIONS</span><span class="client-tag">TIDESQUARE</span><span class="client-tag">SEAGATE</span><span class="client-tag">PROTEIN METRICS</span><span class="client-tag">S.A.B.E.W.</span><span class="client-tag">AND MANY MORE</span>
-    </div>
+  <p class="clients-label">Previously worked with</p>
+  <div class="clients-grid">
+    <div class="client-card" title="BBC">
+  <div class="client-logo-wrap">
+    <img src="https://logo.clearbit.com/bbc.co.uk"
+         onerror="this.src='https://www.google.com/s2/favicons?sz=64&domain=bbc.co.uk';this.onerror=null"
+         alt="BBC" loading="lazy">
   </div>
+  <span class="client-name-text">BBC</span>
+</div>
+    <div class="client-card" title="ITV">
+  <div class="client-logo-wrap">
+    <img src="https://logo.clearbit.com/itv.com"
+         onerror="this.src='https://www.google.com/s2/favicons?sz=64&domain=itv.com';this.onerror=null"
+         alt="ITV" loading="lazy">
+  </div>
+  <span class="client-name-text">ITV</span>
+</div>
+    <div class="client-card" title="TikTok">
+  <div class="client-logo-wrap">
+    <img src="https://logo.clearbit.com/tiktok.com"
+         onerror="this.src='https://www.google.com/s2/favicons?sz=64&domain=tiktok.com';this.onerror=null"
+         alt="TikTok" loading="lazy">
+  </div>
+  <span class="client-name-text">TikTok</span>
+</div>
+    <div class="client-card" title="WHO">
+  <div class="client-logo-wrap">
+    <img src="https://logo.clearbit.com/who.int"
+         onerror="this.src='https://www.google.com/s2/favicons?sz=64&domain=who.int';this.onerror=null"
+         alt="WHO" loading="lazy">
+  </div>
+  <span class="client-name-text">WHO</span>
+</div>
+    <div class="client-card" title="WTO">
+  <div class="client-logo-wrap">
+    <img src="https://logo.clearbit.com/wto.org"
+         onerror="this.src='https://www.google.com/s2/favicons?sz=64&domain=wto.org';this.onerror=null"
+         alt="WTO" loading="lazy">
+  </div>
+  <span class="client-name-text">WTO</span>
+</div>
+    <div class="client-card" title="WMO">
+  <div class="client-logo-wrap">
+    <img src="https://logo.clearbit.com/wmo.int"
+         onerror="this.src='https://www.google.com/s2/favicons?sz=64&domain=wmo.int';this.onerror=null"
+         alt="WMO" loading="lazy">
+  </div>
+  <span class="client-name-text">WMO</span>
+</div>
+    <div class="client-card" title="CERN">
+  <div class="client-logo-wrap">
+    <img src="https://logo.clearbit.com/cern.ch"
+         onerror="this.src='https://www.google.com/s2/favicons?sz=64&domain=cern.ch';this.onerror=null"
+         alt="CERN" loading="lazy">
+  </div>
+  <span class="client-name-text">CERN</span>
+</div>
+    <div class="client-card" title="ICRC">
+  <div class="client-logo-wrap">
+    <img src="https://logo.clearbit.com/icrc.org"
+         onerror="this.src='https://www.google.com/s2/favicons?sz=64&domain=icrc.org';this.onerror=null"
+         alt="ICRC" loading="lazy">
+  </div>
+  <span class="client-name-text">ICRC</span>
+</div>
+    <div class="client-card" title="AI for Good">
+  <div class="client-logo-wrap">
+    <img src="https://logo.clearbit.com/aiforgood.itu.int"
+         onerror="this.src='https://www.google.com/s2/favicons?sz=64&domain=aiforgood.itu.int';this.onerror=null"
+         alt="AI for Good" loading="lazy">
+  </div>
+  <span class="client-name-text">AI for Good</span>
+</div>
+    <div class="client-card" title="Campus Biotech">
+  <div class="client-logo-wrap">
+    <img src="https://logo.clearbit.com/campusbiotech.ch"
+         onerror="this.src='https://www.google.com/s2/favicons?sz=64&domain=campusbiotech.ch';this.onerror=null"
+         alt="Campus Biotech" loading="lazy">
+  </div>
+  <span class="client-name-text">Campus Biotech</span>
+</div>
+    <div class="client-card" title="Swiss Economic Forum">
+  <div class="client-logo-wrap">
+    <img src="https://logo.clearbit.com/sef.ch"
+         onerror="this.src='https://www.google.com/s2/favicons?sz=64&domain=sef.ch';this.onerror=null"
+         alt="Swiss Economic Forum" loading="lazy">
+  </div>
+  <span class="client-name-text">Swiss Economic Forum</span>
+</div>
+    <div class="client-card" title="University of Geneva">
+  <div class="client-logo-wrap">
+    <img src="https://logo.clearbit.com/unige.ch"
+         onerror="this.src='https://www.google.com/s2/favicons?sz=64&domain=unige.ch';this.onerror=null"
+         alt="University of Geneva" loading="lazy">
+  </div>
+  <span class="client-name-text">University of Geneva</span>
+</div>
+    <div class="client-card" title="Mercator Ocean">
+  <div class="client-logo-wrap">
+    <img src="https://logo.clearbit.com/mercator-ocean.eu"
+         onerror="this.src='https://www.google.com/s2/favicons?sz=64&domain=mercator-ocean.eu';this.onerror=null"
+         alt="Mercator Ocean" loading="lazy">
+  </div>
+  <span class="client-name-text">Mercator Ocean</span>
+</div>
+    <div class="client-card" title="EU4OceanObs">
+  <div class="client-logo-wrap">
+    <img src="https://logo.clearbit.com/eu4oceanobs.eu"
+         onerror="this.src='https://www.google.com/s2/favicons?sz=64&domain=eu4oceanobs.eu';this.onerror=null"
+         alt="EU4OceanObs" loading="lazy">
+  </div>
+  <span class="client-name-text">EU4OceanObs</span>
+</div>
+    <div class="client-card" title="GEO Blue Planet">
+  <div class="client-logo-wrap">
+    <img src="https://logo.clearbit.com/geoblueplanet.org"
+         onerror="this.src='https://www.google.com/s2/favicons?sz=64&domain=geoblueplanet.org';this.onerror=null"
+         alt="GEO Blue Planet" loading="lazy">
+  </div>
+  <span class="client-name-text">GEO Blue Planet</span>
+</div>
+    <div class="client-card" title="United People Global">
+  <div class="client-logo-wrap">
+    <img src="https://logo.clearbit.com/unitedpeople.global"
+         onerror="this.src='https://www.google.com/s2/favicons?sz=64&domain=unitedpeople.global';this.onerror=null"
+         alt="United People Global" loading="lazy">
+  </div>
+  <span class="client-name-text">United People Global</span>
+</div>
+    <div class="client-card" title="Impact Hub">
+  <div class="client-logo-wrap">
+    <img src="https://logo.clearbit.com/impacthub.net"
+         onerror="this.src='https://www.google.com/s2/favicons?sz=64&domain=impacthub.net';this.onerror=null"
+         alt="Impact Hub" loading="lazy">
+  </div>
+  <span class="client-name-text">Impact Hub</span>
+</div>
+    <div class="client-card" title="Caux Forum">
+  <div class="client-logo-wrap">
+    <img src="https://logo.clearbit.com/caux.ch"
+         onerror="this.src='https://www.google.com/s2/favicons?sz=64&domain=caux.ch';this.onerror=null"
+         alt="Caux Forum" loading="lazy">
+  </div>
+  <span class="client-name-text">Caux Forum</span>
+</div>
+    <div class="client-card" title="CICG">
+  <div class="client-logo-wrap">
+    <img src="https://logo.clearbit.com/cicg.ch"
+         onerror="this.src='https://www.google.com/s2/favicons?sz=64&domain=cicg.ch';this.onerror=null"
+         alt="CICG" loading="lazy">
+  </div>
+  <span class="client-name-text">CICG</span>
+</div>
+    <div class="client-card" title="Intercontinental">
+  <div class="client-logo-wrap">
+    <img src="https://logo.clearbit.com/ihg.com"
+         onerror="this.src='https://www.google.com/s2/favicons?sz=64&domain=ihg.com';this.onerror=null"
+         alt="Intercontinental" loading="lazy">
+  </div>
+  <span class="client-name-text">Intercontinental</span>
+</div>
+    <div class="client-card" title="Intercity Hotel">
+  <div class="client-logo-wrap">
+    <img src="https://logo.clearbit.com/intercityhotel.com"
+         onerror="this.src='https://www.google.com/s2/favicons?sz=64&domain=intercityhotel.com';this.onerror=null"
+         alt="Intercity Hotel" loading="lazy">
+  </div>
+  <span class="client-name-text">Intercity Hotel</span>
+</div>
+    <div class="client-card" title="Palexpo">
+  <div class="client-logo-wrap">
+    <img src="https://logo.clearbit.com/palexpo.ch"
+         onerror="this.src='https://www.google.com/s2/favicons?sz=64&domain=palexpo.ch';this.onerror=null"
+         alt="Palexpo" loading="lazy">
+  </div>
+  <span class="client-name-text">Palexpo</span>
+</div>
+    <div class="client-card" title="CVSTOS">
+  <div class="client-logo-wrap">
+    <img src="https://logo.clearbit.com/cvstos.com"
+         onerror="this.src='https://www.google.com/s2/favicons?sz=64&domain=cvstos.com';this.onerror=null"
+         alt="CVSTOS" loading="lazy">
+  </div>
+  <span class="client-name-text">CVSTOS</span>
+</div>
+    <div class="client-card" title="Jacques Philippe">
+  <div class="client-logo-wrap">
+    <img src="https://logo.clearbit.com/jacquesphilippe.com"
+         onerror="this.src='https://www.google.com/s2/favicons?sz=64&domain=jacquesphilippe.com';this.onerror=null"
+         alt="Jacques Philippe" loading="lazy">
+  </div>
+  <span class="client-name-text">Jacques Philippe</span>
+</div>
+    <div class="client-card" title="Universe Constant">
+  <div class="client-logo-wrap">
+    <img src="https://logo.clearbit.com/universeconstant.com"
+         onerror="this.src='https://www.google.com/s2/favicons?sz=64&domain=universeconstant.com';this.onerror=null"
+         alt="Universe Constant" loading="lazy">
+  </div>
+  <span class="client-name-text">Universe Constant</span>
+</div>
+    <div class="client-card" title="Tomboy Films">
+  <div class="client-logo-wrap">
+    <img src="https://logo.clearbit.com/tomboy-films.com"
+         onerror="this.src='https://www.google.com/s2/favicons?sz=64&domain=tomboy-films.com';this.onerror=null"
+         alt="Tomboy Films" loading="lazy">
+  </div>
+  <span class="client-name-text">Tomboy Films</span>
+</div>
+    <div class="client-card" title="Scottish Documentary Institute">
+  <div class="client-logo-wrap">
+    <img src="https://logo.clearbit.com/scottishdocinstitute.com"
+         onerror="this.src='https://www.google.com/s2/favicons?sz=64&domain=scottishdocinstitute.com';this.onerror=null"
+         alt="Scottish Documentary Institute" loading="lazy">
+  </div>
+  <span class="client-name-text">Scottish Documentary Institute</span>
+</div>
+    <div class="client-card" title="True/False Film Fest">
+  <div class="client-logo-wrap">
+    <img src="https://logo.clearbit.com/truefalse.org"
+         onerror="this.src='https://www.google.com/s2/favicons?sz=64&domain=truefalse.org';this.onerror=null"
+         alt="True/False Film Fest" loading="lazy">
+  </div>
+  <span class="client-name-text">True/False Film Fest</span>
+</div>
+    <div class="client-card" title="Edinburgh Napier University">
+  <div class="client-logo-wrap">
+    <img src="https://logo.clearbit.com/napier.ac.uk"
+         onerror="this.src='https://www.google.com/s2/favicons?sz=64&domain=napier.ac.uk';this.onerror=null"
+         alt="Edinburgh Napier University" loading="lazy">
+  </div>
+  <span class="client-name-text">Edinburgh Napier University</span>
+</div>
+    <div class="client-card" title="University of Missouri">
+  <div class="client-logo-wrap">
+    <img src="https://logo.clearbit.com/missouri.edu"
+         onerror="this.src='https://www.google.com/s2/favicons?sz=64&domain=missouri.edu';this.onerror=null"
+         alt="University of Missouri" loading="lazy">
+  </div>
+  <span class="client-name-text">University of Missouri</span>
+</div>
+    <div class="client-card" title="Vienna Innovations Lab">
+  <div class="client-logo-wrap">
+    <img src="https://logo.clearbit.com/viennalab.at"
+         onerror="this.src='https://www.google.com/s2/favicons?sz=64&domain=viennalab.at';this.onerror=null"
+         alt="Vienna Innovations Lab" loading="lazy">
+  </div>
+  <span class="client-name-text">Vienna Innovations Lab</span>
+</div>
+    <div class="client-card" title="ActivTrades">
+  <div class="client-logo-wrap">
+    <img src="https://logo.clearbit.com/activtrades.com"
+         onerror="this.src='https://www.google.com/s2/favicons?sz=64&domain=activtrades.com';this.onerror=null"
+         alt="ActivTrades" loading="lazy">
+  </div>
+  <span class="client-name-text">ActivTrades</span>
+</div>
+    <div class="client-card" title="The Travel Corporation">
+  <div class="client-logo-wrap">
+    <img src="https://logo.clearbit.com/ttc.com"
+         onerror="this.src='https://www.google.com/s2/favicons?sz=64&domain=ttc.com';this.onerror=null"
+         alt="The Travel Corporation" loading="lazy">
+  </div>
+  <span class="client-name-text">The Travel Corporation</span>
+</div>
+    <div class="client-card" title="Insight Vacations">
+  <div class="client-logo-wrap">
+    <img src="https://logo.clearbit.com/insightvacations.com"
+         onerror="this.src='https://www.google.com/s2/favicons?sz=64&domain=insightvacations.com';this.onerror=null"
+         alt="Insight Vacations" loading="lazy">
+  </div>
+  <span class="client-name-text">Insight Vacations</span>
+</div>
+    <div class="client-card" title="Tidesquare">
+  <div class="client-logo-wrap">
+    <img src="https://logo.clearbit.com/tidesquare.co.kr"
+         onerror="this.src='https://www.google.com/s2/favicons?sz=64&domain=tidesquare.co.kr';this.onerror=null"
+         alt="Tidesquare" loading="lazy">
+  </div>
+  <span class="client-name-text">Tidesquare</span>
+</div>
+    <div class="client-card" title="Seagate">
+  <div class="client-logo-wrap">
+    <img src="https://logo.clearbit.com/seagate.com"
+         onerror="this.src='https://www.google.com/s2/favicons?sz=64&domain=seagate.com';this.onerror=null"
+         alt="Seagate" loading="lazy">
+  </div>
+  <span class="client-name-text">Seagate</span>
+</div>
+    <div class="client-card" title="Protein Metrics">
+  <div class="client-logo-wrap">
+    <img src="https://logo.clearbit.com/proteinmetrics.com"
+         onerror="this.src='https://www.google.com/s2/favicons?sz=64&domain=proteinmetrics.com';this.onerror=null"
+         alt="Protein Metrics" loading="lazy">
+  </div>
+  <span class="client-name-text">Protein Metrics</span>
+</div>
+    <div class="client-card" title="Swiss Young Academy">
+  <div class="client-logo-wrap">
+    <img src="https://logo.clearbit.com/swissyoungacademy.ch"
+         onerror="this.src='https://www.google.com/s2/favicons?sz=64&domain=swissyoungacademy.ch';this.onerror=null"
+         alt="Swiss Young Academy" loading="lazy">
+  </div>
+  <span class="client-name-text">Swiss Young Academy</span>
+</div>
+  </div>
+</div>
 
   <section style="background:var(--black)">
     <p class="eyebrow">Welcome to FilmGeneva</p>
