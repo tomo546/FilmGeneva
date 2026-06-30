@@ -270,7 +270,11 @@ export default {
     // Strip trailing slash for matching (except root)
     const matchPath = path !== '/' && path.endsWith('/') ? path.slice(0, -1) : path;
     const route = ROUTE_MAP[matchPath];
-    if (route) {
+    // The homepage needs no rewriting (it's already correct by default in
+    // the source HTML), so skip the rewriter entirely for "/" to minimise
+    // risk on the most important page — just fall through to normal asset
+    // serving below.
+    if (route && route.key !== 'home') {
       try {
         return await renderRoute(request, env, route);
       } catch (err) {

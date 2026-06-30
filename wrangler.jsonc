@@ -14,11 +14,13 @@
     }
   ],
 
-  // Static assets (the HTML site) — run_worker_first ensures the Worker
-  // code runs before falling back to static assets, so /photos/* and
-  // /api/photos/* are handled by the Worker rather than served as files.
+  // Static assets — directory "." matches the actual repo structure
+  // (index.html and fr-translations.json live at repo root, not in a
+  // public/ subfolder). run_worker_first ensures the Worker code runs
+  // before falling back to static assets, so /photos/*, /api/photos/*,
+  // and the clean-URL routes are handled by the Worker.
   "assets": {
-    "directory": "./public",
+    "directory": ".",
     "run_worker_first": true,
     "not_found_handling": "single-page-application"
   },
