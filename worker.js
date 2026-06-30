@@ -81,7 +81,7 @@ function withSecurityHeaders(response) {
     'Content-Security-Policy',
     [
       "default-src 'self'",
-      "script-src 'sha256-AM3nRwwZZrO3Wd1oO/2LQkvYEsmAM7YNs2jX6bwdjsk=' 'sha256-5kx2PO9zZPp/hxDDdKkqM2AZqy105k+CpXqAOQY/FCM='",
+      "script-src 'sha256-AM3nRwwZZrO3Wd1oO/2LQkvYEsmAM7YNs2jX6bwdjsk=' 'sha256-5kx2PO9zZPp/hxDDdKkqM2AZqy105k+CpXqAOQY/FCM=' https://static.cloudflareinsights.com",
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
       "font-src 'self' https://fonts.gstatic.com",
       "img-src 'self' https: data:",
