@@ -81,7 +81,7 @@ function withSecurityHeaders(response) {
     'Content-Security-Policy',
     [
       "default-src 'self'",
-      "script-src 'self' 'sha256-AM3nRwwZZrO3Wd1oO/2LQkvYEsmAM7YNs2jX6bwdjsk=' 'sha256-5kx2PO9zZPp/hxDDdKkqM2AZqy105k+CpXqAOQY/FCM='",
+      "script-src 'sha256-AM3nRwwZZrO3Wd1oO/2LQkvYEsmAM7YNs2jX6bwdjsk=' 'sha256-5kx2PO9zZPp/hxDDdKkqM2AZqy105k+CpXqAOQY/FCM='",
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
       "font-src 'self' https://fonts.gstatic.com",
       "img-src 'self' https: data:",
@@ -92,6 +92,8 @@ function withSecurityHeaders(response) {
       "form-action 'self'",
       "frame-ancestors 'self'",
       "upgrade-insecure-requests",
+      "require-trusted-types-for 'script'",
+      "trusted-types default",
     ].join('; ')
   );
   headers.set('Strict-Transport-Security', 'max-age=63072000; includeSubDomains; preload');
