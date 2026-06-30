@@ -92,13 +92,13 @@ section{padding:88px 5vw}
 /* ── SERVICES ── */
 .services-hdr{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:52px;flex-wrap:wrap;gap:24px}
 .svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1px;background:var(--border);border:1px solid var(--border)}
-.svc-card{background:var(--dark);padding:34px 30px;cursor:pointer;position:relative;overflow:hidden;transition:background .25s}
+.svc-card{background:var(--dark);padding:34px 30px;cursor:pointer;position:relative;overflow:hidden;transition:background .25s;color:var(--white);display:block}
 .svc-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--accent);transform:scaleX(0);transition:transform .3s;transform-origin:left}
 .svc-card:hover{background:var(--dark2)}
 .svc-card:hover::after{transform:scaleX(1)}
 .svc-num{font-family:var(--fd);font-size:42px;color:var(--dark3);margin-bottom:18px;transition:color .25s}
 .svc-card:hover .svc-num{color:rgba(232,184,106,.1)}
-.svc-name{font-family:var(--fd);font-size:23px;letter-spacing:2px;margin-bottom:8px}
+.svc-name{font-family:var(--fd);font-size:23px;letter-spacing:2px;margin-bottom:8px;color:var(--white)}
 .svc-desc{font-size:14px;color:var(--white2);line-height:1.6;font-weight:300}
 .svc-arrow{position:absolute;bottom:22px;right:22px;color:var(--accent);font-size:16px;opacity:0;transition:opacity .2s,transform .2s}
 .svc-card:hover .svc-arrow{opacity:1;transform:translate(2px,-2px)}
@@ -165,14 +165,14 @@ details[open] .faq-icon{transform:rotate(45deg)}
 @media(max-width:768px){.contact-grid{grid-template-columns:1fr;gap:40px}}
 .contact-detail{display:flex;align-items:flex-start;gap:14px;margin-bottom:22px}
 .contact-icon{width:36px;height:36px;background:var(--dark3);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:15px}
-.c-lbl{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--white2);opacity:.45;margin-bottom:3px;font-weight:500}
+.c-lbl{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--white2);opacity:.65;margin-bottom:3px;font-weight:500}
 .c-val{font-size:15px;color:var(--white);text-decoration:none;transition:color .2s}
 .c-val:hover{color:var(--accent)}
 .form-group{display:flex;flex-direction:column;gap:13px}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:13px}
 @media(max-width:600px){.form-row{grid-template-columns:1fr}}
 .form-field{display:flex;flex-direction:column;gap:6px}
-.f-lbl{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--white2);opacity:.5;font-weight:500}
+.f-lbl{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--white2);opacity:.65;font-weight:500}
 .f-input{background:var(--dark2);border:1px solid var(--border);color:var(--white);font-family:var(--fb);font-size:14px;padding:12px 14px;border-radius:var(--radius);outline:none;transition:border-color .2s;width:100%}
 .f-input:focus{border-color:rgba(232,184,106,.4)}
 .f-input::placeholder{color:rgba(255,255,255,.18)}
@@ -199,6 +199,8 @@ textarea.f-input{resize:vertical;min-height:108px}
 .clients-list{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 28px;align-items:center}
 .client-tag{font-family:var(--fd);font-size:22px;letter-spacing:3px;color:var(--white);opacity:.65;transition:opacity .2s,color .2s;cursor:default}
 .client-tag:hover{opacity:1;color:var(--accent)}
+.client-tag.featured{color:var(--accent);opacity:.9;font-size:24px}
+.client-tag.featured:hover{opacity:1}
 
 
 .sub-hero-title{font-size:54px!important}.hero-title{font-size:58px!important}.section-title{font-size:36px!important}}
@@ -211,7 +213,7 @@ textarea.f-input{resize:vertical;min-height:108px}
 .photo-grid{columns:3 280px;gap:12px}
 .photo-grid img{width:100%;display:block;margin-bottom:12px;border-radius:2px;cursor:pointer;transition:transform .25s,opacity .25s;opacity:.9}
 .photo-grid img:hover{transform:scale(1.02);opacity:1}
-.photo-loading{text-align:center;padding:48px;color:var(--white2);opacity:.5;font-family:var(--fb);font-size:13px;letter-spacing:2px;text-transform:uppercase}
+.photo-loading{text-align:center;padding:48px;color:var(--white2);opacity:.65;font-family:var(--fb);font-size:13px;letter-spacing:2px;text-transform:uppercase}
 /* Lightbox */
 .lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.95);z-index:1000;align-items:center;justify-content:center;padding:20px}
 .lightbox.open{display:flex}
@@ -315,7 +317,7 @@ textarea.f-input{resize:vertical;min-height:108px}
 .gallery-placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:64px 24px;text-align:center;background:var(--dark2);border:1px solid var(--border);border-radius:4px;grid-column:1/-1}
 .gallery-ph-icon{font-size:48px;margin-bottom:16px;opacity:.4}
 .gallery-ph-title{font-family:var(--fd);font-size:32px;letter-spacing:2px;color:var(--white);margin-bottom:8px}
-.gallery-ph-sub{font-size:14px;color:var(--white2);opacity:.6;font-weight:300}
+.gallery-ph-sub{font-size:14px;color:var(--white2);opacity:.7;font-weight:300}
 
 
 /* ── MOBILE MENU ── */
@@ -333,7 +335,7 @@ textarea.f-input{resize:vertical;min-height:108px}
 .gallery-placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:64px 24px;text-align:center;background:var(--dark2);border:1px solid var(--border);border-radius:4px;grid-column:1/-1}
 .gallery-ph-icon{font-size:48px;margin-bottom:16px;opacity:.4}
 .gallery-ph-title{font-family:var(--fd);font-size:32px;letter-spacing:2px;color:var(--white);margin-bottom:8px}
-.gallery-ph-sub{font-size:14px;color:var(--white2);opacity:.6;font-weight:300}
+.gallery-ph-sub{font-size:14px;color:var(--white2);opacity:.7;font-weight:300}
 @media(max-width:900px){.hamburger{display:flex}.nav-links{display:none!important}}
 @media(max-width:600px){.video-grid{grid-template-columns:1fr!important}.sub-hero-title{font-size:52px!important}.hero-title{font-size:56px!important}.section-title{font-size:34px!important}.page-two-col{grid-template-columns:1fr!important;gap:32px!important}.contact-grid{grid-template-columns:1fr!important}.two-col{grid-template-columns:1fr!important}}
 
@@ -361,6 +363,16 @@ textarea.f-input{resize:vertical;min-height:108px}
 .sc-placeholder:hover .sc-play-btn{transform:scale(1.1);background:var(--accent2)}
 .sc-play-label{font-size:11px;color:var(--white2);letter-spacing:1px;text-transform:uppercase;font-family:var(--fb)}
 
+
+
+/* ── Reset default link styling on converted nav/button/card anchors ── */
+.btn, .nav-links a, .footer-nav a, .mobile-menu a, .sub-card, .svc-card,
+.nav-logo, .footer-logo, .section-title a, .c-val, a.client-tag {
+  text-decoration: none;
+}
+.btn-ghost { color: var(--white2); }
+.btn-ghost:hover { color: var(--white); }
+.btn-primary { color: var(--black); }
 
 footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px}
 .footer-logo{font-family:var(--fd);font-size:21px;letter-spacing:3px;cursor:pointer;color:var(--white)}
@@ -587,14 +599,14 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
   <div class="clients-strip">
   <p class="clients-label" data-i18n>Previously worked with</p>
   <div class="clients-list">
-    <span class="client-tag">BBC</span>
-    <span class="client-tag">ITV</span>
-    <span class="client-tag">TikTok</span>
-    <span class="client-tag">WHO</span>
-    <span class="client-tag">WTO</span>
-    <span class="client-tag">WMO</span>
-    <span class="client-tag">CERN</span>
-    <span class="client-tag">ICRC</span>
+    <span class="client-tag featured">BBC</span>
+    <span class="client-tag featured">ITV</span>
+    <span class="client-tag featured">TikTok</span>
+    <span class="client-tag featured">WHO</span>
+    <span class="client-tag featured">WTO</span>
+    <span class="client-tag featured">WMO</span>
+    <span class="client-tag featured">CERN</span>
+    <span class="client-tag featured">ICRC</span>
     <span class="client-tag">AI for Good</span>
     <span class="client-tag">Campus Biotech</span>
     <span class="client-tag">Swiss Economic Forum</span>
@@ -629,6 +641,11 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
     <span class="client-tag">Artisa Group</span>
     <span class="client-tag">Tech Mahindra</span>
     <span class="client-tag">T&T Beauty Concierge</span>
+    <span class="client-tag">ASAGE</span>
+    <span class="client-tag">Permanent Mission of India</span>
+    <span class="client-tag">Secours Genève</span>
+    <span class="client-tag">UAE Mission</span>
+    <span class="client-tag">Young Ambassadors Programme</span>
     <span class="client-tag">and many more</span>
   </div>
 </div>
@@ -938,9 +955,15 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
 
 <!-- ══════════ PHOTOGRAPHY ══════════ -->
 <div class="page" id="page-photography">
-  <div class="sub-hero">
-    <p class="sub-hero-eyebrow" data-i18n>Professional Photography in Geneva</p>
-    <h1 class="sub-hero-title" data-i18n>PHOTO<br>GRAPHY</h1>
+  <div style="width:100%;height:480px;overflow:hidden;position:relative;margin-top:64px">
+    <img src="https://filmgeneva.ch/photos/Gifs/header.gif" alt="FilmGeneva" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block">
+    <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(9,9,9,0) 40%,rgba(9,9,9,1) 100%)"></div>
+    <div style="position:absolute;bottom:36px;left:5vw">
+      <p style="font-size:10px;letter-spacing:5px;text-transform:uppercase;color:#e8b86a;font-weight:500;font-family:DM Sans,sans-serif;margin-bottom:10px">Professional Photography in Geneva</p>
+      <h1 style="font-family:Bebas Neue,sans-serif;font-size:clamp(52px,8vw,100px);line-height:.92;letter-spacing:3px;color:#f4f1ed;margin:0">PHOTOGRAPHY</h1>
+    </div>
+  </div>
+  <div class="sub-hero" style="padding-top:36px">
     <p class="sub-hero-desc" data-i18n>Stunning Visuals for Brands, NGOs &amp; Personal Projects — Geneva-Based Photography Services. Competitive rates, tailored to your project.</p>
     <div class="hero-actions">
       <a class="btn btn-primary" href="/contact-filmgeneva" data-nav="contact" data-i18n>Request a Quote</a>
@@ -959,7 +982,7 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
     <div class="divider" style="margin-bottom:0"></div>
     <div class="photo-gallery">
       <div class="photo-gallery-header">
-        <span style="font-size:12px;color:var(--white2);opacity:.5;font-family:var(--fb);letter-spacing:1px" id="photo-main-events-count"></span>
+        <span style="font-size:12px;color:var(--white2);opacity:.65;font-family:var(--fb);letter-spacing:1px" id="photo-main-events-count"></span>
       </div>
       <div class="photo-grid" id="photo-main-events" data-folder="Events" data-limit="6">
         <div class="photo-loading">Loading...</div>
@@ -972,7 +995,7 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
     <div class="divider" style="margin-bottom:0"></div>
     <div class="photo-gallery">
       <div class="photo-gallery-header">
-        <span style="font-size:12px;color:var(--white2);opacity:.5;font-family:var(--fb);letter-spacing:1px" id="photo-main-watches-count"></span>
+        <span style="font-size:12px;color:var(--white2);opacity:.65;font-family:var(--fb);letter-spacing:1px" id="photo-main-watches-count"></span>
       </div>
       <div class="photo-grid" id="photo-main-watches" data-folder="watches" data-limit="6">
         <div class="photo-loading">Loading...</div>
@@ -985,7 +1008,7 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
     <div class="divider" style="margin-bottom:0"></div>
     <div class="photo-gallery">
       <div class="photo-gallery-header">
-        <span style="font-size:12px;color:var(--white2);opacity:.5;font-family:var(--fb);letter-spacing:1px" id="photo-main-portraits-count"></span>
+        <span style="font-size:12px;color:var(--white2);opacity:.65;font-family:var(--fb);letter-spacing:1px" id="photo-main-portraits-count"></span>
       </div>
       <div class="photo-grid" id="photo-main-portraits" data-folder="portraits" data-limit="6">
         <div class="photo-loading">Loading...</div>
@@ -998,7 +1021,7 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
     <div class="divider" style="margin-bottom:0"></div>
     <div class="photo-gallery">
       <div class="photo-gallery-header">
-        <span style="font-size:12px;color:var(--white2);opacity:.5;font-family:var(--fb);letter-spacing:1px" id="photo-main-ngo-count"></span>
+        <span style="font-size:12px;color:var(--white2);opacity:.65;font-family:var(--fb);letter-spacing:1px" id="photo-main-ngo-count"></span>
       </div>
       <div class="photo-grid" id="photo-main-ngo" data-folder="ngo" data-limit="6">
         <div class="photo-loading">Loading...</div>
@@ -1011,7 +1034,7 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
     <div class="divider" style="margin-bottom:0"></div>
     <div class="photo-gallery">
       <div class="photo-gallery-header">
-        <span style="font-size:12px;color:var(--white2);opacity:.5;font-family:var(--fb);letter-spacing:1px" id="photo-main-wedding-count"></span>
+        <span style="font-size:12px;color:var(--white2);opacity:.65;font-family:var(--fb);letter-spacing:1px" id="photo-main-wedding-count"></span>
       </div>
       <div class="photo-grid" id="photo-main-wedding" data-folder="wedding" data-limit="6">
         <div class="photo-loading">Loading...</div>
@@ -1024,7 +1047,7 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
     <div class="divider" style="margin-bottom:0"></div>
     <div class="photo-gallery">
       <div class="photo-gallery-header">
-        <span style="font-size:12px;color:var(--white2);opacity:.5;font-family:var(--fb);letter-spacing:1px" id="photo-main-places-count"></span>
+        <span style="font-size:12px;color:var(--white2);opacity:.65;font-family:var(--fb);letter-spacing:1px" id="photo-main-places-count"></span>
       </div>
       <div class="photo-grid" id="photo-main-places" data-folder="Places" data-limit="6">
         <div class="photo-loading">Loading...</div>
@@ -1037,7 +1060,7 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
     <div class="divider" style="margin-bottom:0"></div>
     <div class="photo-gallery">
       <div class="photo-gallery-header">
-        <span style="font-size:12px;color:var(--white2);opacity:.5;font-family:var(--fb);letter-spacing:1px" id="photo-main-production-count"></span>
+        <span style="font-size:12px;color:var(--white2);opacity:.65;font-family:var(--fb);letter-spacing:1px" id="photo-main-production-count"></span>
       </div>
       <div class="photo-grid" id="photo-main-production" data-folder="production" data-limit="6">
         <div class="photo-loading">Loading...</div>
@@ -1050,7 +1073,7 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
     <div class="divider" style="margin-bottom:0"></div>
     <div class="photo-gallery">
       <div class="photo-gallery-header">
-        <span style="font-size:12px;color:var(--white2);opacity:.5;font-family:var(--fb);letter-spacing:1px" id="photo-main-influencers-count"></span>
+        <span style="font-size:12px;color:var(--white2);opacity:.65;font-family:var(--fb);letter-spacing:1px" id="photo-main-influencers-count"></span>
       </div>
       <div class="photo-grid" id="photo-main-influencers" data-folder="influencers" data-limit="6">
         <div class="photo-loading">Loading...</div>
@@ -1063,7 +1086,7 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
     <div class="divider" style="margin-bottom:0"></div>
     <div class="photo-gallery">
       <div class="photo-gallery-header">
-        <span style="font-size:12px;color:var(--white2);opacity:.5;font-family:var(--fb);letter-spacing:1px" id="photo-main-educational-count"></span>
+        <span style="font-size:12px;color:var(--white2);opacity:.65;font-family:var(--fb);letter-spacing:1px" id="photo-main-educational-count"></span>
       </div>
       <div class="photo-grid" id="photo-main-educational" data-folder="educational" data-limit="6">
         <div class="photo-loading">Loading...</div>
@@ -1103,9 +1126,15 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
 
 <!-- ══════════ PODCASTS ══════════ -->
 <div class="page" id="page-podcasts">
-  <div class="sub-hero">
-    <p class="sub-hero-eyebrow" data-i18n>Podcast & Audio Services in Geneva</p>
-    <h1 class="sub-hero-title" data-i18n>PODCASTS<br>&amp; AUDIO</h1>
+  <div style="width:100%;height:480px;overflow:hidden;position:relative;margin-top:64px">
+    <img src="https://filmgeneva.ch/photos/Gifs/header.gif" alt="FilmGeneva" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block">
+    <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(9,9,9,0) 40%,rgba(9,9,9,1) 100%)"></div>
+    <div style="position:absolute;bottom:36px;left:5vw">
+      <p style="font-size:10px;letter-spacing:5px;text-transform:uppercase;color:#e8b86a;font-weight:500;font-family:DM Sans,sans-serif;margin-bottom:10px">Podcast & Audio Services in Geneva</p>
+      <h1 style="font-family:Bebas Neue,sans-serif;font-size:clamp(52px,8vw,100px);line-height:.92;letter-spacing:3px;color:#f4f1ed;margin:0">PODCASTS &amp; AUDIO</h1>
+    </div>
+  </div>
+  <div class="sub-hero" style="padding-top:36px">
     <p class="sub-hero-desc" data-i18n>Crystal-Clear Sound for Films, Podcasts &amp; Events — Studio-Quality Audio Services in Switzerland. Very competitive pricing, tailored to your project.</p>
     <div class="hero-actions">
       <a class="btn btn-primary" href="/contact-filmgeneva" data-nav="contact" data-i18n>Request a Quote</a>
@@ -1204,9 +1233,15 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
 
 <!-- ══════════ ABOUT ══════════ -->
 <div class="page" id="page-about">
-  <div class="sub-hero">
-    <p class="sub-hero-eyebrow" data-i18n>About FilmGeneva</p>
-    <h1 class="sub-hero-title" data-i18n>FILM<br>GENEVA</h1>
+  <div style="width:100%;height:480px;overflow:hidden;position:relative;margin-top:64px">
+    <img src="https://filmgeneva.ch/photos/Gifs/header.gif" alt="FilmGeneva" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block">
+    <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(9,9,9,0) 40%,rgba(9,9,9,1) 100%)"></div>
+    <div style="position:absolute;bottom:36px;left:5vw">
+      <p style="font-size:10px;letter-spacing:5px;text-transform:uppercase;color:#e8b86a;font-weight:500;font-family:DM Sans,sans-serif;margin-bottom:10px">About FilmGeneva</p>
+      <h1 style="font-family:Bebas Neue,sans-serif;font-size:clamp(52px,8vw,100px);line-height:.92;letter-spacing:3px;color:#f4f1ed;margin:0">FILM GENEVA</h1>
+    </div>
+  </div>
+  <div class="sub-hero" style="padding-top:36px">
     <p class="sub-hero-desc" data-i18n>Professional video and photography production based in Geneva, Switzerland. Serving NGOs, corporations, universities, and international clients since 2021.</p>
     <div class="hero-actions">
       <a class="btn btn-primary" href="/contact-filmgeneva" data-nav="contact" data-i18n>Get in Touch</a>
@@ -1513,9 +1548,7 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
 <div class="video-item"><div class="vid-wrap" data-yt="F7lGeAHsqag"><img class="vid-thumb" src="https://img.youtube.com/vi/F7lGeAHsqag/hqdefault.jpg" alt="Interview — Political/NGO" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
   <p>Interview — Political/NGO</p>
 </div>
-<div class="video-item"><div class="vid-wrap" data-yt="dDuGJ3aJoNw"><img class="vid-thumb" src="https://img.youtube.com/vi/dDuGJ3aJoNw/hqdefault.jpg" alt="WHO Interview" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
-  <p>WHO Interview</p>
-</div>
+
 </div>
     <div style="margin-top:28px"><a class="btn btn-primary" href="/contact-filmgeneva" data-nav="contact" data-i18n>Get a Quote</a></div>
   </section>
@@ -1653,7 +1686,7 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
     <div class="divider" style="margin-bottom:0"></div>
     <div class="photo-gallery">
       <div class="photo-gallery-header">
-        <span style="font-size:12px;color:var(--white2);opacity:.5;font-family:var(--fb);letter-spacing:1px" id="wedding-filming-gallery-count"></span>
+        <span style="font-size:12px;color:var(--white2);opacity:.65;font-family:var(--fb);letter-spacing:1px" id="wedding-filming-gallery-count"></span>
       </div>
       <div class="photo-grid" id="wedding-filming-gallery" data-folder="wedding">
         <div class="photo-loading">Loading...</div>
@@ -1679,9 +1712,7 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
     <h2 class="section-title" data-i18n>RELEVANT WORK</h2>
     <div class="divider" style="margin-bottom:0"></div>
     <div class="video-grid">
-<div class="video-item"><div class="vid-wrap" data-yt="UGUVQ4MxFtA"><img class="vid-thumb" src="https://img.youtube.com/vi/UGUVQ4MxFtA/hqdefault.jpg" alt="Aerial Rope Performance" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
-  <p>Aerial Rope Performance</p>
-</div>
+
 </div>
     <div style="margin-top:28px"><a class="btn btn-primary" href="/contact-filmgeneva" data-nav="contact" data-i18n>Get a Quote</a></div>
   </section>
@@ -1973,7 +2004,7 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
     <div class="divider" style="margin-bottom:0"></div>
     <div class="photo-gallery">
       <div class="photo-gallery-header">
-        <span style="font-size:12px;color:var(--white2);opacity:.5;font-family:var(--fb);letter-spacing:1px" id="events-gallery-count"></span>
+        <span style="font-size:12px;color:var(--white2);opacity:.65;font-family:var(--fb);letter-spacing:1px" id="events-gallery-count"></span>
       </div>
       <div class="photo-grid" id="events-gallery" data-folder="Events">
         <div class="photo-loading">Loading...</div>
@@ -2001,7 +2032,7 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
     <div class="divider" style="margin-bottom:0"></div>
     <div class="photo-gallery">
       <div class="photo-gallery-header">
-        <span style="font-size:12px;color:var(--white2);opacity:.5;font-family:var(--fb);letter-spacing:1px" id="portraits-gallery-count"></span>
+        <span style="font-size:12px;color:var(--white2);opacity:.65;font-family:var(--fb);letter-spacing:1px" id="portraits-gallery-count"></span>
       </div>
       <div class="photo-grid" id="portraits-gallery" data-folder="portraits">
         <div class="photo-loading">Loading...</div>
@@ -2029,7 +2060,7 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
     <div class="divider" style="margin-bottom:0"></div>
     <div class="photo-gallery">
       <div class="photo-gallery-header">
-        <span style="font-size:12px;color:var(--white2);opacity:.5;font-family:var(--fb);letter-spacing:1px" id="conf-photo-gallery-count"></span>
+        <span style="font-size:12px;color:var(--white2);opacity:.65;font-family:var(--fb);letter-spacing:1px" id="conf-photo-gallery-count"></span>
       </div>
       <div class="photo-grid" id="conf-photo-gallery" data-folder="Events" data-limit="50">
         <div class="photo-loading">Loading...</div>
@@ -2057,7 +2088,7 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
     <div class="divider" style="margin-bottom:0"></div>
     <div class="photo-gallery">
       <div class="photo-gallery-header">
-        <span style="font-size:12px;color:var(--white2);opacity:.5;font-family:var(--fb);letter-spacing:1px" id="ngo-gallery-count"></span>
+        <span style="font-size:12px;color:var(--white2);opacity:.65;font-family:var(--fb);letter-spacing:1px" id="ngo-gallery-count"></span>
       </div>
       <div class="photo-grid" id="ngo-gallery" data-folder="ngo">
         <div class="photo-loading">Loading...</div>
@@ -2127,7 +2158,7 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
     <div class="divider" style="margin-bottom:0"></div>
     <div class="photo-gallery">
       <div class="photo-gallery-header">
-        <span style="font-size:12px;color:var(--white2);opacity:.5;font-family:var(--fb);letter-spacing:1px" id="watches-gallery-count"></span>
+        <span style="font-size:12px;color:var(--white2);opacity:.65;font-family:var(--fb);letter-spacing:1px" id="watches-gallery-count"></span>
       </div>
       <div class="photo-grid" id="watches-gallery" data-folder="watches">
         <div class="photo-loading">Loading...</div>
@@ -2155,7 +2186,7 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
     <div class="divider" style="margin-bottom:0"></div>
     <div class="photo-gallery">
       <div class="photo-gallery-header">
-        <span style="font-size:12px;color:var(--white2);opacity:.5;font-family:var(--fb);letter-spacing:1px" id="places-gallery-count"></span>
+        <span style="font-size:12px;color:var(--white2);opacity:.65;font-family:var(--fb);letter-spacing:1px" id="places-gallery-count"></span>
       </div>
       <div class="photo-grid" id="places-gallery" data-folder="Places">
         <div class="photo-loading">Loading...</div>
@@ -2496,7 +2527,7 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
     <div class="divider" style="margin-bottom:0"></div>
     <div class="photo-gallery">
       <div class="photo-gallery-header">
-        <span style="font-size:12px;color:var(--white2);opacity:.5;font-family:var(--fb);letter-spacing:1px" id="edu-gallery-count"></span>
+        <span style="font-size:12px;color:var(--white2);opacity:.65;font-family:var(--fb);letter-spacing:1px" id="edu-gallery-count"></span>
       </div>
       <div class="photo-grid" id="edu-gallery" data-folder="educational">
         <div class="photo-loading">Loading...</div>
@@ -2592,7 +2623,7 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
     <div class="divider" style="margin-bottom:0"></div>
     <div class="photo-gallery">
       <div class="photo-gallery-header">
-        <span style="font-size:12px;color:var(--white2);opacity:.5;font-family:var(--fb);letter-spacing:1px" id="prod-gallery-count"></span>
+        <span style="font-size:12px;color:var(--white2);opacity:.65;font-family:var(--fb);letter-spacing:1px" id="prod-gallery-count"></span>
       </div>
       <div class="photo-grid" id="prod-gallery" data-folder="production">
         <div class="photo-loading">Loading...</div>
@@ -2923,12 +2954,8 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
   <section style="background:var(--black)"><div class="sub-body"><h3 class="sub-section-title" data-i18n>Covering the World's Most Important Gatherings</h3><p class="sub-p" data-i18n>Geneva and Davos are two of the world's most important locations for international business, diplomacy, and policy. FilmGeneva covers corporate events and gatherings throughout Switzerland — from the annual meetings in Davos and the major conference season in Geneva to NGO summits, leadership forums, and industry gatherings across the country.</p><p class="sub-p" data-i18n>We understand the pace and prestige of high-level international events. We work efficiently in complex multi-stakeholder environments, capture the key moments and atmosphere, and deliver polished content quickly — whether you need a same-day social clip or a comprehensive highlight film.</p><ul class='feat-list'><li>World Economic Forum side events and corporate gatherings in Davos</li><li>Geneva conference season coverage — Palexpo, CICG, WMO, WHO</li><li>Leadership forum and roundtable coverage</li><li>NGO summits and international organisation events</li><li>Corporate hospitality and networking event coverage</li><li>Same-day highlight reels for social media</li><li>Multi-day event coverage packages</li></ul><div class="video-grid" style="margin-top:32px"><div class="video-item"><div class="vid-wrap" data-yt="9HZSgMghWQs"><img class="vid-thumb" src="https://img.youtube.com/vi/9HZSgMghWQs/hqdefault.jpg" alt="Tech Mahindra Annual Drinks — Davos" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
   <p>Tech Mahindra Annual Drinks — Davos</p>
 </div>
-<div class="video-item"><div class="vid-wrap" data-yt="AT0UAa-qKWE"><img class="vid-thumb" src="https://img.youtube.com/vi/AT0UAa-qKWE/hqdefault.jpg" alt="1st ICRC Conference on Weapon-Wounded Care" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
-  <p>1st ICRC Conference on Weapon-Wounded Care</p>
-</div>
-<div class="video-item"><div class="vid-wrap" data-yt="2Cayeud1Mko"><img class="vid-thumb" src="https://img.youtube.com/vi/2Cayeud1Mko/hqdefault.jpg" alt="Caux Forum: Just Governance for Human Security" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
-  <p>Caux Forum: Just Governance for Human Security</p>
-</div>
+
+
 <div class="video-item"><div class="vid-wrap" data-yt="DncVHMS-ZAE"><img class="vid-thumb" src="https://img.youtube.com/vi/DncVHMS-ZAE/hqdefault.jpg" alt="Gérer l'urgence — Incendie Secours Genève" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
   <p>Gérer l'urgence — Incendie Secours Genève</p>
 </div>
@@ -2987,16 +3014,14 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
   <section style="background:var(--black)"><div class="sub-body"><h3 class="sub-section-title" data-i18n>Premium Content for Beauty and Lifestyle Brands</h3><p class="sub-p" data-i18n>Geneva is home to luxury brands, wellness businesses, and a thriving community of lifestyle content creators. FilmGeneva produces high-quality video content for beauty brands, lifestyle influencers, wellness businesses, and luxury retail — combining cinematic production values with the authentic, personal tone that performs on social media.</p><p class="sub-p" data-i18n>Beauty and lifestyle content requires a specific visual sensibility — attention to colour, texture, and detail; lighting that flatters both products and people; and an editing rhythm that matches the platform and audience. FilmGeneva delivers content that looks premium, feels authentic, and performs.</p><ul class='feat-list'><li>Beauty brand product and campaign videos</li><li>Influencer content production — Reels, Shorts, TikTok</li><li>Brand partnership and sponsored content</li><li>Wellness and lifestyle brand films</li><li>Luxury retail and hospitality content</li><li>Tutorial and how-to video production</li><li>Social media content packages for ongoing creators</li><li>Colour grading optimised for beauty content</li></ul><div class="video-grid" style="margin-top:32px"><div class="video-item"><div class="vid-wrap" data-yt="56w2AKriTis"><img class="vid-thumb" src="https://img.youtube.com/vi/56w2AKriTis/hqdefault.jpg" alt="T&T Beauty Concierge" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
   <p>T&T Beauty Concierge</p>
 </div>
-<div class="video-item"><div class="vid-wrap" data-yt="y3QwH0WYw1k"><img class="vid-thumb" src="https://img.youtube.com/vi/y3QwH0WYw1k/hqdefault.jpg" alt="Lakevoices Neuchâtel — Full Concert" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
-  <p>Lakevoices Neuchâtel — Full Concert</p>
-</div></div></div></section>
+</div></div></section>
   <section style="background:var(--dark)">
     <p class="eyebrow" data-i18n>Examples — beauty & lifestyle</p>
     <h2 class="section-title" data-i18n>INFLUENCER &amp; LIFESTYLE<br>PHOTOGRAPHY</h2>
     <div class="divider" style="margin-bottom:0"></div>
     <div class="photo-gallery">
       <div class="photo-gallery-header">
-        <span style="font-size:12px;color:var(--white2);opacity:.5;font-family:var(--fb);letter-spacing:1px" id="beauty-gallery-count"></span>
+        <span style="font-size:12px;color:var(--white2);opacity:.65;font-family:var(--fb);letter-spacing:1px" id="beauty-gallery-count"></span>
       </div>
       <div class="photo-grid" id="beauty-gallery" data-folder="influencers">
         <div class="photo-loading">Loading...</div>
@@ -3024,7 +3049,7 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
     <div class="divider" style="margin-bottom:0"></div>
     <div class="photo-gallery">
       <div class="photo-gallery-header">
-        <span style="font-size:12px;color:var(--white2);opacity:.5;font-family:var(--fb);letter-spacing:1px" id="places-pg-gallery-count"></span>
+        <span style="font-size:12px;color:var(--white2);opacity:.65;font-family:var(--fb);letter-spacing:1px" id="places-pg-gallery-count"></span>
       </div>
       <div class="photo-grid" id="places-pg-gallery" data-folder="Places">
         <div class="photo-loading">Loading...</div>
@@ -3052,7 +3077,7 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
     <div class="divider" style="margin-bottom:0"></div>
     <div class="photo-gallery">
       <div class="photo-gallery-header">
-        <span style="font-size:12px;color:var(--white2);opacity:.5;font-family:var(--fb);letter-spacing:1px" id="watches-full-gallery-count"></span>
+        <span style="font-size:12px;color:var(--white2);opacity:.65;font-family:var(--fb);letter-spacing:1px" id="watches-full-gallery-count"></span>
       </div>
       <div class="photo-grid" id="watches-full-gallery" data-folder="watches">
         <div class="photo-loading">Loading...</div>
@@ -3080,9 +3105,15 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
 
 
 <div class="page" id="page-production-company">
-  <div class="sub-hero">
-    <p class="sub-hero-eyebrow">End-to-End Production in Switzerland</p>
-    <h1 class="sub-hero-title">PRODUCTION<br>COMPANY</h1>
+  <div style="width:100%;height:480px;overflow:hidden;position:relative;margin-top:64px">
+    <img src="https://filmgeneva.ch/photos/Gifs/header.gif" alt="FilmGeneva" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block">
+    <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(9,9,9,0) 40%,rgba(9,9,9,1) 100%)"></div>
+    <div style="position:absolute;bottom:36px;left:5vw">
+      <p style="font-size:10px;letter-spacing:5px;text-transform:uppercase;color:#e8b86a;font-weight:500;font-family:DM Sans,sans-serif;margin-bottom:10px">End-to-End Production in Switzerland</p>
+      <h1 style="font-family:Bebas Neue,sans-serif;font-size:clamp(52px,8vw,100px);line-height:.92;letter-spacing:3px;color:#f4f1ed;margin:0">PRODUCTION COMPANY</h1>
+    </div>
+  </div>
+  <div class="sub-hero" style="padding-top:36px">
     <p class="sub-hero-desc">From scriptwriting to final cut — full production support for shoots in Geneva and across Switzerland. Location scouting, permits, crew, equipment, set coordination, and logistics, all under one roof.</p>
     <div class="hero-actions">
       <a class="btn btn-primary" href="/contact-filmgeneva" data-nav="contact">Get a Quote</a>
@@ -3096,7 +3127,7 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
     <div class="divider" style="margin-bottom:0"></div>
     <div class="photo-gallery">
       <div class="photo-gallery-header">
-        <span style="font-size:12px;color:var(--white2);opacity:.5;font-family:var(--fb);letter-spacing:1px" id="prod-co-production-count"></span>
+        <span style="font-size:12px;color:var(--white2);opacity:.65;font-family:var(--fb);letter-spacing:1px" id="prod-co-production-count"></span>
       </div>
       <div class="photo-grid" id="prod-co-production" data-folder="production" data-limit="6">
         <div class="photo-loading">Loading...</div>
@@ -3109,7 +3140,7 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
     <div class="divider" style="margin-bottom:0"></div>
     <div class="photo-gallery">
       <div class="photo-gallery-header">
-        <span style="font-size:12px;color:var(--white2);opacity:.5;font-family:var(--fb);letter-spacing:1px" id="prod-co-events-count"></span>
+        <span style="font-size:12px;color:var(--white2);opacity:.65;font-family:var(--fb);letter-spacing:1px" id="prod-co-events-count"></span>
       </div>
       <div class="photo-grid" id="prod-co-events" data-folder="Events" data-limit="6">
         <div class="photo-loading">Loading...</div>
@@ -3122,7 +3153,7 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
     <div class="divider" style="margin-bottom:0"></div>
     <div class="photo-gallery">
       <div class="photo-gallery-header">
-        <span style="font-size:12px;color:var(--white2);opacity:.5;font-family:var(--fb);letter-spacing:1px" id="prod-co-places-count"></span>
+        <span style="font-size:12px;color:var(--white2);opacity:.65;font-family:var(--fb);letter-spacing:1px" id="prod-co-places-count"></span>
       </div>
       <div class="photo-grid" id="prod-co-places" data-folder="Places" data-limit="6">
         <div class="photo-loading">Loading...</div>

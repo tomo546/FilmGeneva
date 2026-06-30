@@ -21,6 +21,40 @@ Crawl-delay: 1
 Disallow: /api/
 `;
 
+const LLMS_TXT = `# FilmGeneva
+
+> Professional video production, photography, livestreaming, and podcast recording company based in Geneva, Switzerland, serving NGOs, corporations, international organisations, and individual clients across Switzerland and internationally.
+
+FilmGeneva produces corporate video, event filming, conference coverage, livestreaming, photography, podcast and audio recording, and drone/aerial work. Clients include the BBC, ITV, WHO, WTO, CERN, ICRC, AI for Good, TikTok, Campus Biotech, the Swiss Economic Forum, and the University of Geneva, among others. Cameras include Panasonic Lumix, Sony FX series, and Canon EOS, shooting up to 8K.
+
+## Main sections
+
+- [Home](https://filmgeneva.ch/) — Overview of services, clients, and company information
+- [Video Production](https://filmgeneva.ch/video-production) — Corporate video, documentaries, event filming, NGO content
+- [Livestreaming](https://filmgeneva.ch/livestreaming-geneva) — Conference, hybrid event, and concert livestreaming
+- [Photography](https://filmgeneva.ch/photography-geneva) — Event, corporate, portrait, real estate, and product photography
+- [Podcasts & Audio](https://filmgeneva.ch/podcast-recording-geneva) — Podcast recording, concert recording, lecture recording
+- [Production Company](https://filmgeneva.ch/production-company-geneva) — End-to-end production support: location scouting, permits, crew, equipment
+- [About](https://filmgeneva.ch/about-filmgeneva) — Company background, equipment, and client testimonials
+- [Contact](https://filmgeneva.ch/contact-filmgeneva) — Phone, email, WhatsApp, Signal, Telegram, and quote request form
+
+## Notable specialised pages
+
+- [NGO Video Production](https://filmgeneva.ch/ngo-video-production-geneva)
+- [Conference Filming](https://filmgeneva.ch/conference-filming-geneva)
+- [Wedding Videography](https://filmgeneva.ch/wedding-videographer-geneva)
+- [Drone & Aerial Filming](https://filmgeneva.ch/drone-filming-geneva-switzerland)
+- [Watch & Jewellery Photography](https://filmgeneva.ch/watch-photography-geneva)
+- [Political & Diplomatic Video](https://filmgeneva.ch/political-diplomatic-video-geneva)
+- [WHO Interview Production](https://filmgeneva.ch/who-interview-production-geneva)
+
+## Contact
+
+Phone / WhatsApp / Signal / Telegram: +41 76 747 77 14
+Email: filmgeneva1@gmail.com
+Address: Rue de Vermont 42, Geneva, Switzerland
+`;
+
 const SITEMAP_XML = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://filmgeneva.ch/</loc><priority>1.0</priority><changefreq>weekly</changefreq></url>
@@ -201,6 +235,13 @@ export default {
     if (path === '/robots.txt') {
       return withSecurityHeaders(new Response(ROBOTS_TXT, {
         headers: { 'Content-Type': 'text/plain', 'Cache-Control': 'public, max-age=86400' },
+      }));
+    }
+
+    // ── llms.txt (for AI agent / LLM crawlers) ───────────────────────────────
+    if (path === '/llms.txt') {
+      return withSecurityHeaders(new Response(LLMS_TXT, {
+        headers: { 'Content-Type': 'text/markdown; charset=utf-8', 'Cache-Control': 'public, max-age=86400' },
       }));
     }
 
