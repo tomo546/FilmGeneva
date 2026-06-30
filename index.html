@@ -346,6 +346,16 @@ textarea.f-input{resize:vertical;min-height:108px}
 .m-lang-toggle{display:flex;gap:8px;margin:16px 0 8px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.06)}
 .m-lang-toggle .lang-btn{font-size:14px;padding:8px 18px}
 
+
+/* ── AUDIO / SOUNDCLOUD GALLERY ── */
+.audio-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(380px,1fr));gap:24px;margin-top:36px}
+.audio-card{background:var(--dark2);border:1px solid var(--border);border-radius:4px;overflow:hidden;transition:border-color .2s}
+.audio-card:hover{border-color:rgba(232,184,106,.25)}
+.audio-card-header{padding:18px 20px 14px}
+.audio-card-title{font-family:var(--fd);font-size:20px;letter-spacing:1.5px;color:var(--white);margin-bottom:4px}
+.audio-card-sub{font-size:12px;color:var(--accent);letter-spacing:.5px;font-family:var(--fb)}
+.audio-card iframe{display:block;width:100%;border:none}
+
 footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px}
 .footer-logo{font-family:var(--fd);font-size:21px;letter-spacing:3px;cursor:pointer;color:var(--white)}
 .footer-logo span{color:var(--accent)}
@@ -378,9 +388,9 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
       "email": "filmgeneva1@gmail.com",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Chemin des Vignettes 11",
+        "streetAddress": "Rue de Vermont 42",
         "addressLocality": "Geneva",
-        "postalCode": "1231",
+        "postalCode": "1202",
         "addressCountry": "CH"
       },
       "geo": {
@@ -703,10 +713,49 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
     <p class="sub-hero-desc" data-i18n>Craft Cinematic Stories in Geneva — Expert Videography for Documentaries, Events &amp; Campaigns. Very competitive pricing tailored to your project.</p>
     <div class="hero-actions">
       <button class="btn btn-primary" onclick="goTo('contact')" data-i18n>Request a Quote</button>
-      <button class="btn btn-ghost" onclick="goTo('home')"> data-i18n>&#8592; Home</button>
+      <button class="btn btn-ghost" onclick="goTo('home')" data-i18n>&#8592; Home</button>
     </div>
   </div>
   <section style="background:var(--black)">
+    <p class="eyebrow">Featured photography</p>
+    <h2 class="section-title">RECENT WORK</h2>
+    <div class="divider" style="margin-bottom:0"></div>
+    <div class="photo-gallery">
+      <div class="photo-gallery-header">
+        <span style="font-size:12px;color:var(--white2);opacity:.5;font-family:var(--fb);letter-spacing:1px" id="photo-main-events-count"></span>
+      </div>
+      <div class="photo-grid" id="photo-main-events">
+        <div class="photo-loading">Loading...</div>
+      </div>
+    </div>
+  </section>
+  <section style="background:var(--dark)">
+    <p class="eyebrow">Featured photography</p>
+    <h2 class="section-title">WATCHES &amp; PRODUCT</h2>
+    <div class="divider" style="margin-bottom:0"></div>
+    <div class="photo-gallery">
+      <div class="photo-gallery-header">
+        <span style="font-size:12px;color:var(--white2);opacity:.5;font-family:var(--fb);letter-spacing:1px" id="photo-main-watches-count"></span>
+      </div>
+      <div class="photo-grid" id="photo-main-watches">
+        <div class="photo-loading">Loading...</div>
+      </div>
+    </div>
+  </section>
+  <section style="background:var(--black)">
+    <p class="eyebrow">Featured photography</p>
+    <h2 class="section-title">PORTRAITS &amp; HEADSHOTS</h2>
+    <div class="divider" style="margin-bottom:0"></div>
+    <div class="photo-gallery">
+      <div class="photo-gallery-header">
+        <span style="font-size:12px;color:var(--white2);opacity:.5;font-family:var(--fb);letter-spacing:1px" id="photo-main-portraits-count"></span>
+      </div>
+      <div class="photo-grid" id="photo-main-portraits">
+        <div class="photo-loading">Loading...</div>
+      </div>
+    </div>
+  </section>
+  <section style="background:var(--dark)">
     <p class="eyebrow" data-i18n>Corporate &amp; Business</p>
     <h2 class="section-title" data-i18n>CORPORATE VIDEO<br>SERVICES</h2>
     <div class="divider" style="margin-bottom:0"></div>
@@ -855,7 +904,7 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
     <p class="sub-hero-desc" data-i18n>Broadcast Live to the World — Professional Livestreaming for Conferences, Concerts &amp; Corporate Events in Geneva and Switzerland. Competitive rates, tailored to your project.</p>
     <div class="hero-actions">
       <button class="btn btn-primary" onclick="goTo('contact')" data-i18n>Request a Quote</button>
-      <button class="btn btn-ghost" onclick="goTo('home')"> data-i18n>&#8592; Home</button>
+      <button class="btn btn-ghost" onclick="goTo('home')" data-i18n>&#8592; Home</button>
     </div>
   </div>
   <section style="background:var(--black)">
@@ -899,7 +948,7 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
     <p class="sub-hero-desc" data-i18n>Stunning Visuals for Brands, NGOs &amp; Personal Projects — Geneva-Based Photography Services. Competitive rates, tailored to your project.</p>
     <div class="hero-actions">
       <button class="btn btn-primary" onclick="goTo('contact')" data-i18n>Request a Quote</button>
-      <button class="btn btn-ghost" onclick="goTo('home')"> data-i18n>&#8592; Home</button>
+      <button class="btn btn-ghost" onclick="goTo('home')" data-i18n>&#8592; Home</button>
     </div>
   </div>
   <section style="background:var(--black)">
@@ -941,7 +990,7 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
     <p class="sub-hero-desc" data-i18n>Crystal-Clear Sound for Films, Podcasts &amp; Events — Studio-Quality Audio Services in Switzerland. Very competitive pricing, tailored to your project.</p>
     <div class="hero-actions">
       <button class="btn btn-primary" onclick="goTo('contact')" data-i18n>Request a Quote</button>
-      <button class="btn btn-ghost" onclick="goTo('home')"> data-i18n>&#8592; Home</button>
+      <button class="btn btn-ghost" onclick="goTo('home')" data-i18n>&#8592; Home</button>
     </div>
   </div>
   <section style="background:var(--black)">
@@ -969,6 +1018,33 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
       <div class="sub-card" onclick="goTo('music-session')"><div class="sub-card-title" data-i18n>MUSIC SESSION</div><p class="sub-card-text" data-i18n>Studio-style music recording in any location for EPKs and artist content.</p><div class="sub-arrow">&#8599;</div></div>
       <div class="sub-card" onclick="goTo('event-audio-support')"><div class="sub-card-title" data-i18n>EVENT AUDIO SUPPORT</div><p class="sub-card-text" data-i18n>Technical audio support for events — microphone management, mixing, PA integration.</p><div class="sub-arrow">&#8599;</div></div>
     </div>
+  </section>
+  <section style="background:var(--dark)">
+    <p class="eyebrow">Concert recordings</p>
+    <h2 class="section-title">LIVE CONCERT<br>AUDIO RECORDINGS</h2>
+    <div class="divider" style="margin-bottom:0"></div>
+    <p class="section-lead" style="margin-top:18px">A selection of live concert recordings captured and mixed by FilmGeneva — full broadcast-quality audio direct from the performance.</p>
+    <div class="audio-grid"><div class="audio-card">
+  <div class="audio-card-header">
+    <div class="audio-card-title">Madelyn Kowalski</div>
+    <div class="audio-card-sub">Live Concert Recording</div>
+  </div>
+  <iframe width="100%" height="120" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Favatar64%2Fmadelyn-kowalski-concert&color=%23e8b86a&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=false"></iframe>
+</div>
+<div class="audio-card">
+  <div class="audio-card-header">
+    <div class="audio-card-title">Sao Soulez Lariviere</div>
+    <div class="audio-card-sub">Live Concert Recording</div>
+  </div>
+  <iframe width="100%" height="120" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Favatar64%2Fsao-soulez-lariviere-concert&color=%23e8b86a&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=false"></iframe>
+</div>
+<div class="audio-card">
+  <div class="audio-card-header">
+    <div class="audio-card-title">Clarissa Belvilacqua</div>
+    <div class="audio-card-sub">Live Concert Recording</div>
+  </div>
+  <iframe width="100%" height="120" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Favatar64%2Fclarissa-belvilacqua-concert&color=%23e8b86a&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=false"></iframe>
+</div></div>
   </section>
   <section style="background:var(--black)">
     <p class="eyebrow" data-i18n>Portfolio</p>
@@ -1015,7 +1091,7 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
     <p class="sub-hero-desc" data-i18n>Professional video and photography production based in Geneva, Switzerland. Serving NGOs, corporations, universities, and international clients since 2021.</p>
     <div class="hero-actions">
       <button class="btn btn-primary" onclick="goTo('contact')" data-i18n>Get in Touch</button>
-      <button class="btn btn-ghost" onclick="goTo('home')"> data-i18n>&#8592; Home</button>
+      <button class="btn btn-ghost" onclick="goTo('home')" data-i18n>&#8592; Home</button>
     </div>
   </div>
   <section style="background:var(--black)">
@@ -1051,6 +1127,7 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
       <div class="equip-card"><div class="equip-title" data-i18n>SET COORDINATION</div><p class="equip-text" data-i18n>Full on-set coordination — scheduling, call sheets, logistics, and communication between all production departments throughout the shoot.</p></div>
       <div class="equip-card"><div class="equip-title" data-i18n>TRAVEL &amp; LOGISTICS</div><p class="equip-text" data-i18n>Arranging travel, transport, and accommodation for cast and crew for productions across Switzerland and internationally.</p></div>
     </div>
+    <div style="margin-top:28px"><button class="btn btn-ghost" onclick="goTo('production-company')">Full Production Company Details &#8594;</button></div>
   </section>
 
   <section style="background:var(--dark)">
@@ -1096,7 +1173,7 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
         <div class="contact-detail"><div class="contact-icon">&#128222;</div><div><p class="c-lbl" data-i18n>Phone / WhatsApp / Signal / Telegram</p><a href="tel:+41767477714" class="c-val">+41 76 747 77 14</a></div></div>
         <div class="contact-detail"><div class="contact-icon">&#9993;</div><div><p class="c-lbl" data-i18n>Email</p><a href="mailto:filmgeneva1@gmail.com" class="c-val">filmgeneva1@gmail.com</a></div></div>
         <div class="contact-detail"><div class="contact-icon">&#127760;</div><div><p class="c-lbl" data-i18n>Website</p><a href="https://filmgeneva.ch" class="c-val">filmgeneva.ch</a></div></div>
-        <div class="contact-detail"><div class="contact-icon">&#128205;</div><div><p class="c-lbl" data-i18n>Address</p><span class="c-val" data-i18n>Chemin des Vignettes 11, 1231 Gen&#232;ve</span></div></div>
+        <div class="contact-detail"><div class="contact-icon">&#128205;</div><div><p class="c-lbl" data-i18n>Address</p><span class="c-val" data-i18n>Rue de Vermont 42, Gen&#232;ve</span></div></div>
         <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
           <a href="https://wa.me/41767477714" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">WhatsApp</a>
           <a href="https://signal.me/#p/+41767477714" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">Signal</a>
@@ -2231,6 +2308,33 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
 </div>
     <div style="margin-top:28px"><button class="btn btn-primary" onclick="goTo('contact')" data-i18n>Get a Quote</button></div>
   </section>
+
+  <section style="background:var(--dark)">
+    <p class="eyebrow">Audio recordings</p>
+    <h2 class="section-title">LIVE RECORDINGS</h2>
+    <div class="divider" style="margin-bottom:0"></div>
+    <div class="audio-grid"><div class="audio-card">
+  <div class="audio-card-header">
+    <div class="audio-card-title">Madelyn Kowalski</div>
+    <div class="audio-card-sub">Live Concert Recording</div>
+  </div>
+  <iframe width="100%" height="120" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Favatar64%2Fmadelyn-kowalski-concert&color=%23e8b86a&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=false"></iframe>
+</div>
+<div class="audio-card">
+  <div class="audio-card-header">
+    <div class="audio-card-title">Sao Soulez Lariviere</div>
+    <div class="audio-card-sub">Live Concert Recording</div>
+  </div>
+  <iframe width="100%" height="120" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Favatar64%2Fsao-soulez-lariviere-concert&color=%23e8b86a&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=false"></iframe>
+</div>
+<div class="audio-card">
+  <div class="audio-card-header">
+    <div class="audio-card-title">Clarissa Belvilacqua</div>
+    <div class="audio-card-sub">Live Concert Recording</div>
+  </div>
+  <iframe width="100%" height="120" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Favatar64%2Fclarissa-belvilacqua-concert&color=%23e8b86a&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=false"></iframe>
+</div></div>
+  </section>
 </div>
 
 <div class="page" id="page-lecture-recording">
@@ -2846,6 +2950,20 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
   </section>
 </div>
 
+
+<div class="page" id="page-production-company">
+  <div class="sub-hero">
+    <p class="sub-hero-eyebrow">End-to-End Production in Switzerland</p>
+    <h1 class="sub-hero-title">PRODUCTION<br>COMPANY</h1>
+    <p class="sub-hero-desc">From scriptwriting to final cut — full production support for shoots in Geneva and across Switzerland. Location scouting, permits, crew, equipment, set coordination, and logistics, all under one roof.</p>
+    <div class="hero-actions">
+      <button class="btn btn-primary" onclick="goTo('contact')">Get a Quote</button>
+      <button class="btn btn-ghost" onclick="goTo('about')">&#8592; Back</button>
+    </div>
+  </div>
+  <section style="background:var(--black)"><div class="sub-body"><h3 class="sub-section-title">End-to-End Video Production in Switzerland</h3><p class="sub-p">Beyond filming and editing, FilmGeneva operates as a full production company for clients who need more than just a camera crew — handling every practical and logistical element of a shoot from the first scout to the final delivery. For larger productions, international shoots, or projects with multiple moving parts, this end-to-end support is often what makes the difference between a stressful shoot and a smooth one.</p><p class="sub-p">Whether you're an international broadcaster filming in Geneva for the first time, a brand running a multi-location campaign across Switzerland, or an organisation managing a complex event, we coordinate everything around your production so you can focus on the creative result.</p><ul class='feat-list'><li>Location scouting — finding and securing the right settings across Geneva and Switzerland</li><li>Obtaining permits — filming permits for public spaces, roads, and restricted locations</li><li>Hiring crew — assembling camera operators, sound recordists, lighting technicians, and production assistants</li><li>Renting equipment — access to specialty cameras, lenses, rigs, and broadcast gear beyond our own kit</li><li>Set coordination — scheduling, call sheets, and on-the-day logistics across every department</li><li>Arranging travel, transport and accommodation — for cast and crew, across Switzerland and internationally</li></ul><h3 class="sub-section-title">Location Scouting</h3><p class="sub-p">We know Geneva and the surrounding region intimately — from lakeside venues and the old city to corporate campuses, mountain locations, and everything in between. We scout and secure locations that match your creative brief, handling the practical assessment of light, access, power, and permissions before your crew ever arrives.</p><h3 class="sub-section-title">Obtaining Permits</h3><p class="sub-p">Filming in public spaces, on roads, or in protected and government-managed locations across Switzerland often requires permits. We handle this process directly with the relevant authorities, so your production stays compliant without you needing to navigate Swiss bureaucracy yourself.</p><h3 class="sub-section-title">Hiring Crew</h3><p class="sub-p">For productions that need more hands than our core team, we assemble the right crew for the job — camera operators, sound recordists, gaffers, grips, and production assistants — drawn from our network of trusted freelance professionals across Geneva and Switzerland.</p><h3 class="sub-section-title">Renting Equipment</h3><p class="sub-p">Beyond our own Panasonic Lumix, Sony FX, and Canon EOS cinema cameras, we have access to a wider range of specialty equipment — additional lenses, camera rigs, lighting packages, and broadcast-grade gear — for productions with specific technical requirements.</p><h3 class="sub-section-title">Set Coordination</h3><p class="sub-p">On larger shoots, we manage the moving parts on the day itself: call sheets, scheduling, communication between departments, and keeping the production on time and on track from setup to wrap.</p><h3 class="sub-section-title">Travel, Transport & Accommodation</h3><p class="sub-p">For productions involving cast or crew travelling into or across Switzerland, we arrange the logistics — transport, accommodation, and scheduling — so visiting teams can focus entirely on the shoot itself.</p></div></section>
+</div>
+
 <footer>
   <span class="footer-logo" onclick="goTo('home')">FILM<span>GENEVA</span></span>
   <p class="footer-copy" data-i18n>&#169; 2026 FilmGeneva — Geneva, Switzerland</p>
@@ -3132,6 +3250,9 @@ function handleForm(e) {
 
 // ── Initialise all photo galleries once the DOM and functions are ready ──────
 function initGalleries() {
+  loadGallery('Events', 'photo-main-events', 12);
+  loadGallery('watches', 'photo-main-watches', 8);
+  loadGallery('portraits', 'photo-main-portraits', 8);
   loadGallery('wedding', 'wedding-filming-gallery');
   loadGallery('Events', 'events-gallery');
   loadGallery('portraits', 'portraits-gallery');
