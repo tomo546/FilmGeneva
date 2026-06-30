@@ -61,6 +61,18 @@ export default {
     const url = new URL(request.url);
     const path = url.pathname;
 
+    // ── 301 redirect: old .com domain → new .ch domain (preserves SEO value) ──
+    if (url.hostname === 'filmgeneva.com' || url.hostname === 'www.filmgeneva.com') {
+      const target = 'https://filmgeneva.ch' + url.pathname + url.search;
+      return Response.redirect(target, 301);
+    }
+
+    // ── redirect www.filmgeneva.ch → filmgeneva.ch (single canonical host) ───
+    if (url.hostname === 'www.filmgeneva.ch') {
+      const target = 'https://filmgeneva.ch' + url.pathname + url.search;
+      return Response.redirect(target, 301);
+    }
+
     // ── robots.txt ──────────────────────────────────────────────────────────
     if (path === '/robots.txt') {
       return new Response(ROBOTS_TXT, {

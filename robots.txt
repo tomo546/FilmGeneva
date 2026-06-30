@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://www.filmgeneva.com/sitemap.xml
+Sitemap: https://filmgeneva.ch/sitemap.xml
 
 # Crawl-delay for polite crawling
 Crawl-delay: 1

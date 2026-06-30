@@ -21,9 +21,14 @@
     "not_found_handling": "single-page-application"
   },
 
-  // Routes (update domain as needed)
+  // Routes — filmgeneva.ch is canonical. The .com and www routes are included
+  // so the Worker can issue 301 redirects to the canonical .ch domain.
+  // Note: filmgeneva.com must also be added as a zone in this Cloudflare
+  // account for its route to take effect.
   "routes": [
     { "pattern": "filmgeneva.ch/*", "zone_name": "filmgeneva.ch" },
-    { "pattern": "www.filmgeneva.ch/*", "zone_name": "filmgeneva.ch" }
+    { "pattern": "www.filmgeneva.ch/*", "zone_name": "filmgeneva.ch" },
+    { "pattern": "filmgeneva.com/*", "zone_name": "filmgeneva.com" },
+    { "pattern": "www.filmgeneva.com/*", "zone_name": "filmgeneva.com" }
   ]
 }

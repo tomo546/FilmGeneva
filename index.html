@@ -6,7 +6,7 @@
 <title>FilmGeneva — Professional Video &amp; Photography in Geneva, Switzerland</title>
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.filmgeneva.com">
+  <meta property="og:url" content="https://filmgeneva.ch">
   <meta property="og:title" content="FilmGeneva — Professional Video &amp; Photography in Geneva, Switzerland">
   <meta property="og:description" content="Professional video production, photography, livestreaming and podcast recording in Geneva. Clients include BBC, WHO, CERN, ICRC. Lumix, Sony FX, Canon EOS up to 8K.">
   <meta property="og:image" content="https://pub-8b0d2c0e3502403c9dc9c69a3207085b.r2.dev/Gifs/header.gif">
@@ -27,7 +27,7 @@
   <meta name="keywords" content="video production Geneva, videography Geneva, photographer Geneva, livestreaming Geneva, podcast recording Geneva, corporate video Geneva, event filming Geneva, drone filming Geneva, Lumix videographer Geneva, Sony FX Geneva, Canon EOS Geneva, FilmGeneva, NGO video Geneva, conference filming Geneva, Palexpo filming, WMO filming, CICG filming">
   <meta name="author" content="FilmGeneva">
   <meta name="copyright" content="FilmGeneva">
-  <link rel="canonical" href="https://www.filmgeneva.com">
+  <link rel="canonical" href="https://filmgeneva.ch">
   <meta name="description" content="Professional video production, photography, livestreaming and podcast recording in Geneva, Switzerland. Competitive rates, fast delivery. Serving NGOs, corporations and international clients.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -361,10 +361,10 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
   "@graph": [
     {
       "@type": "LocalBusiness",
-      "@id": "https://www.filmgeneva.com/#business",
+      "@id": "https://filmgeneva.ch/#business",
       "name": "FilmGeneva",
       "description": "Professional video production, photography, livestreaming and podcast recording company in Geneva, Switzerland. Serving NGOs, corporations, and international clients including BBC, WHO, CERN, and ICRC.",
-      "url": "https://www.filmgeneva.com",
+      "url": "https://filmgeneva.ch",
       "telephone": "+41767477714",
       "email": "filmgeneva1@gmail.com",
       "address": {
@@ -441,14 +441,14 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
     },
     {
       "@type": "WebSite",
-      "@id": "https://www.filmgeneva.com/#website",
-      "url": "https://www.filmgeneva.com",
+      "@id": "https://filmgeneva.ch/#website",
+      "url": "https://filmgeneva.ch",
       "name": "FilmGeneva",
       "description": "Professional video production, photography and livestreaming in Geneva, Switzerland",
-      "publisher": {"@id": "https://www.filmgeneva.com/#business"},
+      "publisher": {"@id": "https://filmgeneva.ch/#business"},
       "potentialAction": {
         "@type": "SearchAction",
-        "target": {"@type": "EntryPoint", "urlTemplate": "https://www.filmgeneva.com/?s={search_term_string}"},
+        "target": {"@type": "EntryPoint", "urlTemplate": "https://filmgeneva.ch/?s={search_term_string}"},
         "query-input": "required name=search_term_string"
       }
     },
@@ -456,7 +456,7 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
       "@type": "Person",
       "name": "Tymon",
       "jobTitle": "Director of Photography & Video Producer",
-      "worksFor": {"@id": "https://www.filmgeneva.com/#business"},
+      "worksFor": {"@id": "https://filmgeneva.ch/#business"},
       "knowsAbout": ["Video Production", "Cinematography", "Photography", "Livestreaming", "Podcast Recording", "Drone Operation"]
     },
     {
@@ -1078,7 +1078,7 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
         <div class="divider" style="margin-bottom:28px"></div>
         <div class="contact-detail"><div class="contact-icon">&#128222;</div><div><p class="c-lbl">Phone / WhatsApp / Signal / Telegram</p><a href="tel:+41767477714" class="c-val">+41 76 747 77 14</a></div></div>
         <div class="contact-detail"><div class="contact-icon">&#9993;</div><div><p class="c-lbl">Email</p><a href="mailto:filmgeneva1@gmail.com" class="c-val">filmgeneva1@gmail.com</a></div></div>
-        <div class="contact-detail"><div class="contact-icon">&#127760;</div><div><p class="c-lbl">Website</p><a href="https://www.filmgeneva.com" class="c-val">www.filmgeneva.com</a></div></div>
+        <div class="contact-detail"><div class="contact-icon">&#127760;</div><div><p class="c-lbl">Website</p><a href="https://filmgeneva.ch" class="c-val">filmgeneva.ch</a></div></div>
         <div class="contact-detail"><div class="contact-icon">&#128205;</div><div><p class="c-lbl">Address</p><span class="c-val">Chemin des Vignettes 11, 1231 Gen&#232;ve</span></div></div>
         <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
           <a href="https://wa.me/41767477714" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">WhatsApp</a>
@@ -2844,6 +2844,77 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
 <script>
 const PAGES = {home:'page-home',video:'page-video',livestream:'page-livestream',photography:'page-photography',podcasts:'page-podcasts',about:'page-about',contact:'page-contact'};
 
+// ── Per-page SEO: dynamic title / canonical / Open Graph updates ────────────
+const PAGE_SEO = {
+  "home": {url:"/",title:"FilmGeneva — Professional Video & Photography in Geneva, Switzerland",desc:"Professional video production, photography, livestreaming and podcast recording in Geneva, Switzerland."},
+  "video": {url:"/video-production",title:"Video Production Geneva | FilmGeneva",desc:"Expert video production in Geneva — corporate films, documentaries, event filming, NGO content and more. Up to 8K."},
+  "livestream": {url:"/livestreaming-geneva",title:"Livestreaming Geneva | FilmGeneva",desc:"Professional livestreaming services in Geneva. Conferences, hybrid events, concerts, AGMs."},
+  "photography": {url:"/photography-geneva",title:"Photography Geneva | FilmGeneva",desc:"Professional event, corporate, portrait, real estate and aerial photography in Geneva and Switzerland."},
+  "podcasts": {url:"/podcast-recording-geneva",title:"Podcast & Audio Recording Geneva | FilmGeneva",desc:"Studio-quality podcast and audio recording in Geneva. On-location, no studio needed."},
+  "about": {url:"/about-filmgeneva",title:"About FilmGeneva | Video Production Company Geneva",desc:"FilmGeneva — professional video production company in Geneva. 4+ years experience, 100+ projects."},
+  "contact": {url:"/contact-filmgeneva",title:"Contact FilmGeneva | Get a Quote",desc:"Contact FilmGeneva for a free quote. Video production, photography, livestreaming in Geneva."},
+  "corporate-videos": {url:"/corporate-video-production-geneva",title:"Corporate Video Production Geneva | FilmGeneva",desc:"Professional corporate video production in Geneva."},
+  "ceo-interviews": {url:"/ceo-interview-video-geneva",title:"CEO & Executive Interview Video Geneva | FilmGeneva",desc:"Executive and CEO interview production in Geneva."},
+  "conference-filming": {url:"/conference-filming-geneva",title:"Conference Filming Geneva | FilmGeneva",desc:"Professional conference and summit filming in Geneva. Palexpo, WMO, CICG."},
+  "conference-highlights": {url:"/conference-highlight-reel-geneva",title:"Conference Highlight Reel Geneva | FilmGeneva",desc:"Conference highlight reels in Geneva."},
+  "ngo-filming": {url:"/ngo-video-production-geneva",title:"NGO Video Production Geneva | FilmGeneva",desc:"Video production for NGOs and international organisations in Geneva."},
+  "science-videos": {url:"/science-communication-video-geneva",title:"Science Communication Video Geneva | FilmGeneva",desc:"Science communication videos for research institutions in Geneva."},
+  "documentary-filming": {url:"/documentary-film-production-geneva",title:"Documentary Film Production Geneva | FilmGeneva",desc:"Documentary film production in Geneva."},
+  "drone-footage": {url:"/drone-filming-geneva-switzerland",title:"Drone & Aerial Filming Geneva | FilmGeneva",desc:"Licensed drone operator for aerial filming across Geneva and Switzerland."},
+  "wedding-filming": {url:"/wedding-videographer-geneva",title:"Wedding Videographer Geneva | FilmGeneva",desc:"Cinematic wedding films in Geneva and Switzerland."},
+  "real-estate-video": {url:"/real-estate-video-production-geneva",title:"Real Estate Video Production Geneva | FilmGeneva",desc:"Cinematic property walkthroughs and drone aerial footage in Geneva."},
+  "social-media-video": {url:"/social-media-video-production-geneva",title:"Social Media Video Production Geneva | FilmGeneva",desc:"Reels, Shorts and branded content for social media. Made in Geneva."},
+  "conference-livestream": {url:"/conference-livestream-geneva",title:"Conference Livestreaming Geneva | FilmGeneva",desc:"Broadcast-quality conference livestreaming in Geneva."},
+  "hybrid-events": {url:"/hybrid-event-production-geneva",title:"Hybrid Event Production Geneva | FilmGeneva",desc:"Professional hybrid event production in Geneva."},
+  "concert-streaming": {url:"/concert-livestreaming-geneva",title:"Concert Livestreaming Geneva | FilmGeneva",desc:"Professional concert livestreaming in Geneva."},
+  "agm-livestream": {url:"/agm-livestreaming-geneva",title:"AGM & General Assembly Livestreaming Geneva | FilmGeneva",desc:"Reliable AGM and general assembly livestreaming in Geneva."},
+  "event-photography": {url:"/event-photography-geneva",title:"Event Photography Geneva | FilmGeneva",desc:"Professional event photography in Geneva."},
+  "headshots-portraits": {url:"/executive-headshots-geneva",title:"Executive Headshots & Corporate Portraits Geneva | FilmGeneva",desc:"Natural, professional executive headshots in Geneva."},
+  "conference-photography": {url:"/conference-photography-geneva",title:"Conference Photography Geneva | FilmGeneva",desc:"Conference photography in Geneva at Palexpo, WMO, CICG."},
+  "real-estate-photography": {url:"/real-estate-photography-geneva",title:"Real Estate Photography Geneva | FilmGeneva",desc:"Professional real estate photography in Geneva."},
+  "airbnb-photography": {url:"/airbnb-photography-geneva",title:"Airbnb & Rental Photography Geneva | FilmGeneva",desc:"Professional Airbnb and vacation rental photography in Geneva."},
+  "watches-photography": {url:"/watch-photography-geneva",title:"Watch & Jewellery Photography Geneva | FilmGeneva",desc:"Precision product photography for Swiss watches and jewellery."},
+  "video-podcast": {url:"/video-podcast-production-geneva",title:"Video Podcast Production Geneva | FilmGeneva",desc:"Multi-camera video podcast recording in Geneva."},
+  "audio-podcast": {url:"/podcast-recording-service-geneva",title:"Audio Podcast Recording Geneva | FilmGeneva",desc:"Broadcast-quality audio podcast recording in Geneva."},
+  "concert-recording": {url:"/concert-recording-geneva",title:"Concert & Music Recording Geneva | FilmGeneva",desc:"Professional multi-camera concert recording in Geneva."},
+  "lecture-recording": {url:"/lecture-recording-geneva",title:"Lecture & Academic Recording Geneva | FilmGeneva",desc:"Professional lecture and academic recording in Geneva."},
+  "sports-filming": {url:"/sports-video-production-geneva",title:"Sports & Action Video Production Geneva | FilmGeneva",desc:"Dynamic sports filming for athletes, events and brands in Geneva."},
+  "behind-scenes": {url:"/behind-the-scenes-video-geneva",title:"Behind the Scenes Video Production Geneva | FilmGeneva",desc:"BTS content for productions and brand activations in Geneva."},
+  "content-creator-video": {url:"/influencer-video-production-geneva",title:"Influencer & Content Creator Video Geneva | FilmGeneva",desc:"Professional video production for content creators in Geneva."},
+  "greenscreen": {url:"/greenscreen-production-geneva",title:"Greenscreen & Studio Production Geneva | FilmGeneva",desc:"Professional greenscreen production for virtual studios in Geneva."},
+  "timelapse": {url:"/timelapse-video-geneva",title:"Time-lapse Video Production Geneva | FilmGeneva",desc:"Professional time-lapse filming in Geneva."},
+  "agm-corporate-events": {url:"/agm-corporate-event-video-geneva",title:"AGM & Corporate Event Video Geneva | FilmGeneva",desc:"Professional video and livestreaming for AGMs in Geneva."},
+  "short-films": {url:"/short-film-production-geneva",title:"Short Film Production Geneva | FilmGeneva",desc:"Award-winning short film production in Geneva. REBOOT won Best Film & Audience Award at 48HFP."},
+  "political-diplomatic": {url:"/political-diplomatic-video-geneva",title:"Political & Diplomatic Video Production Geneva | FilmGeneva",desc:"Video production for diplomatic missions and political events in Geneva."},
+  "who-interviews": {url:"/who-interview-production-geneva",title:"WHO Interview Production Geneva | FilmGeneva",desc:"Professional interview production for the World Health Organization."},
+  "classical-music-livestream": {url:"/classical-music-livestream-geneva",title:"Classical Music Livestream Geneva | FilmGeneva",desc:"Professional classical music filming and livestreaming in Geneva."},
+  "interviews": {url:"/interview-video-production-geneva",title:"Interview Video Production Geneva | FilmGeneva",desc:"Professional on-camera interview production in Geneva."},
+  "davos-events": {url:"/davos-wef-event-coverage-geneva",title:"Davos & International Summit Coverage | FilmGeneva",desc:"Event coverage for Davos, WEF and major international summits."},
+  "art-performance": {url:"/art-performance-video-geneva",title:"Art & Performance Video Production Geneva | FilmGeneva",desc:"Cinematic filming for performing arts and creative productions in Geneva."},
+  "beauty-lifestyle": {url:"/beauty-lifestyle-video-geneva",title:"Beauty & Lifestyle Video Production Geneva | FilmGeneva",desc:"Professional video for beauty brands and influencers in Geneva."},
+  "locations": {url:"/geneva-locations-photography",title:"Geneva & Switzerland Locations | FilmGeneva",desc:"Aerial and location photography across Geneva, Lake Geneva and Switzerland."}
+};
+
+function updatePageSEO(key) {
+  const seo = PAGE_SEO[key];
+  if (!seo) return;
+  document.title = seo.title;
+  const canonical = document.querySelector('link[rel="canonical"]');
+  if (canonical) canonical.href = "https://filmgeneva.ch" + seo.url;
+  const ogUrl = document.querySelector('meta[property="og:url"]');
+  if (ogUrl) ogUrl.content = "https://filmgeneva.ch" + seo.url;
+  const ogTitle = document.querySelector('meta[property="og:title"]');
+  if (ogTitle) ogTitle.content = seo.title;
+  const ogDesc = document.querySelector('meta[property="og:description"]');
+  if (ogDesc) ogDesc.content = seo.desc;
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc) metaDesc.content = seo.desc;
+  const twTitle = document.querySelector('meta[name="twitter:title"]');
+  if (twTitle) twTitle.content = seo.title;
+  const twDesc = document.querySelector('meta[name="twitter:description"]');
+  if (twDesc) twDesc.content = seo.desc;
+}
+
 let currentPage = 'home';
 
 // History API is unavailable inside sandboxed preview frames (about:srcdoc) —
@@ -2862,6 +2933,7 @@ function goTo(key, skipHistory) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   target.classList.add('active');
   window.scrollTo({ top: 0, behavior: 'smooth' });
+  updatePageSEO(key);
   currentPage = key;
   if (!skipHistory && historyAvailable) {
     try { history.pushState({ page: key }, '', '#' + key); } catch (e) { historyAvailable = false; }

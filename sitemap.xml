@@ -4,207 +4,227 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
-    <loc>https://www.filmgeneva.com/</loc>
+    <loc>https://filmgeneva.ch/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.filmgeneva.com/video-production</loc>
+    <loc>https://filmgeneva.ch/video-production</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.filmgeneva.com/livestreaming-geneva</loc>
+    <loc>https://filmgeneva.ch/livestreaming-geneva</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.filmgeneva.com/photography-geneva</loc>
+    <loc>https://filmgeneva.ch/photography-geneva</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.filmgeneva.com/podcast-recording-geneva</loc>
+    <loc>https://filmgeneva.ch/podcast-recording-geneva</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.filmgeneva.com/about-filmgeneva</loc>
+    <loc>https://filmgeneva.ch/about-filmgeneva</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.filmgeneva.com/contact-filmgeneva</loc>
+    <loc>https://filmgeneva.ch/contact-filmgeneva</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.filmgeneva.com/corporate-video-production-geneva</loc>
+    <loc>https://filmgeneva.ch/corporate-video-production-geneva</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.filmgeneva.com/ceo-interview-video-geneva</loc>
+    <loc>https://filmgeneva.ch/ceo-interview-video-geneva</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.filmgeneva.com/testimonial-video-production-geneva</loc>
+    <loc>https://filmgeneva.ch/testimonial-video-production-geneva</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.filmgeneva.com/conference-filming-geneva</loc>
+    <loc>https://filmgeneva.ch/conference-filming-geneva</loc>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.filmgeneva.com/conference-highlight-reel-geneva</loc>
+    <loc>https://filmgeneva.ch/conference-highlight-reel-geneva</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.filmgeneva.com/ngo-video-production-geneva</loc>
+    <loc>https://filmgeneva.ch/ngo-video-production-geneva</loc>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.filmgeneva.com/science-communication-video-geneva</loc>
+    <loc>https://filmgeneva.ch/science-communication-video-geneva</loc>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://www.filmgeneva.com/documentary-film-production-geneva</loc>
+    <loc>https://filmgeneva.ch/documentary-film-production-geneva</loc>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://www.filmgeneva.com/drone-filming-geneva-switzerland</loc>
+    <loc>https://filmgeneva.ch/drone-filming-geneva-switzerland</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.filmgeneva.com/wedding-videographer-geneva</loc>
+    <loc>https://filmgeneva.ch/wedding-videographer-geneva</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.filmgeneva.com/real-estate-video-production-geneva</loc>
+    <loc>https://filmgeneva.ch/real-estate-video-production-geneva</loc>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://www.filmgeneva.com/music-video-production-geneva</loc>
+    <loc>https://filmgeneva.ch/music-video-production-geneva</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.filmgeneva.com/social-media-video-production-geneva</loc>
+    <loc>https://filmgeneva.ch/social-media-video-production-geneva</loc>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://www.filmgeneva.com/conference-livestream-geneva</loc>
+    <loc>https://filmgeneva.ch/conference-livestream-geneva</loc>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.filmgeneva.com/hybrid-event-production-geneva</loc>
+    <loc>https://filmgeneva.ch/hybrid-event-production-geneva</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.filmgeneva.com/webinar-production-geneva</loc>
+    <loc>https://filmgeneva.ch/webinar-production-geneva</loc>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://www.filmgeneva.com/concert-livestreaming-geneva</loc>
+    <loc>https://filmgeneva.ch/concert-livestreaming-geneva</loc>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://www.filmgeneva.com/agm-livestreaming-geneva</loc>
+    <loc>https://filmgeneva.ch/agm-livestreaming-geneva</loc>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://www.filmgeneva.com/event-photography-geneva</loc>
+    <loc>https://filmgeneva.ch/event-photography-geneva</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.filmgeneva.com/executive-headshots-geneva</loc>
+    <loc>https://filmgeneva.ch/executive-headshots-geneva</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.filmgeneva.com/conference-photography-geneva</loc>
+    <loc>https://filmgeneva.ch/conference-photography-geneva</loc>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://www.filmgeneva.com/real-estate-photography-geneva</loc>
+    <loc>https://filmgeneva.ch/real-estate-photography-geneva</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.filmgeneva.com/airbnb-photography-geneva</loc>
+    <loc>https://filmgeneva.ch/airbnb-photography-geneva</loc>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://www.filmgeneva.com/watch-photography-geneva</loc>
+    <loc>https://filmgeneva.ch/watch-photography-geneva</loc>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://www.filmgeneva.com/video-podcast-production-geneva</loc>
+    <loc>https://filmgeneva.ch/video-podcast-production-geneva</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.filmgeneva.com/podcast-recording-service-geneva</loc>
+    <loc>https://filmgeneva.ch/podcast-recording-service-geneva</loc>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://www.filmgeneva.com/concert-recording-geneva</loc>
+    <loc>https://filmgeneva.ch/concert-recording-geneva</loc>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://www.filmgeneva.com/lecture-recording-geneva</loc>
+    <loc>https://filmgeneva.ch/lecture-recording-geneva</loc>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://www.filmgeneva.com/sports-video-production-geneva</loc>
+    <loc>https://filmgeneva.ch/sports-video-production-geneva</loc>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://www.filmgeneva.com/behind-the-scenes-video-geneva</loc>
+    <loc>https://filmgeneva.ch/behind-the-scenes-video-geneva</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.filmgeneva.com/influencer-video-production-geneva</loc>
+    <loc>https://filmgeneva.ch/influencer-video-production-geneva</loc>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://www.filmgeneva.com/greenscreen-production-geneva</loc>
+    <loc>https://filmgeneva.ch/greenscreen-production-geneva</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.filmgeneva.com/timelapse-video-geneva</loc>
+    <loc>https://filmgeneva.ch/timelapse-video-geneva</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.filmgeneva.com/agm-corporate-event-video-geneva</loc>
+    <loc>https://filmgeneva.ch/agm-corporate-event-video-geneva</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://filmgeneva.ch/short-film-production-geneva</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://filmgeneva.ch/political-diplomatic-video-geneva</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://filmgeneva.ch/who-interview-production-geneva</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://filmgeneva.ch/classical-music-livestream-geneva</loc>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
