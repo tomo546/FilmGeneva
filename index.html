@@ -716,45 +716,7 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
       <button class="btn btn-ghost" onclick="goTo('home')" data-i18n>&#8592; Home</button>
     </div>
   </div>
-  <section style="background:var(--black)">
-    <p class="eyebrow">Featured photography</p>
-    <h2 class="section-title">RECENT WORK</h2>
-    <div class="divider" style="margin-bottom:0"></div>
-    <div class="photo-gallery">
-      <div class="photo-gallery-header">
-        <span style="font-size:12px;color:var(--white2);opacity:.5;font-family:var(--fb);letter-spacing:1px" id="photo-main-events-count"></span>
-      </div>
-      <div class="photo-grid" id="photo-main-events">
-        <div class="photo-loading">Loading...</div>
-      </div>
-    </div>
-  </section>
-  <section style="background:var(--dark)">
-    <p class="eyebrow">Featured photography</p>
-    <h2 class="section-title">WATCHES &amp; PRODUCT</h2>
-    <div class="divider" style="margin-bottom:0"></div>
-    <div class="photo-gallery">
-      <div class="photo-gallery-header">
-        <span style="font-size:12px;color:var(--white2);opacity:.5;font-family:var(--fb);letter-spacing:1px" id="photo-main-watches-count"></span>
-      </div>
-      <div class="photo-grid" id="photo-main-watches">
-        <div class="photo-loading">Loading...</div>
-      </div>
-    </div>
-  </section>
-  <section style="background:var(--black)">
-    <p class="eyebrow">Featured photography</p>
-    <h2 class="section-title">PORTRAITS &amp; HEADSHOTS</h2>
-    <div class="divider" style="margin-bottom:0"></div>
-    <div class="photo-gallery">
-      <div class="photo-gallery-header">
-        <span style="font-size:12px;color:var(--white2);opacity:.5;font-family:var(--fb);letter-spacing:1px" id="photo-main-portraits-count"></span>
-      </div>
-      <div class="photo-grid" id="photo-main-portraits">
-        <div class="photo-loading">Loading...</div>
-      </div>
-    </div>
-  </section>
+  
   <section style="background:var(--dark)">
     <p class="eyebrow" data-i18n>Corporate &amp; Business</p>
     <h2 class="section-title" data-i18n>CORPORATE VIDEO<br>SERVICES</h2>
@@ -936,7 +898,32 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
       <div class="sub-card" onclick="goTo('agm-livestream')"><div class="sub-card-title" data-i18n>SIMULTANEOUS RECORDING</div><p class="sub-card-text" data-i18n>All livestreams recorded locally in up to 8K simultaneously for archive and editing.</p><div class="sub-arrow">&#8599;</div></div>
       <div class="sub-card" onclick="goTo('webinars')"><div class="sub-card-title" data-i18n>TELEPROMPTER</div><p class="sub-card-text" data-i18n>Teleprompter service for speakers who want fluent, confident delivery on camera.</p><div class="sub-arrow">&#8599;</div></div>
     </div>
-    <div style="margin-top:36px"><button class="btn btn-primary" onclick="goTo('contact')" data-i18n>Get in Touch</button></div>
+  </section>
+  <section style="background:var(--black)">
+    <p class="eyebrow">Portfolio</p>
+    <h2 class="section-title">LIVESTREAM<br>EXAMPLES</h2>
+    <div class="divider" style="margin-bottom:0"></div>
+    <div class="video-grid"><div class="video-item"><div class="vid-wrap" onclick="playVid(this,'r2d4vncDyLc')"><img class="vid-thumb" src="https://img.youtube.com/vi/r2d4vncDyLc/hqdefault.jpg" alt="Indian Mission Livestream" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
+  <p>Indian Mission Livestream</p>
+</div>
+<div class="video-item"><div class="vid-wrap" onclick="playVid(this,'QTJpfK8UDr0')"><img class="vid-thumb" src="https://img.youtube.com/vi/QTJpfK8UDr0/hqdefault.jpg" alt="Impunity Watch — NGO Livestream" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
+  <p>Impunity Watch — NGO Livestream</p>
+</div>
+<div class="video-item"><div class="vid-wrap" onclick="playVid(this,'x92tUnQKfEo')"><img class="vid-thumb" src="https://img.youtube.com/vi/x92tUnQKfEo/hqdefault.jpg" alt="NGO Livestream" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
+  <p>NGO Livestream</p>
+</div>
+<div class="video-item"><div class="vid-wrap" onclick="playVid(this,'MTqvnXK5fXM')"><img class="vid-thumb" src="https://img.youtube.com/vi/MTqvnXK5fXM/hqdefault.jpg" alt="Classical Music Livestream" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
+  <p>Classical Music Livestream</p>
+</div>
+<div class="video-item"><div class="vid-wrap" onclick="playVid(this,'Zv015ppEFYg')"><img class="vid-thumb" src="https://img.youtube.com/vi/Zv015ppEFYg/hqdefault.jpg" alt="Classical Music Livestream" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
+  <p>Classical Music Livestream</p>
+</div>
+<div class="video-item"><div class="vid-wrap" onclick="playVid(this,'VMgd7CN0N8s')"><img class="vid-thumb" src="https://img.youtube.com/vi/VMgd7CN0N8s/hqdefault.jpg" alt="Classical Music Livestream" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
+  <p>Classical Music Livestream</p>
+</div></div>
+  </section>
+  <section style="background:var(--dark)" id="livestream-cta-section">
+    <div style="text-align:center"><button class="btn btn-primary" onclick="goTo('contact')" data-i18n>Get in Touch</button></div>
   </section>
 </div>
 
@@ -951,6 +938,124 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
       <button class="btn btn-ghost" onclick="goTo('home')" data-i18n>&#8592; Home</button>
     </div>
   </div>
+  
+  <section style="background:var(--black)">
+    <p class="eyebrow">Featured photography</p>
+    <h2 class="section-title">EVENTS &amp; CONFERENCES</h2>
+    <div class="divider" style="margin-bottom:0"></div>
+    <div class="photo-gallery">
+      <div class="photo-gallery-header">
+        <span style="font-size:12px;color:var(--white2);opacity:.5;font-family:var(--fb);letter-spacing:1px" id="photo-main-events-count"></span>
+      </div>
+      <div class="photo-grid" id="photo-main-events">
+        <div class="photo-loading">Loading...</div>
+      </div>
+    </div>
+  </section>
+  <section style="background:var(--dark)">
+    <p class="eyebrow">Featured photography</p>
+    <h2 class="section-title">WATCHES &amp; PRODUCT</h2>
+    <div class="divider" style="margin-bottom:0"></div>
+    <div class="photo-gallery">
+      <div class="photo-gallery-header">
+        <span style="font-size:12px;color:var(--white2);opacity:.5;font-family:var(--fb);letter-spacing:1px" id="photo-main-watches-count"></span>
+      </div>
+      <div class="photo-grid" id="photo-main-watches">
+        <div class="photo-loading">Loading...</div>
+      </div>
+    </div>
+  </section>
+  <section style="background:var(--black)">
+    <p class="eyebrow">Featured photography</p>
+    <h2 class="section-title">PORTRAITS &amp; HEADSHOTS</h2>
+    <div class="divider" style="margin-bottom:0"></div>
+    <div class="photo-gallery">
+      <div class="photo-gallery-header">
+        <span style="font-size:12px;color:var(--white2);opacity:.5;font-family:var(--fb);letter-spacing:1px" id="photo-main-portraits-count"></span>
+      </div>
+      <div class="photo-grid" id="photo-main-portraits">
+        <div class="photo-loading">Loading...</div>
+      </div>
+    </div>
+  </section>
+  <section style="background:var(--dark)">
+    <p class="eyebrow">Featured photography</p>
+    <h2 class="section-title">NGO &amp; FIELD WORK</h2>
+    <div class="divider" style="margin-bottom:0"></div>
+    <div class="photo-gallery">
+      <div class="photo-gallery-header">
+        <span style="font-size:12px;color:var(--white2);opacity:.5;font-family:var(--fb);letter-spacing:1px" id="photo-main-ngo-count"></span>
+      </div>
+      <div class="photo-grid" id="photo-main-ngo">
+        <div class="photo-loading">Loading...</div>
+      </div>
+    </div>
+  </section>
+  <section style="background:var(--black)">
+    <p class="eyebrow">Featured photography</p>
+    <h2 class="section-title">WEDDINGS</h2>
+    <div class="divider" style="margin-bottom:0"></div>
+    <div class="photo-gallery">
+      <div class="photo-gallery-header">
+        <span style="font-size:12px;color:var(--white2);opacity:.5;font-family:var(--fb);letter-spacing:1px" id="photo-main-wedding-count"></span>
+      </div>
+      <div class="photo-grid" id="photo-main-wedding">
+        <div class="photo-loading">Loading...</div>
+      </div>
+    </div>
+  </section>
+  <section style="background:var(--dark)">
+    <p class="eyebrow">Featured photography</p>
+    <h2 class="section-title">GENEVA &amp; LOCATIONS</h2>
+    <div class="divider" style="margin-bottom:0"></div>
+    <div class="photo-gallery">
+      <div class="photo-gallery-header">
+        <span style="font-size:12px;color:var(--white2);opacity:.5;font-family:var(--fb);letter-spacing:1px" id="photo-main-places-count"></span>
+      </div>
+      <div class="photo-grid" id="photo-main-places">
+        <div class="photo-loading">Loading...</div>
+      </div>
+    </div>
+  </section>
+  <section style="background:var(--black)">
+    <p class="eyebrow">Featured photography</p>
+    <h2 class="section-title">BEHIND THE SCENES</h2>
+    <div class="divider" style="margin-bottom:0"></div>
+    <div class="photo-gallery">
+      <div class="photo-gallery-header">
+        <span style="font-size:12px;color:var(--white2);opacity:.5;font-family:var(--fb);letter-spacing:1px" id="photo-main-production-count"></span>
+      </div>
+      <div class="photo-grid" id="photo-main-production">
+        <div class="photo-loading">Loading...</div>
+      </div>
+    </div>
+  </section>
+  <section style="background:var(--dark)">
+    <p class="eyebrow">Featured photography</p>
+    <h2 class="section-title">LIFESTYLE &amp; INFLUENCER</h2>
+    <div class="divider" style="margin-bottom:0"></div>
+    <div class="photo-gallery">
+      <div class="photo-gallery-header">
+        <span style="font-size:12px;color:var(--white2);opacity:.5;font-family:var(--fb);letter-spacing:1px" id="photo-main-influencers-count"></span>
+      </div>
+      <div class="photo-grid" id="photo-main-influencers">
+        <div class="photo-loading">Loading...</div>
+      </div>
+    </div>
+  </section>
+  <section style="background:var(--black)">
+    <p class="eyebrow">Featured photography</p>
+    <h2 class="section-title">EDUCATIONAL &amp; ACADEMIC</h2>
+    <div class="divider" style="margin-bottom:0"></div>
+    <div class="photo-gallery">
+      <div class="photo-gallery-header">
+        <span style="font-size:12px;color:var(--white2);opacity:.5;font-family:var(--fb);letter-spacing:1px" id="photo-main-educational-count"></span>
+      </div>
+      <div class="photo-grid" id="photo-main-educational">
+        <div class="photo-loading">Loading...</div>
+      </div>
+    </div>
+  </section>
   <section style="background:var(--black)">
     <p class="eyebrow" data-i18n>Corporate &amp; Business</p>
     <h2 class="section-title" data-i18n>CORPORATE<br>PHOTOGRAPHY</h2>
@@ -3250,9 +3355,15 @@ function handleForm(e) {
 
 // ── Initialise all photo galleries once the DOM and functions are ready ──────
 function initGalleries() {
-  loadGallery('Events', 'photo-main-events', 12);
-  loadGallery('watches', 'photo-main-watches', 8);
-  loadGallery('portraits', 'photo-main-portraits', 8);
+  loadGallery('Events', 'photo-main-events', 6);
+  loadGallery('watches', 'photo-main-watches', 6);
+  loadGallery('portraits', 'photo-main-portraits', 6);
+  loadGallery('ngo', 'photo-main-ngo', 6);
+  loadGallery('wedding', 'photo-main-wedding', 6);
+  loadGallery('Places', 'photo-main-places', 6);
+  loadGallery('production', 'photo-main-production', 6);
+  loadGallery('influencers', 'photo-main-influencers', 6);
+  loadGallery('educational', 'photo-main-educational', 6);
   loadGallery('wedding', 'wedding-filming-gallery');
   loadGallery('Events', 'events-gallery');
   loadGallery('portraits', 'portraits-gallery');
