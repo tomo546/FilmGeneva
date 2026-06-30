@@ -81,15 +81,17 @@ function withSecurityHeaders(response) {
     'Content-Security-Policy',
     [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline'",
+      "script-src 'self' 'sha256-AM3nRwwZZrO3Wd1oO/2LQkvYEsmAM7YNs2jX6bwdjsk=' 'sha256-5kx2PO9zZPp/hxDDdKkqM2AZqy105k+CpXqAOQY/FCM='",
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
       "font-src 'self' https://fonts.gstatic.com",
       "img-src 'self' https: data:",
       "frame-src https://www.youtube-nocookie.com https://player.vimeo.com https://w.soundcloud.com",
       "connect-src 'self'",
+      "object-src 'none'",
       "base-uri 'self'",
       "form-action 'self'",
       "frame-ancestors 'self'",
+      "upgrade-insecure-requests",
     ].join('; ')
   );
   headers.set('Strict-Transport-Security', 'max-age=63072000; includeSubDomains; preload');
