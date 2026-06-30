@@ -113,7 +113,11 @@ section{padding:88px 5vw}
 .sub-card:hover .sub-arrow{opacity:1}
 
 /* ── VIDEO GRID ── */
-.video-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(520px,1fr));gap:20px;margin-top:36px}
+.video-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:20px;margin-top:36px}
+.video-item.featured{grid-column:span 2}
+@media(max-width:760px){.video-item.featured{grid-column:span 1}}
+.video-item .vid-wrap{transition:transform .3s}
+.video-item:hover .vid-wrap{transform:scale(1.015)}
 @media(max-width:860px){.video-grid{grid-template-columns:1fr}}
 .video-item p{font-size:13px;color:var(--white2);margin-top:10px;font-weight:300;letter-spacing:.4px}
 .vid-wrap{width:100%;aspect-ratio:16/9;position:relative;overflow:hidden;border-radius:var(--radius);background:var(--dark3);cursor:pointer}
@@ -790,12 +794,26 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
       <a class="sub-card" href="/ngo-video-production-geneva" data-nav="ngo-filming"><div class="sub-card-title" data-i18n>HUMANITARIAN FILMS</div><p class="sub-card-text" data-i18n>Documentary and field content for NGOs — sensitive, ethical, and powerful.</p><div class="sub-arrow">&#8599;</div></a>
     </div>
   </section>
-  <section style="background:var(--dark)">
+<section style="background:var(--black)">
+    <p class="eyebrow">Specialised Coverage</p>
+    <h2 class="section-title">INTERVIEWS &amp;<br>SPECIALISED CONTENT</h2>
+    <div class="divider" style="margin-bottom:0"></div>
+    <div class="sub-grid">
+      <a class="sub-card" href="/interview-video-production-geneva" data-nav="interviews"><div class="sub-card-title">INTERVIEWS &amp; TALKING HEADS</div><p class="sub-card-text">Corporate, political, NGO, and WHO interview series — professional, natural, broadcast-quality.</p><div class="sub-arrow">&#8599;</div></a>
+      <a class="sub-card" href="/political-diplomatic-video-geneva" data-nav="political-diplomatic"><div class="sub-card-title">POLITICAL &amp; DIPLOMATIC</div><p class="sub-card-text">National days, diplomatic missions, special envoys, and intergovernmental conferences.</p><div class="sub-arrow">&#8599;</div></a>
+      <a class="sub-card" href="/davos-wef-event-coverage-geneva" data-nav="davos-events"><div class="sub-card-title">DAVOS &amp; BUSINESS SUMMITS</div><p class="sub-card-text">Corporate gatherings and major international summits across Switzerland.</p><div class="sub-arrow">&#8599;</div></a>
+      <a class="sub-card" href="/art-performance-video-geneva" data-nav="art-performance"><div class="sub-card-title">ART &amp; PERFORMANCE</div><p class="sub-card-text">Aerial performance, theatre, concerts, festivals, and creative productions.</p><div class="sub-arrow">&#8599;</div></a>
+      <a class="sub-card" href="/short-film-production-geneva" data-nav="short-films"><div class="sub-card-title">SHORT FILMS &amp; FICTION</div><p class="sub-card-text">Award-winning short films — REBOOT won Best Film & Audience Award at 48HFP Switzerland.</p><div class="sub-arrow">&#8599;</div></a>
+      <a class="sub-card" href="/beauty-lifestyle-video-geneva" data-nav="beauty-lifestyle"><div class="sub-card-title">BEAUTY &amp; LIFESTYLE</div><p class="sub-card-text">Beauty brands, lifestyle creators, wellness, and luxury social media content.</p><div class="sub-arrow">&#8599;</div></a>
+      <a class="sub-card" href="/reels-short-form-video-geneva" data-nav="reels-social"><div class="sub-card-title">REELS &amp; SHORT-FORM</div><p class="sub-card-text">Vertical video for Instagram Reels, YouTube Shorts, and TikTok across all content types.</p><div class="sub-arrow">&#8599;</div></a>
+    </div>
+  </section>
+    <section style="background:var(--dark)">
     <p class="eyebrow" data-i18n>Portfolio</p>
     <h2 class="section-title" data-i18n>SHOWREEL &amp; EXAMPLES</h2>
     <div class="divider" style="margin-bottom:0"></div>
     <div class="video-grid">
-<div class="video-item">
+<div class="video-item featured">
   <div class="vid-wrap vimeo-wrap" data-vimeo="942738398">
     <img class="vid-thumb" src="https://vumbnail.com/942738398.jpg"
          onerror="this.src='https://i.vimeocdn.com/video/942738398_640x360.jpg';this.onerror=null"
@@ -803,24 +821,6 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
     <div class="vid-overlay"><div class="vid-btn">&#9654;</div></div>
   </div>
   <p>2023 Showreel</p>
-</div>
-<div class="video-item">
-  <div class="vid-wrap vimeo-wrap" data-vimeo="788842884">
-    <img class="vid-thumb" src="https://vumbnail.com/788842884.jpg"
-         onerror="this.src='https://i.vimeocdn.com/video/788842884_640x360.jpg';this.onerror=null"
-         alt="2022 Showreel" loading="lazy">
-    <div class="vid-overlay"><div class="vid-btn">&#9654;</div></div>
-  </div>
-  <p>2022 Showreel</p>
-</div>
-<div class="video-item">
-  <div class="vid-wrap vimeo-wrap" data-vimeo="673164993">
-    <img class="vid-thumb" src="https://vumbnail.com/673164993.jpg"
-         onerror="this.src='https://i.vimeocdn.com/video/673164993_640x360.jpg';this.onerror=null"
-         alt="Showreel" loading="lazy">
-    <div class="vid-overlay"><div class="vid-btn">&#9654;</div></div>
-  </div>
-  <p>Showreel</p>
 </div>
 <div class="video-item"><div class="vid-wrap" data-yt="Xd1DZG7ZOSs"><img class="vid-thumb" src="https://img.youtube.com/vi/Xd1DZG7ZOSs/hqdefault.jpg" alt="UAE National Day" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
   <p>UAE National Day</p>
@@ -831,47 +831,26 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
 <div class="video-item"><div class="vid-wrap" data-yt="b1ilT5jD07k"><img class="vid-thumb" src="https://img.youtube.com/vi/b1ilT5jD07k/hqdefault.jpg" alt="ASAGE — Transition énergétique" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
   <p>ASAGE — Transition énergétique</p>
 </div>
-<div class="video-item"><div class="vid-wrap" data-yt="2Cayeud1Mko"><img class="vid-thumb" src="https://img.youtube.com/vi/2Cayeud1Mko/hqdefault.jpg" alt="Caux Forum: Just Governance for Human Security" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
-  <p>Caux Forum: Just Governance for Human Security</p>
-</div>
 <div class="video-item"><div class="vid-wrap" data-yt="k4YIP0iz9QE"><img class="vid-thumb" src="https://img.youtube.com/vi/k4YIP0iz9QE/hqdefault.jpg" alt="The Three Old Men — Fête de la Musique 2024" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
   <p>The Three Old Men — Fête de la Musique 2024</p>
-</div>
-<div class="video-item"><div class="vid-wrap" data-yt="od8Ab2SL2SI"><img class="vid-thumb" src="https://img.youtube.com/vi/od8Ab2SL2SI/hqdefault.jpg" alt="Building Trust in Europe: Young Ambassadors" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
-  <p>Building Trust in Europe: Young Ambassadors</p>
-</div>
-<div class="video-item"><div class="vid-wrap" data-yt="DncVHMS-ZAE"><img class="vid-thumb" src="https://img.youtube.com/vi/DncVHMS-ZAE/hqdefault.jpg" alt="Gérer l'urgence — Incendie Secours Genève" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
-  <p>Gérer l'urgence — Incendie Secours Genève</p>
-</div>
-<div class="video-item"><div class="vid-wrap" data-yt="oPBldw6mrxE"><img class="vid-thumb" src="https://img.youtube.com/vi/oPBldw6mrxE/hqdefault.jpg" alt="Gstaad Real Estate" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
-  <p>Gstaad Real Estate</p>
-</div>
-<div class="video-item"><div class="vid-wrap" data-yt="1bihqFn9LE8"><img class="vid-thumb" src="https://img.youtube.com/vi/1bihqFn9LE8/hqdefault.jpg" alt="Neuchâtel Real Estate" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
-  <p>Neuchâtel Real Estate</p>
-</div>
-<div class="video-item"><div class="vid-wrap" data-yt="UGUVQ4MxFtA"><img class="vid-thumb" src="https://img.youtube.com/vi/UGUVQ4MxFtA/hqdefault.jpg" alt="Aerial Rope Performance" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
-  <p>Aerial Rope Performance</p>
 </div>
 <div class="video-item"><div class="vid-wrap" data-yt="9HZSgMghWQs"><img class="vid-thumb" src="https://img.youtube.com/vi/9HZSgMghWQs/hqdefault.jpg" alt="Tech Mahindra Annual Drinks — Davos" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
   <p>Tech Mahindra Annual Drinks — Davos</p>
 </div>
-<div class="video-item"><div class="vid-wrap" data-yt="y3QwH0WYw1k"><img class="vid-thumb" src="https://img.youtube.com/vi/y3QwH0WYw1k/hqdefault.jpg" alt="Lakevoices Neuchâtel — Full Concert" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
-  <p>Lakevoices Neuchâtel — Full Concert</p>
-</div>
 <div class="video-item"><div class="vid-wrap" data-yt="tIrZRcH-ux0"><img class="vid-thumb" src="https://img.youtube.com/vi/tIrZRcH-ux0/hqdefault.jpg" alt="REBOOT — Best Film & Audience Award 48HFP" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
   <p>REBOOT — Best Film & Audience Award 48HFP</p>
 </div>
-<div class="video-item"><div class="vid-wrap" data-yt="TqhaemXm-oE"><img class="vid-thumb" src="https://img.youtube.com/vi/TqhaemXm-oE/hqdefault.jpg" alt="Le vrai making of" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
-  <p>Le vrai making of</p>
+<div class="video-item">
+  <div class="vid-wrap vimeo-wrap" data-vimeo="788842884">
+    <img class="vid-thumb" src="https://vumbnail.com/788842884.jpg"
+         onerror="this.src='https://i.vimeocdn.com/video/788842884_640x360.jpg';this.onerror=null"
+         alt="2022 Showreel" loading="lazy">
+    <div class="vid-overlay"><div class="vid-btn">&#9654;</div></div>
+  </div>
+  <p>2022 Showreel</p>
 </div>
-<div class="video-item"><div class="vid-wrap" data-yt="r2d4vncDyLc"><img class="vid-thumb" src="https://img.youtube.com/vi/r2d4vncDyLc/hqdefault.jpg" alt="Indian Mission Livestream" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
-  <p>Indian Mission Livestream</p>
-</div>
-<div class="video-item"><div class="vid-wrap" data-yt="XG5lLdl4hAw"><img class="vid-thumb" src="https://img.youtube.com/vi/XG5lLdl4hAw/hqdefault.jpg" alt="Artisa Group" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
-  <p>Artisa Group</p>
-</div>
-<div class="video-item"><div class="vid-wrap" data-yt="aU_ZGuE6aj8"><img class="vid-thumb" src="https://img.youtube.com/vi/aU_ZGuE6aj8/hqdefault.jpg" alt="7 Rencontres RH Carrière" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
-  <p>7 Rencontres RH Carrière</p>
+<div class="video-item"><div class="vid-wrap" data-yt="oPBldw6mrxE"><img class="vid-thumb" src="https://img.youtube.com/vi/oPBldw6mrxE/hqdefault.jpg" alt="Gstaad Real Estate" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
+  <p>Gstaad Real Estate</p>
 </div>
 </div>
     <div style="margin-top:36px;text-align:center"><a class="btn btn-primary" href="/contact-filmgeneva" data-nav="contact" data-i18n>Start Your Project</a></div>
@@ -1396,6 +1375,14 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
 <div class="video-item"><div class="vid-wrap" data-yt="v1IiSHJT6UE"><img class="vid-thumb" src="https://img.youtube.com/vi/v1IiSHJT6UE/hqdefault.jpg" alt="Corporate Interview" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
   <p>Corporate Interview</p>
 </div>
+
+<div class="video-item"><div class="vid-wrap" data-yt="HCxLM0BQB1I"><img class="vid-thumb" src="https://img.youtube.com/vi/HCxLM0BQB1I/hqdefault.jpg" alt="Operating Model" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
+  <p>Operating Model</p>
+</div>
+
+<div class="video-item"><div class="vid-wrap" data-yt="2FekB2M18Ro"><img class="vid-thumb" src="https://img.youtube.com/vi/2FekB2M18Ro/hqdefault.jpg" alt="Demographic Changes" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
+  <p>Demographic Changes</p>
+</div>
 </div>
     <div style="margin-top:28px"><a class="btn btn-primary" href="/contact-filmgeneva" data-nav="contact" data-i18n>Get a Quote</a></div>
   </section>
@@ -1518,6 +1505,10 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
 <div class="video-item"><div class="vid-wrap" data-yt="F7lGeAHsqag"><img class="vid-thumb" src="https://img.youtube.com/vi/F7lGeAHsqag/hqdefault.jpg" alt="Interview — Political/NGO" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
   <p>Interview — Political/NGO</p>
 </div>
+
+<div class="video-item"><div class="vid-wrap" data-yt="l_GW9BtceAE"><img class="vid-thumb" src="https://img.youtube.com/vi/l_GW9BtceAE/hqdefault.jpg" alt="NGO Conference" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
+  <p>NGO Conference</p>
+</div>
 </div>
     <div style="margin-top:28px"><a class="btn btn-primary" href="/contact-filmgeneva" data-nav="contact" data-i18n>Get a Quote</a></div>
   </section>
@@ -1612,6 +1603,14 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
 <div class="video-item"><div class="vid-wrap" data-yt="QTJpfK8UDr0"><img class="vid-thumb" src="https://img.youtube.com/vi/QTJpfK8UDr0/hqdefault.jpg" alt="Impunity Watch — NGO Livestream" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
   <p>Impunity Watch — NGO Livestream</p>
 </div>
+
+<div class="video-item"><div class="vid-wrap" data-yt="l_GW9BtceAE"><img class="vid-thumb" src="https://img.youtube.com/vi/l_GW9BtceAE/hqdefault.jpg" alt="NGO Conference" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
+  <p>NGO Conference</p>
+</div>
+
+<div class="video-item"><div class="vid-wrap" data-yt="a-0qHjCqNC0"><img class="vid-thumb" src="https://img.youtube.com/vi/a-0qHjCqNC0/hqdefault.jpg" alt="Lausanne Roundtable" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
+  <p>Lausanne Roundtable</p>
+</div>
 </div>
     <div style="margin-top:28px"><a class="btn btn-primary" href="/contact-filmgeneva" data-nav="contact" data-i18n>Get a Quote</a></div>
   </section>
@@ -1692,7 +1691,14 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
         <div class="photo-loading">Loading...</div>
       </div>
     </div>
-    
+  </section>
+  <section style="background:var(--dark)">
+    <p class="eyebrow">Portfolio</p>
+    <h2 class="section-title">WEDDING FILM<br>EXAMPLE</h2>
+    <div class="divider" style="margin-bottom:0"></div>
+    <div class="video-grid"><div class="video-item"><div class="vid-wrap" data-yt="KXfzT8OkEME"><img class="vid-thumb" src="https://img.youtube.com/vi/KXfzT8OkEME/hqdefault.jpg" alt="Steve & Alexis — Wedding" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
+  <p>Steve & Alexis — Wedding</p>
+</div></div>
   </section>
 </div>
 
@@ -1713,6 +1719,10 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
     <div class="divider" style="margin-bottom:0"></div>
     <div class="video-grid">
 
+
+<div class="video-item"><div class="vid-wrap" data-yt="Ff4ASzl0WSg"><img class="vid-thumb" src="https://img.youtube.com/vi/Ff4ASzl0WSg/hqdefault.jpg" alt="Aerial Drone Footage" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
+  <p>Aerial Drone Footage</p>
+</div>
 </div>
     <div style="margin-top:28px"><a class="btn btn-primary" href="/contact-filmgeneva" data-nav="contact" data-i18n>Get a Quote</a></div>
   </section>
@@ -2652,6 +2662,10 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
 <div class="video-item"><div class="vid-wrap" data-yt="56w2AKriTis"><img class="vid-thumb" src="https://img.youtube.com/vi/56w2AKriTis/hqdefault.jpg" alt="T&T Beauty Concierge" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
   <p>T&T Beauty Concierge</p>
 </div>
+
+<div class="video-item"><div class="vid-wrap" data-yt="2St1Wd9GCow"><img class="vid-thumb" src="https://img.youtube.com/vi/2St1Wd9GCow/hqdefault.jpg" alt="World of Coffee Geneva 2025" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
+  <p>World of Coffee Geneva 2025</p>
+</div>
 </div>
     <div style="margin-top:28px"><a class="btn btn-primary" href="/contact-filmgeneva" data-nav="contact" data-i18n>Get a Quote</a></div>
   </section>
@@ -2810,7 +2824,15 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
 </div>
 <div class="video-item"><div class="vid-wrap" data-yt="WkPYJJhQhaU"><img class="vid-thumb" src="https://img.youtube.com/vi/WkPYJJhQhaU/hqdefault.jpg" alt="Interview — Political/NGO" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
   <p>Interview — Political/NGO</p>
-</div></div></div>
+</div>
+<div class="video-item"><div class="vid-wrap" data-yt="a-0qHjCqNC0"><img class="vid-thumb" src="https://img.youtube.com/vi/a-0qHjCqNC0/hqdefault.jpg" alt="Lausanne Roundtable" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
+  <p>Lausanne Roundtable</p>
+</div>
+
+<div class="video-item"><div class="vid-wrap" data-yt="Wk3PJhkxWco"><img class="vid-thumb" src="https://img.youtube.com/vi/Wk3PJhkxWco/hqdefault.jpg" alt="Peter Schuurman, Special Envoy for Migration" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
+  <p>Peter Schuurman, Special Envoy for Migration</p>
+</div>
+</div></div>
   </section>
 </div>
 <div class="page" id="page-who-interviews">
@@ -2939,7 +2961,11 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
 </div>
 <div class="video-item"><div class="vid-wrap" data-yt="od8Ab2SL2SI"><img class="vid-thumb" src="https://img.youtube.com/vi/od8Ab2SL2SI/hqdefault.jpg" alt="Building Trust in Europe: Young Ambassadors" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
   <p>Building Trust in Europe: Young Ambassadors</p>
-</div></div></div></section>
+</div>
+<div class="video-item"><div class="vid-wrap" data-yt="2FekB2M18Ro"><img class="vid-thumb" src="https://img.youtube.com/vi/2FekB2M18Ro/hqdefault.jpg" alt="Demographic Changes" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
+  <p>Demographic Changes</p>
+</div>
+</div></div></section>
 </div>
 <div class="page" id="page-davos-events">
   <div class="sub-hero">
@@ -2964,7 +2990,15 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
 </div>
 <div class="video-item"><div class="vid-wrap" data-yt="b1ilT5jD07k"><img class="vid-thumb" src="https://img.youtube.com/vi/b1ilT5jD07k/hqdefault.jpg" alt="ASAGE — Transition énergétique" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
   <p>ASAGE — Transition énergétique</p>
-</div></div></div></section>
+</div>
+<div class="video-item"><div class="vid-wrap" data-yt="HCxLM0BQB1I"><img class="vid-thumb" src="https://img.youtube.com/vi/HCxLM0BQB1I/hqdefault.jpg" alt="Operating Model" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
+  <p>Operating Model</p>
+</div>
+
+<div class="video-item"><div class="vid-wrap" data-yt="AgX4QSPby4E"><img class="vid-thumb" src="https://img.youtube.com/vi/AgX4QSPby4E/hqdefault.jpg" alt="Tech Mahindra in Davos" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
+  <p>Tech Mahindra in Davos</p>
+</div>
+</div></div></section>
 </div>
 <div class="page" id="page-art-performance">
   <div class="sub-hero">
@@ -2999,7 +3033,11 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
 </div>
 <div class="video-item"><div class="vid-wrap" data-yt="TqhaemXm-oE"><img class="vid-thumb" src="https://img.youtube.com/vi/TqhaemXm-oE/hqdefault.jpg" alt="Le vrai making of" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
   <p>Le vrai making of</p>
-</div></div></div></section>
+</div>
+<div class="video-item"><div class="vid-wrap" data-yt="hibEzQ2JLcg"><img class="vid-thumb" src="https://img.youtube.com/vi/hibEzQ2JLcg/hqdefault.jpg" alt="Theatre Play" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
+  <p>Theatre Play</p>
+</div>
+</div></div></section>
 </div>
 <div class="page" id="page-beauty-lifestyle">
   <div class="sub-hero">
@@ -3013,6 +3051,10 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
   </div>
   <section style="background:var(--black)"><div class="sub-body"><h3 class="sub-section-title" data-i18n>Premium Content for Beauty and Lifestyle Brands</h3><p class="sub-p" data-i18n>Geneva is home to luxury brands, wellness businesses, and a thriving community of lifestyle content creators. FilmGeneva produces high-quality video content for beauty brands, lifestyle influencers, wellness businesses, and luxury retail — combining cinematic production values with the authentic, personal tone that performs on social media.</p><p class="sub-p" data-i18n>Beauty and lifestyle content requires a specific visual sensibility — attention to colour, texture, and detail; lighting that flatters both products and people; and an editing rhythm that matches the platform and audience. FilmGeneva delivers content that looks premium, feels authentic, and performs.</p><ul class='feat-list'><li>Beauty brand product and campaign videos</li><li>Influencer content production — Reels, Shorts, TikTok</li><li>Brand partnership and sponsored content</li><li>Wellness and lifestyle brand films</li><li>Luxury retail and hospitality content</li><li>Tutorial and how-to video production</li><li>Social media content packages for ongoing creators</li><li>Colour grading optimised for beauty content</li></ul><div class="video-grid" style="margin-top:32px"><div class="video-item"><div class="vid-wrap" data-yt="56w2AKriTis"><img class="vid-thumb" src="https://img.youtube.com/vi/56w2AKriTis/hqdefault.jpg" alt="T&T Beauty Concierge" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
   <p>T&T Beauty Concierge</p>
+</div>
+
+<div class="video-item"><div class="vid-wrap" data-yt="2St1Wd9GCow"><img class="vid-thumb" src="https://img.youtube.com/vi/2St1Wd9GCow/hqdefault.jpg" alt="World of Coffee Geneva 2025" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
+  <p>World of Coffee Geneva 2025</p>
 </div>
 </div></div></section>
   <section style="background:var(--dark)">
@@ -3163,6 +3205,28 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
 </div>
 
 </main>
+
+<div class="page" id="page-reels-social">
+  <div class="sub-hero">
+    <p class="sub-hero-eyebrow">Vertical Video for Social Media</p>
+    <h1 class="sub-hero-title">REELS &amp;<br>SHORT-FORM</h1>
+    <p class="sub-hero-desc">Vertical, fast-paced video content for Instagram Reels, YouTube Shorts, and TikTok — covering events, weddings, brands, and political content across Geneva and Switzerland.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="/contact-filmgeneva" data-nav="contact">Get a Quote</a>
+      <a class="btn btn-ghost" href="/video-production" data-nav="video">&#8592; Back</a>
+    </div>
+  </div>
+  <section style="background:var(--black)"><div class="sub-body"><h3 class="sub-section-title">Vertical, Fast, Built for the Feed</h3><p class="sub-p">Alongside full-length video production, FilmGeneva produces short-form vertical content for Instagram Reels, YouTube Shorts, and TikTok — covering everything from diplomatic events and corporate gatherings to weddings and lifestyle brands. These short, punchy edits are designed to perform in a social feed: fast pacing, clear hooks, and native vertical framing.</p><p class="sub-p">We can produce these as standalone short-form content or as a companion package alongside a full-length production — extracting the most shareable moments from a longer shoot into ready-to-post social clips.</p><ul class='feat-list'><li>Vertical 9:16 format, optimised for Reels, Shorts, and TikTok</li><li>Fast-paced editing built for short attention spans</li><li>Subtitles and captions included as standard</li><li>Coverage across political, corporate, wedding, and lifestyle content</li><li>Available as a standalone service or bundled with full-length production</li></ul><h3 class="sub-section-title">Examples</h3><div class="video-grid" style="margin-top:24px"><div class="video-item"><div class="vid-wrap" data-yt="Wk3PJhkxWco"><img class="vid-thumb" src="https://img.youtube.com/vi/Wk3PJhkxWco/hqdefault.jpg" alt="Peter Schuurman, Special Envoy for Migration" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
+  <p>Peter Schuurman, Special Envoy for Migration</p>
+</div><div class="video-item"><div class="vid-wrap" data-yt="2St1Wd9GCow"><img class="vid-thumb" src="https://img.youtube.com/vi/2St1Wd9GCow/hqdefault.jpg" alt="World of Coffee Geneva 2025" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
+  <p>World of Coffee Geneva 2025</p>
+</div><div class="video-item"><div class="vid-wrap" data-yt="KXfzT8OkEME"><img class="vid-thumb" src="https://img.youtube.com/vi/KXfzT8OkEME/hqdefault.jpg" alt="Steve & Alexis — Wedding" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
+  <p>Steve & Alexis — Wedding</p>
+</div><div class="video-item"><div class="vid-wrap" data-yt="AgX4QSPby4E"><img class="vid-thumb" src="https://img.youtube.com/vi/AgX4QSPby4E/hqdefault.jpg" alt="Tech Mahindra in Davos" loading="lazy"><div class="vid-overlay"><div class="vid-btn">&#9654;</div></div></div>
+  <p>Tech Mahindra in Davos</p>
+</div></div></div></section>
+</div>
+
 <footer>
   <a class="footer-logo" href="/" data-nav="home">FILM<span>GENEVA</a></span>
   <p class="footer-copy" data-i18n>&#169; 2026 FilmGeneva — Geneva, Switzerland</p>
@@ -3308,6 +3372,7 @@ const PAGE_SEO = {
   "art-performance": {url:"/art-performance-video-geneva",title:"Art & Performance Video Production Geneva | FilmGeneva",desc:"Cinematic filming for performing arts and creative productions in Geneva."},
   "beauty-lifestyle": {url:"/beauty-lifestyle-video-geneva",title:"Beauty & Lifestyle Video Production Geneva | FilmGeneva",desc:"Professional video for beauty brands and influencers in Geneva."},
   "production-company": {url:"/production-company-geneva",title:"Production Company Geneva | FilmGeneva",desc:"End-to-end video production company in Geneva and Switzerland. Location scouting, permits, crew, equipment, set coordination and logistics."},
+  "reels-social": {url:"/reels-short-form-video-geneva",title:"Reels & Short-Form Video Geneva | FilmGeneva",desc:"Vertical video content for Instagram Reels, YouTube Shorts, and TikTok across Geneva and Switzerland."},
   "locations": {url:"/geneva-locations-photography",title:"Geneva & Switzerland Locations | FilmGeneva",desc:"Aerial and location photography across Geneva, Lake Geneva and Switzerland."},
   "testimonial-videos": {url:"/testimonial-video-production-geneva",title:"Testimonial Video Production Geneva | FilmGeneva",desc:"Authentic client testimonial videos for marketing, websites, and social media in Geneva."},
   "explainer-videos": {url:"/explainer-video-production-geneva",title:"Explainer Video Production Geneva | FilmGeneva",desc:"Clear, engaging explainer videos for products, services, and concepts in Geneva."},
