@@ -14,13 +14,14 @@
     }
   ],
 
-  // Static assets — directory "." matches the actual repo structure
-  // (index.html and fr-translations.json live at repo root, not in a
-  // public/ subfolder). run_worker_first ensures the Worker code runs
-  // before falling back to static assets, so /photos/*, /api/photos/*,
-  // and the clean-URL routes are handled by the Worker.
+  // Static assets — directory "." matches the repo structure (index.html
+  // and fr-translations.json live at repo root). "binding": "ASSETS" is
+  // required whenever run_worker_first is set — without it, env.ASSETS is
+  // undefined and every request that falls through to env.ASSETS.fetch()
+  // throws, breaking the entire site.
   "assets": {
     "directory": ".",
+    "binding": "ASSETS",
     "run_worker_first": true,
     "not_found_handling": "single-page-application"
   },
