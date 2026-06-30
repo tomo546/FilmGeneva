@@ -386,6 +386,11 @@ textarea.f-input{resize:vertical;min-height:108px}
 .btn-ghost:hover { color: var(--white); }
 .btn-primary { color: var(--black); }
 
+
+.hero-slideshow{width:100%;height:480px;overflow:hidden;position:relative;margin-top:64px;background:var(--dark)}
+.hero-slideshow img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:0;transition:opacity 1.2s ease}
+.hero-slideshow img.active{opacity:1}
+
 footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px}
 .footer-logo{font-family:var(--fd);font-size:21px;letter-spacing:3px;cursor:pointer;color:var(--white)}
 .footer-logo span{color:var(--accent)}
@@ -739,6 +744,7 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
 
 <!-- ══════════ VIDEO ══════════ -->
 <div class="page" id="page-video">
+<div class="page" id="page-video">
   <div style="width:100%;height:480px;overflow:hidden;position:relative;margin-top:64px">
     <img src="https://filmgeneva.ch/photos/Gifs/camera.gif" alt="FilmGeneva Video Production" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block">
     <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(9,9,9,0) 40%,rgba(9,9,9,1) 100%)"></div>
@@ -755,69 +761,22 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
     </div>
   </div>
   
-  <section style="background:var(--dark)">
-    <p class="eyebrow" data-i18n>Corporate &amp; Business</p>
-    <h2 class="section-title" data-i18n>CORPORATE VIDEO<br>SERVICES</h2>
-    <div class="divider" style="margin-bottom:0"></div>
-    <div class="sub-grid">
-      <a class="sub-card" href="/corporate-video-production-geneva" data-nav="corporate-videos"><div class="sub-card-title" data-i18n>CORPORATE VIDEOS</div><p class="sub-card-text" data-i18n>Company profiles, brand films, product videos, and business communications. Professional, polished, on-time.</p><div class="sub-arrow">&#8599;</div></a>
-      <a class="sub-card" href="/ceo-interview-video-geneva" data-nav="ceo-interviews"><div class="sub-card-title" data-i18n>CEO INTERVIEWS</div><p class="sub-card-text" data-i18n>Executive on-camera interviews for press, investor relations, annual reports, and internal communications.</p><div class="sub-arrow">&#8599;</div></a>
-      <a class="sub-card" href="/testimonial-video-production-geneva" data-nav="testimonial-videos"><div class="sub-card-title" data-i18n>TESTIMONIAL VIDEOS</div><p class="sub-card-text" data-i18n>Authentic client testimonials that build trust — natural, credible, and edited for maximum impact.</p><div class="sub-arrow">&#8599;</div></a>
-      <a class="sub-card" href="/explainer-video-production-geneva" data-nav="explainer-videos"><div class="sub-card-title" data-i18n>EXPLAINER VIDEOS</div><p class="sub-card-text" data-i18n>Clear, engaging explainer videos for products, services, and concepts. Live-action or mixed media.</p><div class="sub-arrow">&#8599;</div></a>
-      <a class="sub-card" href="/product-launch-video-geneva" data-nav="product-launch-videos"><div class="sub-card-title" data-i18n>PRODUCT LAUNCH VIDEOS</div><p class="sub-card-text" data-i18n>Cinematic launch films that capture excitement and communicate value — for events and social media.</p><div class="sub-arrow">&#8599;</div></a>
-      <a class="sub-card" href="/training-video-production-geneva" data-nav="training-videos"><div class="sub-card-title" data-i18n>TRAINING VIDEOS</div><p class="sub-card-text" data-i18n>Internal training and onboarding videos for consistent, professional staff development.</p><div class="sub-arrow">&#8599;</div></a>
-      <a class="sub-card" href="/" data-nav="crowdfunding-videos"><div class="sub-card-title" data-i18n>CROWDFUNDING VIDEOS</div><p class="sub-card-text" data-i18n>Campaign videos that connect with backers emotionally and convert viewers into supporters.</p><div class="sub-arrow">&#8599;</div></a>
-      <a class="sub-card" href="/" data-nav="annual-report-videos"><div class="sub-card-title" data-i18n>ANNUAL REPORT VIDEOS</div><p class="sub-card-text" data-i18n>Year-in-review films for NGOs and corporations — bringing your impact to life beyond print.</p><div class="sub-arrow">&#8599;</div></a>
-      <a class="sub-card" href="/" data-nav="startup-pitch-videos"><div class="sub-card-title" data-i18n>STARTUP PITCH VIDEOS</div><p class="sub-card-text" data-i18n>Professional pitch videos for investors and accelerators in Geneva's innovation ecosystem.</p><div class="sub-arrow">&#8599;</div></a>
-      <a class="sub-card" href="/" data-nav="luxury-brand-videos"><div class="sub-card-title" data-i18n>LUXURY BRAND FILMS</div><p class="sub-card-text" data-i18n>High-end brand films for Swiss watchmakers, luxury hospitality, and premium brands.</p><div class="sub-arrow">&#8599;</div></a>
-      <a class="sub-card" href="/social-media-video-production-geneva" data-nav="social-media-video"><div class="sub-card-title" data-i18n>SOCIAL MEDIA VIDEO</div><p class="sub-card-text" data-i18n>Reels, Shorts, and branded content for Instagram, LinkedIn, TikTok, and YouTube.</p><div class="sub-arrow">&#8599;</div></a>
-      <a class="sub-card" href="/real-estate-video-production-geneva" data-nav="real-estate-video"><div class="sub-card-title" data-i18n>REAL ESTATE VIDEOS</div><p class="sub-card-text" data-i18n>Cinematic property walkthroughs and drone overviews for listings across Geneva.</p><div class="sub-arrow">&#8599;</div></a>
+  
+  <section style="background:var(--black);padding:48px 5vw 24px">
+    <p class="eyebrow">Browse by category</p>
+    <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:16px">
+      <a href="/corporate-video-production-geneva" data-nav="corporate-videos" style="font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--white2);background:var(--dark2);border:1px solid var(--border);padding:9px 16px;border-radius:20px;text-decoration:none;transition:color .2s,border-color .2s">Corporate</a>
+      <a href="/conference-filming-geneva" data-nav="conference-filming" style="font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--white2);background:var(--dark2);border:1px solid var(--border);padding:9px 16px;border-radius:20px;text-decoration:none">Events &amp; Conferences</a>
+      <a href="/ngo-video-production-geneva" data-nav="ngo-filming" style="font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--white2);background:var(--dark2);border:1px solid var(--border);padding:9px 16px;border-radius:20px;text-decoration:none">NGO &amp; Humanitarian</a>
+      <a href="/documentary-film-production-geneva" data-nav="documentary-filming" style="font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--white2);background:var(--dark2);border:1px solid var(--border);padding:9px 16px;border-radius:20px;text-decoration:none">Documentary</a>
+      <a href="/interview-video-production-geneva" data-nav="interviews" style="font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--white2);background:var(--dark2);border:1px solid var(--border);padding:9px 16px;border-radius:20px;text-decoration:none">Interviews</a>
+      <a href="/political-diplomatic-video-geneva" data-nav="political-diplomatic" style="font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--white2);background:var(--dark2);border:1px solid var(--border);padding:9px 16px;border-radius:20px;text-decoration:none">Political &amp; Diplomatic</a>
+      <a href="/wedding-videographer-geneva" data-nav="wedding-filming" style="font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--white2);background:var(--dark2);border:1px solid var(--border);padding:9px 16px;border-radius:20px;text-decoration:none">Weddings</a>
+      <a href="/short-film-production-geneva" data-nav="short-films" style="font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--white2);background:var(--dark2);border:1px solid var(--border);padding:9px 16px;border-radius:20px;text-decoration:none">Short Films</a>
+      <a href="/all-videos-geneva" data-nav="all-videos" style="font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--accent);background:rgba(232,184,106,.1);border:1px solid rgba(232,184,106,.3);padding:9px 16px;border-radius:20px;text-decoration:none">All Videos &#8594;</a>
     </div>
   </section>
-  <section style="background:var(--dark)">
-    <p class="eyebrow" data-i18n>Events &amp; Conferences</p>
-    <h2 class="section-title" data-i18n>EVENT FILMING<br>SERVICES</h2>
-    <div class="divider" style="margin-bottom:0"></div>
-    <div class="sub-grid">
-      <a class="sub-card" href="/conference-filming-geneva" data-nav="conference-filming"><div class="sub-card-title" data-i18n>CONFERENCE FILMING</div><p class="sub-card-text" data-i18n>Multi-camera conference coverage at Palexpo, WMO, CICG, and venues across Geneva.</p><div class="sub-arrow">&#8599;</div></a>
-      <a class="sub-card" href="/conference-highlight-reel-geneva" data-nav="conference-highlights"><div class="sub-card-title" data-i18n>CONFERENCE HIGHLIGHTS</div><p class="sub-card-text" data-i18n>Punchy 1–3 min highlight reels from your event — ready for social media fast.</p><div class="sub-arrow">&#8599;</div></a>
-      <a class="sub-card" href="/" data-nav="gala-filming"><div class="sub-card-title" data-i18n>GALA & AWARD CEREMONIES</div><p class="sub-card-text" data-i18n>Elegant multi-camera coverage of gala dinners, award ceremonies, and formal events.</p><div class="sub-arrow">&#8599;</div></a>
-      <a class="sub-card" href="/ngo-video-production-geneva" data-nav="ngo-filming"><div class="sub-card-title" data-i18n>NGO & CHARITY VIDEO</div><p class="sub-card-text" data-i18n>Impact films for NGOs and international organisations — powerful storytelling for global audiences.</p><div class="sub-arrow">&#8599;</div></a>
-      <a class="sub-card" href="/" data-nav="un-events"><div class="sub-card-title" data-i18n>UN & INTERNATIONAL EVENTS</div><p class="sub-card-text" data-i18n>Experienced filming at UN agencies and intergovernmental events across Geneva.</p><div class="sub-arrow">&#8599;</div></a>
-      <a class="sub-card" href="/" data-nav="event-filming"><div class="sub-card-title" data-i18n>EVENT FILMING</div><p class="sub-card-text" data-i18n>Conferences, launches, concerts, academic events — multi-camera, professional, reliable.</p><div class="sub-arrow">&#8599;</div></a>
-      <a class="sub-card" href="/wedding-videographer-geneva" data-nav="wedding-filming"><div class="sub-card-title" data-i18n>WEDDING FILMS</div><p class="sub-card-text" data-i18n>Cinematic, natural wedding films that capture the real emotion and atmosphere of your day.</p><div class="sub-arrow">&#8599;</div></a>
-      <a class="sub-card" href="/drone-filming-geneva-switzerland" data-nav="drone-footage"><div class="sub-card-title" data-i18n>DRONE & AERIAL FOOTAGE</div><p class="sub-card-text" data-i18n>Licensed drone operator for cinematic aerial footage across Switzerland.</p><div class="sub-arrow">&#8599;</div></a>
-    </div>
-  </section>
-  <section style="background:var(--black)">
-    <p class="eyebrow" data-i18n>Documentary &amp; Creative</p>
-    <h2 class="section-title" data-i18n>DOCUMENTARY &amp;<br>CREATIVE FILM</h2>
-    <div class="divider" style="margin-bottom:0"></div>
-    <div class="sub-grid">
-      <a class="sub-card" href="/documentary-film-production-geneva" data-nav="documentary-filming"><div class="sub-card-title" data-i18n>DOCUMENTARY FILM</div><p class="sub-card-text" data-i18n>Short-form and long-form documentary production — screened at international film festivals.</p><div class="sub-arrow">&#8599;</div></a>
-      <a class="sub-card" href="/science-communication-video-geneva" data-nav="science-videos"><div class="sub-card-title" data-i18n>SCIENCE COMMUNICATION</div><p class="sub-card-text" data-i18n>Engaging science videos for AI for Good, Campus Biotech, WMO, and research institutions.</p><div class="sub-arrow">&#8599;</div></a>
-      <a class="sub-card" href="/music-video-production-geneva" data-nav="music-videos-filming"><div class="sub-card-title" data-i18n>MUSIC VIDEOS</div><p class="sub-card-text" data-i18n>Creative music video production from concept to final cut for artists in Geneva.</p><div class="sub-arrow">&#8599;</div></a>
-      <a class="sub-card" href="/film-tv-production-support-geneva" data-nav="interviews-film-tv"><div class="sub-card-title">CREW &amp; FIXER SERVICES</div><p class="sub-card-text">Local crew, fixer, and full production support for international teams from the US, India, China, and worldwide.</p><div class="sub-arrow">&#8599;</div></a>
-      <a class="sub-card" href="/behind-the-scenes-video-geneva" data-nav="behind-scenes"><div class="sub-card-title" data-i18n>BEHIND THE SCENES</div><p class="sub-card-text" data-i18n>Authentic BTS content for productions, brand activations, and social media.</p><div class="sub-arrow">&#8599;</div></a>
-      <a class="sub-card" href="/ngo-video-production-geneva" data-nav="ngo-filming"><div class="sub-card-title" data-i18n>HUMANITARIAN FILMS</div><p class="sub-card-text" data-i18n>Documentary and field content for NGOs — sensitive, ethical, and powerful.</p><div class="sub-arrow">&#8599;</div></a>
-    </div>
-  </section>
-<section style="background:var(--black)">
-    <p class="eyebrow">Specialised Coverage</p>
-    <h2 class="section-title">INTERVIEWS &amp;<br>SPECIALISED CONTENT</h2>
-    <div class="divider" style="margin-bottom:0"></div>
-    <div class="sub-grid">
-      <a class="sub-card" href="/interview-video-production-geneva" data-nav="interviews"><div class="sub-card-title">INTERVIEWS &amp; TALKING HEADS</div><p class="sub-card-text">Corporate, political, NGO, and WHO interview series — professional, natural, broadcast-quality.</p><div class="sub-arrow">&#8599;</div></a>
-      <a class="sub-card" href="/political-diplomatic-video-geneva" data-nav="political-diplomatic"><div class="sub-card-title">POLITICAL &amp; DIPLOMATIC</div><p class="sub-card-text">National days, diplomatic missions, special envoys, and intergovernmental conferences.</p><div class="sub-arrow">&#8599;</div></a>
-      <a class="sub-card" href="/davos-wef-event-coverage-geneva" data-nav="davos-events"><div class="sub-card-title">DAVOS &amp; BUSINESS SUMMITS</div><p class="sub-card-text">Corporate gatherings and major international summits across Switzerland.</p><div class="sub-arrow">&#8599;</div></a>
-      <a class="sub-card" href="/art-performance-video-geneva" data-nav="art-performance"><div class="sub-card-title">ART &amp; PERFORMANCE</div><p class="sub-card-text">Aerial performance, theatre, concerts, festivals, and creative productions.</p><div class="sub-arrow">&#8599;</div></a>
-      <a class="sub-card" href="/short-film-production-geneva" data-nav="short-films"><div class="sub-card-title">SHORT FILMS &amp; FICTION</div><p class="sub-card-text">Award-winning short films — REBOOT won Best Film & Audience Award at 48HFP Switzerland.</p><div class="sub-arrow">&#8599;</div></a>
-      <a class="sub-card" href="/beauty-lifestyle-video-geneva" data-nav="beauty-lifestyle"><div class="sub-card-title">BEAUTY &amp; LIFESTYLE</div><p class="sub-card-text">Beauty brands, lifestyle creators, wellness, and luxury social media content.</p><div class="sub-arrow">&#8599;</div></a>
-      <a class="sub-card" href="/reels-short-form-video-geneva" data-nav="reels-social"><div class="sub-card-title">REELS &amp; SHORT-FORM</div><p class="sub-card-text">Vertical video for Instagram Reels, YouTube Shorts, and TikTok across all content types.</p><div class="sub-arrow">&#8599;</div></a>
-      <a class="sub-card" href="/all-videos-geneva" data-nav="all-videos"><div class="sub-card-title">ALL VIDEOS</div><p class="sub-card-text">Browse the complete video library — every example across every category in one place.</p><div class="sub-arrow">&#8599;</div></a>
-    </div>
-  </section>
-    <section style="background:var(--dark)">
+<section style="background:var(--dark)">
     <p class="eyebrow" data-i18n>Portfolio</p>
     <h2 class="section-title" data-i18n>SHOWREEL &amp; EXAMPLES</h2>
     <div class="divider" style="margin-bottom:0"></div>
@@ -890,6 +849,69 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
 </div>
 
 <!-- ══════════ LIVESTREAM ══════════ -->
+<section style="background:var(--dark)">
+    <p class="eyebrow" data-i18n>Corporate &amp; Business</p>
+    <h2 class="section-title" data-i18n>CORPORATE VIDEO<br>SERVICES</h2>
+    <div class="divider" style="margin-bottom:0"></div>
+    <div class="sub-grid">
+      <a class="sub-card" href="/corporate-video-production-geneva" data-nav="corporate-videos"><div class="sub-card-title" data-i18n>CORPORATE VIDEOS</div><p class="sub-card-text" data-i18n>Company profiles, brand films, product videos, and business communications. Professional, polished, on-time.</p><div class="sub-arrow">&#8599;</div></a>
+      <a class="sub-card" href="/ceo-interview-video-geneva" data-nav="ceo-interviews"><div class="sub-card-title" data-i18n>CEO INTERVIEWS</div><p class="sub-card-text" data-i18n>Executive on-camera interviews for press, investor relations, annual reports, and internal communications.</p><div class="sub-arrow">&#8599;</div></a>
+      <a class="sub-card" href="/testimonial-video-production-geneva" data-nav="testimonial-videos"><div class="sub-card-title" data-i18n>TESTIMONIAL VIDEOS</div><p class="sub-card-text" data-i18n>Authentic client testimonials that build trust — natural, credible, and edited for maximum impact.</p><div class="sub-arrow">&#8599;</div></a>
+      <a class="sub-card" href="/explainer-video-production-geneva" data-nav="explainer-videos"><div class="sub-card-title" data-i18n>EXPLAINER VIDEOS</div><p class="sub-card-text" data-i18n>Clear, engaging explainer videos for products, services, and concepts. Live-action or mixed media.</p><div class="sub-arrow">&#8599;</div></a>
+      <a class="sub-card" href="/product-launch-video-geneva" data-nav="product-launch-videos"><div class="sub-card-title" data-i18n>PRODUCT LAUNCH VIDEOS</div><p class="sub-card-text" data-i18n>Cinematic launch films that capture excitement and communicate value — for events and social media.</p><div class="sub-arrow">&#8599;</div></a>
+      <a class="sub-card" href="/training-video-production-geneva" data-nav="training-videos"><div class="sub-card-title" data-i18n>TRAINING VIDEOS</div><p class="sub-card-text" data-i18n>Internal training and onboarding videos for consistent, professional staff development.</p><div class="sub-arrow">&#8599;</div></a>
+      <a class="sub-card" href="/" data-nav="crowdfunding-videos"><div class="sub-card-title" data-i18n>CROWDFUNDING VIDEOS</div><p class="sub-card-text" data-i18n>Campaign videos that connect with backers emotionally and convert viewers into supporters.</p><div class="sub-arrow">&#8599;</div></a>
+      <a class="sub-card" href="/" data-nav="annual-report-videos"><div class="sub-card-title" data-i18n>ANNUAL REPORT VIDEOS</div><p class="sub-card-text" data-i18n>Year-in-review films for NGOs and corporations — bringing your impact to life beyond print.</p><div class="sub-arrow">&#8599;</div></a>
+      <a class="sub-card" href="/" data-nav="startup-pitch-videos"><div class="sub-card-title" data-i18n>STARTUP PITCH VIDEOS</div><p class="sub-card-text" data-i18n>Professional pitch videos for investors and accelerators in Geneva's innovation ecosystem.</p><div class="sub-arrow">&#8599;</div></a>
+      <a class="sub-card" href="/" data-nav="luxury-brand-videos"><div class="sub-card-title" data-i18n>LUXURY BRAND FILMS</div><p class="sub-card-text" data-i18n>High-end brand films for Swiss watchmakers, luxury hospitality, and premium brands.</p><div class="sub-arrow">&#8599;</div></a>
+      <a class="sub-card" href="/social-media-video-production-geneva" data-nav="social-media-video"><div class="sub-card-title" data-i18n>SOCIAL MEDIA VIDEO</div><p class="sub-card-text" data-i18n>Reels, Shorts, and branded content for Instagram, LinkedIn, TikTok, and YouTube.</p><div class="sub-arrow">&#8599;</div></a>
+      <a class="sub-card" href="/real-estate-video-production-geneva" data-nav="real-estate-video"><div class="sub-card-title" data-i18n>REAL ESTATE VIDEOS</div><p class="sub-card-text" data-i18n>Cinematic property walkthroughs and drone overviews for listings across Geneva.</p><div class="sub-arrow">&#8599;</div></a>
+    </div>
+  </section>
+  <section style="background:var(--dark)">
+    <p class="eyebrow" data-i18n>Events &amp; Conferences</p>
+    <h2 class="section-title" data-i18n>EVENT FILMING<br>SERVICES</h2>
+    <div class="divider" style="margin-bottom:0"></div>
+    <div class="sub-grid">
+      <a class="sub-card" href="/conference-filming-geneva" data-nav="conference-filming"><div class="sub-card-title" data-i18n>CONFERENCE FILMING</div><p class="sub-card-text" data-i18n>Multi-camera conference coverage at Palexpo, WMO, CICG, and venues across Geneva.</p><div class="sub-arrow">&#8599;</div></a>
+      <a class="sub-card" href="/conference-highlight-reel-geneva" data-nav="conference-highlights"><div class="sub-card-title" data-i18n>CONFERENCE HIGHLIGHTS</div><p class="sub-card-text" data-i18n>Punchy 1–3 min highlight reels from your event — ready for social media fast.</p><div class="sub-arrow">&#8599;</div></a>
+      <a class="sub-card" href="/" data-nav="gala-filming"><div class="sub-card-title" data-i18n>GALA & AWARD CEREMONIES</div><p class="sub-card-text" data-i18n>Elegant multi-camera coverage of gala dinners, award ceremonies, and formal events.</p><div class="sub-arrow">&#8599;</div></a>
+      <a class="sub-card" href="/ngo-video-production-geneva" data-nav="ngo-filming"><div class="sub-card-title" data-i18n>NGO & CHARITY VIDEO</div><p class="sub-card-text" data-i18n>Impact films for NGOs and international organisations — powerful storytelling for global audiences.</p><div class="sub-arrow">&#8599;</div></a>
+      <a class="sub-card" href="/" data-nav="un-events"><div class="sub-card-title" data-i18n>UN & INTERNATIONAL EVENTS</div><p class="sub-card-text" data-i18n>Experienced filming at UN agencies and intergovernmental events across Geneva.</p><div class="sub-arrow">&#8599;</div></a>
+      <a class="sub-card" href="/" data-nav="event-filming"><div class="sub-card-title" data-i18n>EVENT FILMING</div><p class="sub-card-text" data-i18n>Conferences, launches, concerts, academic events — multi-camera, professional, reliable.</p><div class="sub-arrow">&#8599;</div></a>
+      <a class="sub-card" href="/wedding-videographer-geneva" data-nav="wedding-filming"><div class="sub-card-title" data-i18n>WEDDING FILMS</div><p class="sub-card-text" data-i18n>Cinematic, natural wedding films that capture the real emotion and atmosphere of your day.</p><div class="sub-arrow">&#8599;</div></a>
+      <a class="sub-card" href="/drone-filming-geneva-switzerland" data-nav="drone-footage"><div class="sub-card-title" data-i18n>DRONE & AERIAL FOOTAGE</div><p class="sub-card-text" data-i18n>Licensed drone operator for cinematic aerial footage across Switzerland.</p><div class="sub-arrow">&#8599;</div></a>
+    </div>
+  </section>
+  <section style="background:var(--black)">
+    <p class="eyebrow" data-i18n>Documentary &amp; Creative</p>
+    <h2 class="section-title" data-i18n>DOCUMENTARY &amp;<br>CREATIVE FILM</h2>
+    <div class="divider" style="margin-bottom:0"></div>
+    <div class="sub-grid">
+      <a class="sub-card" href="/documentary-film-production-geneva" data-nav="documentary-filming"><div class="sub-card-title" data-i18n>DOCUMENTARY FILM</div><p class="sub-card-text" data-i18n>Short-form and long-form documentary production — screened at international film festivals.</p><div class="sub-arrow">&#8599;</div></a>
+      <a class="sub-card" href="/science-communication-video-geneva" data-nav="science-videos"><div class="sub-card-title" data-i18n>SCIENCE COMMUNICATION</div><p class="sub-card-text" data-i18n>Engaging science videos for AI for Good, Campus Biotech, WMO, and research institutions.</p><div class="sub-arrow">&#8599;</div></a>
+      <a class="sub-card" href="/music-video-production-geneva" data-nav="music-videos-filming"><div class="sub-card-title" data-i18n>MUSIC VIDEOS</div><p class="sub-card-text" data-i18n>Creative music video production from concept to final cut for artists in Geneva.</p><div class="sub-arrow">&#8599;</div></a>
+      <a class="sub-card" href="/film-tv-production-support-geneva" data-nav="interviews-film-tv"><div class="sub-card-title">CREW &amp; FIXER SERVICES</div><p class="sub-card-text">Local crew, fixer, and full production support for international teams from the US, India, China, and worldwide.</p><div class="sub-arrow">&#8599;</div></a>
+      <a class="sub-card" href="/behind-the-scenes-video-geneva" data-nav="behind-scenes"><div class="sub-card-title" data-i18n>BEHIND THE SCENES</div><p class="sub-card-text" data-i18n>Authentic BTS content for productions, brand activations, and social media.</p><div class="sub-arrow">&#8599;</div></a>
+      <a class="sub-card" href="/ngo-video-production-geneva" data-nav="ngo-filming"><div class="sub-card-title" data-i18n>HUMANITARIAN FILMS</div><p class="sub-card-text" data-i18n>Documentary and field content for NGOs — sensitive, ethical, and powerful.</p><div class="sub-arrow">&#8599;</div></a>
+    </div>
+  </section>
+<section style="background:var(--black)">
+    <p class="eyebrow">Specialised Coverage</p>
+    <h2 class="section-title">INTERVIEWS &amp;<br>SPECIALISED CONTENT</h2>
+    <div class="divider" style="margin-bottom:0"></div>
+    <div class="sub-grid">
+      <a class="sub-card" href="/interview-video-production-geneva" data-nav="interviews"><div class="sub-card-title">INTERVIEWS &amp; TALKING HEADS</div><p class="sub-card-text">Corporate, political, NGO, and WHO interview series — professional, natural, broadcast-quality.</p><div class="sub-arrow">&#8599;</div></a>
+      <a class="sub-card" href="/political-diplomatic-video-geneva" data-nav="political-diplomatic"><div class="sub-card-title">POLITICAL &amp; DIPLOMATIC</div><p class="sub-card-text">National days, diplomatic missions, special envoys, and intergovernmental conferences.</p><div class="sub-arrow">&#8599;</div></a>
+      <a class="sub-card" href="/davos-wef-event-coverage-geneva" data-nav="davos-events"><div class="sub-card-title">DAVOS &amp; BUSINESS SUMMITS</div><p class="sub-card-text">Corporate gatherings and major international summits across Switzerland.</p><div class="sub-arrow">&#8599;</div></a>
+      <a class="sub-card" href="/art-performance-video-geneva" data-nav="art-performance"><div class="sub-card-title">ART &amp; PERFORMANCE</div><p class="sub-card-text">Aerial performance, theatre, concerts, festivals, and creative productions.</p><div class="sub-arrow">&#8599;</div></a>
+      <a class="sub-card" href="/short-film-production-geneva" data-nav="short-films"><div class="sub-card-title">SHORT FILMS &amp; FICTION</div><p class="sub-card-text">Award-winning short films — REBOOT won Best Film & Audience Award at 48HFP Switzerland.</p><div class="sub-arrow">&#8599;</div></a>
+      <a class="sub-card" href="/beauty-lifestyle-video-geneva" data-nav="beauty-lifestyle"><div class="sub-card-title">BEAUTY &amp; LIFESTYLE</div><p class="sub-card-text">Beauty brands, lifestyle creators, wellness, and luxury social media content.</p><div class="sub-arrow">&#8599;</div></a>
+      <a class="sub-card" href="/reels-short-form-video-geneva" data-nav="reels-social"><div class="sub-card-title">REELS &amp; SHORT-FORM</div><p class="sub-card-text">Vertical video for Instagram Reels, YouTube Shorts, and TikTok across all content types.</p><div class="sub-arrow">&#8599;</div></a>
+      <a class="sub-card" href="/all-videos-geneva" data-nav="all-videos"><div class="sub-card-title">ALL VIDEOS</div><p class="sub-card-text">Browse the complete video library — every example across every category in one place.</p><div class="sub-arrow">&#8599;</div></a>
+    </div>
+  </section>
+    
 <div class="page" id="page-livestream">
   <div style="width:100%;height:480px;overflow:hidden;position:relative;margin-top:64px">
     <img src="https://filmgeneva.ch/photos/Gifs/livestream.gif" alt="FilmGeneva Livestreaming" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block">
@@ -966,8 +988,8 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
 
 <!-- ══════════ PHOTOGRAPHY ══════════ -->
 <div class="page" id="page-photography">
-  <div style="width:100%;height:480px;overflow:hidden;position:relative;margin-top:64px">
-    <img src="https://filmgeneva.ch/photos/Gifs/header.gif" alt="FilmGeneva" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block">
+  <div class="hero-slideshow" id="slideshow-photography"></div>
+  <div style="position:relative;margin-top:-480px;height:480px;pointer-events:none">
     <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(9,9,9,0) 40%,rgba(9,9,9,1) 100%)"></div>
     <div style="position:absolute;bottom:36px;left:5vw">
       <p style="font-size:10px;letter-spacing:5px;text-transform:uppercase;color:#e8b86a;font-weight:500;font-family:DM Sans,sans-serif;margin-bottom:10px">Professional Photography in Geneva</p>
@@ -1137,8 +1159,8 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
 
 <!-- ══════════ PODCASTS ══════════ -->
 <div class="page" id="page-podcasts">
-  <div style="width:100%;height:480px;overflow:hidden;position:relative;margin-top:64px">
-    <img src="https://filmgeneva.ch/photos/Gifs/header.gif" alt="FilmGeneva" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block">
+  <div class="hero-slideshow" id="slideshow-podcasts"></div>
+  <div style="position:relative;margin-top:-480px;height:480px;pointer-events:none">
     <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(9,9,9,0) 40%,rgba(9,9,9,1) 100%)"></div>
     <div style="position:absolute;bottom:36px;left:5vw">
       <p style="font-size:10px;letter-spacing:5px;text-transform:uppercase;color:#e8b86a;font-weight:500;font-family:DM Sans,sans-serif;margin-bottom:10px">Podcast & Audio Services in Geneva</p>
@@ -1244,8 +1266,8 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
 
 <!-- ══════════ ABOUT ══════════ -->
 <div class="page" id="page-about">
-  <div style="width:100%;height:480px;overflow:hidden;position:relative;margin-top:64px">
-    <img src="https://filmgeneva.ch/photos/Gifs/header.gif" alt="FilmGeneva" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block">
+  <div class="hero-slideshow" id="slideshow-about"></div>
+  <div style="position:relative;margin-top:-480px;height:480px;pointer-events:none">
     <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(9,9,9,0) 40%,rgba(9,9,9,1) 100%)"></div>
     <div style="position:absolute;bottom:36px;left:5vw">
       <p style="font-size:10px;letter-spacing:5px;text-transform:uppercase;color:#e8b86a;font-weight:500;font-family:DM Sans,sans-serif;margin-bottom:10px">About FilmGeneva</p>
@@ -3201,8 +3223,8 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
 
 
 <div class="page" id="page-production-company">
-  <div style="width:100%;height:480px;overflow:hidden;position:relative;margin-top:64px">
-    <img src="https://filmgeneva.ch/photos/Gifs/header.gif" alt="FilmGeneva" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block">
+  <div class="hero-slideshow" id="slideshow-production"></div>
+  <div style="position:relative;margin-top:-480px;height:480px;pointer-events:none">
     <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(9,9,9,0) 40%,rgba(9,9,9,1) 100%)"></div>
     <div style="position:absolute;bottom:36px;left:5vw">
       <p style="font-size:10px;letter-spacing:5px;text-transform:uppercase;color:#e8b86a;font-weight:500;font-family:DM Sans,sans-serif;margin-bottom:10px">End-to-End Production in Switzerland</p>
@@ -3857,6 +3879,48 @@ function handleForm(e) {
 
 
 // ── Initialise all photo galleries once the DOM and functions are ready ──────
+// ── Hero banner photo slideshow (replaces static GIF on some pages) ─────────
+function initHeroSlideshow(containerId, folder, count) {
+  const el = document.getElementById(containerId);
+  if (!el) return;
+  fetch('/api/photos/' + folder)
+    .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(data => {
+      const photos = (data.photos || []).slice();
+      if (!photos.length) return;
+      // simple shuffle, then take first `count`
+      for (let i = photos.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [photos[i], photos[j]] = [photos[j], photos[i]];
+      }
+      const selected = photos.slice(0, count || 6);
+      el.innerHTML = selected.map((p, i) =>
+        '<img src="' + p.url + '" alt="FilmGeneva" class="' + (i === 0 ? 'active' : '') + '">'
+      ).join('');
+      const imgs = el.querySelectorAll('img');
+      if (imgs.length < 2) return;
+      let idx = 0;
+      setInterval(() => {
+        imgs[idx].classList.remove('active');
+        idx = (idx + 1) % imgs.length;
+        imgs[idx].classList.add('active');
+      }, 4000);
+    })
+    .catch(() => {}); // silently keep the dark background if the fetch fails
+}
+
+function initAllSlideshows() {
+  initHeroSlideshow('slideshow-photography', 'Events', 6);
+  initHeroSlideshow('slideshow-podcasts', 'production', 6);
+  initHeroSlideshow('slideshow-production', 'production', 6);
+  initHeroSlideshow('slideshow-about', 'portraits', 6);
+}
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initAllSlideshows);
+} else {
+  initAllSlideshows();
+}
+
 function lazyLoadGalleries() {
   const containers = document.querySelectorAll('.photo-grid[data-folder]');
   if (!('IntersectionObserver' in window)) {
