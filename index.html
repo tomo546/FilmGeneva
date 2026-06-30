@@ -2846,6 +2846,15 @@ const PAGES = {home:'page-home',video:'page-video',livestream:'page-livestream',
 
 let currentPage = 'home';
 
+// History API is unavailable inside sandboxed preview frames (about:srcdoc) —
+// detect that once and skip all history calls there without breaking navigation.
+let historyAvailable = true;
+try {
+  history.replaceState({ page: 'home' }, '', '#home');
+} catch (e) {
+  historyAvailable = false;
+}
+
 function goTo(key, skipHistory) {
   const id = PAGES[key] || ('page-' + key);
   const target = document.getElementById(id);
@@ -2854,24 +2863,26 @@ function goTo(key, skipHistory) {
   target.classList.add('active');
   window.scrollTo({ top: 0, behavior: 'smooth' });
   currentPage = key;
-  if (!skipHistory) {
-    history.pushState({ page: key }, '', '#' + key);
+  if (!skipHistory && historyAvailable) {
+    try { history.pushState({ page: key }, '', '#' + key); } catch (e) { historyAvailable = false; }
   }
 }
 
-// Initialise history with the starting page, then listen for back/forward
-history.replaceState({ page: 'home' }, '', '#home');
-window.addEventListener('popstate', function(e) {
-  const key = (e.state && e.state.page) || 'home';
-  goTo(key, true);
-});
+if (historyAvailable) {
+  window.addEventListener('popstate', function(e) {
+    const key = (e.state && e.state.page) || 'home';
+    goTo(key, true);
+  });
+}
 
 // Support deep-linking via #hash on load
 window.addEventListener('DOMContentLoaded', function() {
   const hash = window.location.hash.replace('#', '');
   if (hash && (PAGES[hash] || document.getElementById('page-' + hash))) {
     goTo(hash, true);
-    history.replaceState({ page: hash }, '', '#' + hash);
+    if (historyAvailable) {
+      try { history.replaceState({ page: hash }, '', '#' + hash); } catch (e) { historyAvailable = false; }
+    }
   }
 });
 
