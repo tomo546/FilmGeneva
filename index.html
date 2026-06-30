@@ -1446,7 +1446,7 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
         <div class="photo-loading">Loading...</div>
       </div>
     </div>
-    <script>loadGallery('wedding', 'wedding-filming-gallery');</script>
+    
   </section>
 </div>
 
@@ -1760,7 +1760,7 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
         <div class="photo-loading">Loading...</div>
       </div>
     </div>
-    <script>loadGallery('Events', 'events-gallery');</script>
+    
   </section>
 </div>
 
@@ -1788,7 +1788,7 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
         <div class="photo-loading">Loading...</div>
       </div>
     </div>
-    <script>loadGallery('portraits', 'portraits-gallery');</script>
+    
   </section>
 </div>
 
@@ -1816,7 +1816,7 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
         <div class="photo-loading">Loading...</div>
       </div>
     </div>
-    <script>loadGallery('Events', 'conf-photo-gallery', 50);</script>
+    
   </section>
 </div>
 
@@ -1844,7 +1844,7 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
         <div class="photo-loading">Loading...</div>
       </div>
     </div>
-    <script>loadGallery('ngo', 'ngo-gallery');</script>
+    
   </section>
 </div>
 
@@ -1914,7 +1914,7 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
         <div class="photo-loading">Loading...</div>
       </div>
     </div>
-    <script>loadGallery('watches', 'watches-gallery');</script>
+    
   </section>
 </div>
 
@@ -1942,7 +1942,7 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
         <div class="photo-loading">Loading...</div>
       </div>
     </div>
-    <script>loadGallery('Places', 'places-gallery');</script>
+    
   </section>
 </div>
 
@@ -2256,7 +2256,7 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
         <div class="photo-loading">Loading...</div>
       </div>
     </div>
-    <script>loadGallery('educational', 'edu-gallery');</script>
+    
   </section>
 </div>
 
@@ -2352,7 +2352,7 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
         <div class="photo-loading">Loading...</div>
       </div>
     </div>
-    <script>loadGallery('production', 'prod-gallery');</script>
+    
   </section>
 </div>
 
@@ -2753,7 +2753,7 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
         <div class="photo-loading">Loading...</div>
       </div>
     </div>
-    <script>loadGallery('influencers', 'beauty-gallery');</script>
+    
   </section>
 </div>
 
@@ -2781,7 +2781,7 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
         <div class="photo-loading">Loading...</div>
       </div>
     </div>
-    <script>loadGallery('Places', 'places-pg-gallery');</script>
+    
   </section>
 </div>
 
@@ -2809,7 +2809,7 @@ footer{background:var(--black);padding:40px 5vw;border-top:1px solid var(--borde
         <div class="photo-loading">Loading...</div>
       </div>
     </div>
-    <script>loadGallery('watches', 'watches-full-gallery');</script>
+    
   </section>
   <section style="background:var(--dark);padding:60px 5vw">
     <div class="sub-body">
@@ -2979,6 +2979,28 @@ function handleForm(e) {
   btn.style.background = '#4a9c6a';
   btn.style.color = '#fff';
   setTimeout(() => { btn.textContent = 'Send Message'; btn.style.background = ''; btn.style.color = ''; e.target.reset(); }, 4000);
+}
+
+
+// ── Initialise all photo galleries once the DOM and functions are ready ──────
+function initGalleries() {
+  loadGallery('wedding', 'wedding-filming-gallery');
+  loadGallery('Events', 'events-gallery');
+  loadGallery('portraits', 'portraits-gallery');
+  loadGallery('Events', 'conf-photo-gallery', 50);
+  loadGallery('ngo', 'ngo-gallery');
+  loadGallery('watches', 'watches-gallery');
+  loadGallery('Places', 'places-gallery');
+  loadGallery('educational', 'edu-gallery');
+  loadGallery('production', 'prod-gallery');
+  loadGallery('influencers', 'beauty-gallery');
+  loadGallery('Places', 'places-pg-gallery');
+  loadGallery('watches', 'watches-full-gallery');
+}
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initGalleries);
+} else {
+  initGalleries();
 }
 </script>
 
