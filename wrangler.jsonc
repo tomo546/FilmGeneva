@@ -14,10 +14,12 @@
     }
   ],
 
-  // Static assets (the HTML site) — serve_directly: false so Worker runs first
+  // Static assets (the HTML site) — run_worker_first ensures the Worker
+  // code runs before falling back to static assets, so /photos/* and
+  // /api/photos/* are handled by the Worker rather than served as files.
   "assets": {
     "directory": "./public",
-    "serve_directly": false,
+    "run_worker_first": true,
     "not_found_handling": "single-page-application"
   },
 
